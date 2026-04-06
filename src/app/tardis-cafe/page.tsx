@@ -1,0 +1,139 @@
+import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
+import SectionHeader from "@/components/ui/SectionHeader";
+import Image from "next/image";
+import Link from "next/link";
+import { SITE } from "@/data/site";
+import { MapPin, Clock } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Tardis Cafe | Coffee & Light Fare at Nassau County Museum of Art",
+  description:
+    "Tardis Cafe at Nassau County Museum of Art in Roslyn, NY — artisan coffee, seasonal bites, and light fare for museum visitors and event guests.",
+};
+
+const cafeMenu = [
+  { category: "Coffee & Beverages", items: ["Espresso & Cappuccino", "Cold Brew", "Matcha Latte", "Seasonal Specialties", "Fresh Juices & Teas"] },
+  { category: "Light Fare", items: ["Avocado Toast", "Seasonal Grain Bowl", "Artisan Sandwiches", "Cheese & Charcuterie Board", "Seasonal Soups"] },
+  { category: "Pastries & Sweets", items: ["Croissants & Viennoiserie", "Seasonal Tarts", "House-Made Cookies", "Macarons", "Cake of the Day"] },
+];
+
+export default function TardisCafePage() {
+  return (
+    <>
+      <PageHero
+        label="Tardis Cafe"
+        title="A Perfect Pause Among Art and Nature"
+        description="Artisan coffee, seasonal fare, and warm hospitality — a tranquil retreat within the Nassau County Museum of Art grounds."
+        imageSrc="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1920&q=80"
+        imageAlt="Tardis Cafe at Nassau County Museum of Art"
+      />
+
+      {/* About */}
+      <section className="bg-cream py-section px-6">
+        <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <SectionHeader
+              label="The Cafe"
+              title="Where the Museum Grounds Meet a Warm Cup"
+              description="Tardis Cafe was born from a desire to offer museum visitors and event guests a moment of true comfort — a beautifully crafted coffee, a seasonal bite, a place to pause and reflect."
+            />
+            <p className="prose-venue mt-5">
+              Located within the museum grounds, the Tardis Cafe is the perfect companion to a morning stroll through the sculpture garden or a quiet lunch before an afternoon event. Every item on our menu reflects the same attention to craft and quality that defines Tardis Catering.
+            </p>
+            <div className="mt-8 space-y-4">
+              <div className="flex gap-3 items-start">
+                <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-body text-xs tracking-widest uppercase text-charcoal/40 mb-1">Location</p>
+                  <p className="font-body text-sm text-charcoal/75">{SITE.address.venue}, {SITE.address.full}</p>
+                </div>
+              </div>
+              <div className="flex gap-3 items-start">
+                <Clock size={18} className="text-primary shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-body text-xs tracking-widest uppercase text-charcoal/40 mb-1">Hours</p>
+                  <p className="font-body text-sm text-charcoal/75">Tuesday – Sunday: 10am – 4pm</p>
+                  <p className="font-body text-sm text-charcoal/75">Closed Mondays</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="relative aspect-[4/5] overflow-hidden">
+            <Image
+              src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=800&q=80"
+              alt="Tardis Cafe interior"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Menu */}
+      <section className="bg-primary-dark py-section px-6">
+        <div className="max-w-8xl mx-auto">
+          <SectionHeader
+            label="Our Menu"
+            title="Simple. Seasonal. Exceptional."
+            centered
+            light
+            className="mb-14"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-4xl mx-auto">
+            {cafeMenu.map((section) => (
+              <div key={section.category}>
+                <h3 className="font-body text-xs font-semibold tracking-[0.25em] uppercase text-cream/40 mb-5">
+                  {section.category}
+                </h3>
+                <ul className="space-y-3">
+                  {section.items.map((item) => (
+                    <li key={item} className="flex gap-2 items-start">
+                      <span className="text-cream/30 shrink-0 mt-1">—</span>
+                      <span className="font-display text-base text-cream/80">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <p className="font-body text-xs text-cream/30 text-center mt-10 tracking-wide">
+            Menu subject to seasonal availability.
+          </p>
+        </div>
+      </section>
+
+      {/* Photo strip */}
+      <section className="bg-cream py-section px-6">
+        <div className="max-w-8xl mx-auto grid grid-cols-3 gap-4">
+          {[
+            { src: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80", alt: "Coffee at Tardis Cafe" },
+            { src: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80", alt: "Seasonal pastry" },
+            { src: "https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=600&q=80", alt: "Outdoor seating at Tardis Cafe" },
+          ].map((img) => (
+            <div key={img.src} className="relative aspect-square overflow-hidden group">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 33vw, 20vw"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-primary py-14 px-6 text-center">
+        <p className="section-label text-cream/50 mb-3">Also by Tardis</p>
+        <h2 className="font-display text-2xl text-cream mb-4">Hosting an Event?</h2>
+        <p className="font-body text-cream/65 text-sm max-w-sm mx-auto mb-6">
+          Tardis Catering handles full event menus and service at Artistry. Explore our catering experience.
+        </p>
+        <Link href="/tardis-catering" className="btn-outline">Explore Tardis Catering</Link>
+      </section>
+    </>
+  );
+}

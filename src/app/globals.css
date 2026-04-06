@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-gilda: "Gilda Display", Georgia, serif;
+    --font-montserrat: "Montserrat", system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+    background-color: #F5F0E8;
+    color: #1a1a1a;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-gilda), Georgia, serif;
+  }
+
+  ::selection {
+    background-color: #1e3a5f;
+    color: #F5F0E8;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3.5 bg-primary text-cream font-body font-medium text-sm tracking-widest uppercase transition-all duration-300 hover:bg-primary-dark hover:tracking-[0.2em] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-3.5 border border-cream text-cream font-body font-medium text-sm tracking-widest uppercase transition-all duration-300 hover:bg-cream hover:text-primary focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2;
+  }
+
+  .btn-outline-dark {
+    @apply inline-flex items-center justify-center px-8 py-3.5 border border-primary text-primary font-body font-medium text-sm tracking-widest uppercase transition-all duration-300 hover:bg-primary hover:text-cream focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .section-label {
+    @apply font-body text-xs font-semibold tracking-[0.3em] uppercase text-primary;
+  }
+
+  .section-title {
+    @apply font-display text-display-md text-charcoal;
+  }
+
+  .section-title-light {
+    @apply font-display text-display-md text-cream;
+  }
+
+  .prose-venue {
+    @apply font-body text-base leading-relaxed text-charcoal/80 max-w-prose;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Parallax utility */
+  .parallax-layer {
+    will-change: transform;
+    transform-style: preserve-3d;
+  }
+
+  /* Cutout text effect */
+  .cutout-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    mix-blend-mode: multiply;
+  }
+}
