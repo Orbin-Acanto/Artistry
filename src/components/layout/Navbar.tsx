@@ -113,7 +113,7 @@ function NavItemComponent({
       >
         <button
           className={cn(
-            "relative flex items-center px-4 py-2 font-display text-base xl:text-lg uppercase tracking-[0.22em] transition-colors duration-200",
+            "relative flex items-center px-4 py-2 font-display text-base xl:text-sm uppercase tracking-[0.22em] transition-colors duration-200",
             "after:absolute after:bottom-0 after:left-4 after:right-4 after:h-px after:bg-primary",
             "after:scale-x-0 after:origin-left after:transition-transform after:duration-300",
             "hover:after:scale-x-100",
@@ -126,7 +126,7 @@ function NavItemComponent({
         </button>
         {open && (
           <div
-            className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-white/98 backdrop-blur-md border border-primary/10 shadow-2xl"
+            className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-white backdrop-blur-md border border-primary/10 shadow-2xl"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
@@ -150,13 +150,13 @@ function NavItemComponent({
       <Link
         href={item.href}
         className={cn(
-          "relative block px-4 py-2 font-display text-base xl:text-lg uppercase tracking-[0.22em] transition-colors duration-200",
+          "relative flex items-center px-4 py-2 font-display text-base xl:text-sm uppercase tracking-[0.22em] transition-colors duration-200",
           "after:absolute after:bottom-0 after:left-4 after:right-4 after:h-px after:bg-primary",
           "after:scale-x-0 after:origin-left after:transition-transform after:duration-300",
           "hover:after:scale-x-100",
           isActive
             ? "text-primary after:scale-x-100"
-            : "text-primary/70 hover:text-primary-dark",
+            : "text-primary hover:text-primary-dark",
         )}
       >
         {item.label}
