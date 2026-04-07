@@ -21,6 +21,9 @@ const images = [
   },
 ];
 
+const ENTRY_X = "110%";
+const ENTRY_FADE_PORTION = 0.25;
+
 function ImageCard({
   img,
   index,
@@ -39,25 +42,30 @@ function ImageCard({
   const entryEnd   = entryStart + slot;
   const exitStart  = entryEnd;
   const exitEnd    = exitStart + slot * 0.8;
+  const fadeInEnd  = entryStart + slot * ENTRY_FADE_PORTION;
 
   // Slide in from right + straighten
-  const x      = useTransform(scrollYProgress, [entryStart, entryEnd], ["160%", "0%"]);
+  const x      = useTransform(scrollYProgress, [entryStart, entryEnd], [ENTRY_X, "0%"]);
   const rotate = useTransform(scrollYProgress, [entryStart, entryEnd], [14, 0]);
 
-  // Opacity: snap visible on entry, fade out after (last card stays)
-  const opacityInputs  = index < total - 1
-    ? [Math.max(0, entryStart - 0.001), entryStart, exitStart, exitEnd]
-    : [Math.max(0, entryStart - 0.001), entryStart, entryEnd];
-  const opacityOutputs = index < total - 1
-    ? [0, 1, 1, 0]
-    : [0, 1, 1];
+  // Opacity eases in during entry so the final card does not appear suddenly.
+  const opacityInputs = index === 0
+    ? [entryStart, exitStart, exitEnd]
+    : index < total - 1
+      ? [entryStart, fadeInEnd, exitStart, exitEnd]
+      : [entryStart, fadeInEnd, 1];
+  const opacityOutputs = index === 0
+    ? [1, 1, 0]
+    : index < total - 1
+      ? [0, 1, 1, 0]
+      : [0, 1, 1];
 
   const opacity = useTransform(scrollYProgress, opacityInputs, opacityOutputs);
 
   return (
     <motion.div
       style={{ x, rotate, opacity, zIndex: index + 1 }}
-      className="absolute inset-0"
+      className="absolute inset-0 will-change-transform"
     >
       <div className="relative w-full h-full overflow-hidden shadow-2xl">
         <Image
@@ -174,7 +182,6 @@ function ProgressDot({
   start: number;
   end: number;
 }) {
-  const scale = useTransform(scrollYProgress, [start, end], [1, 1]);
   const bg = useTransform(
     scrollYProgress,
     [start - 0.01, start, end],
