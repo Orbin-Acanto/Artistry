@@ -8,78 +8,64 @@ import Link from "next/link";
 type Props = {
   text: string;
   subtext?: string;
-  imageSrc: string;
-  imageAlt: string;
   ctaLabel?: string;
   ctaHref?: string;
+  imageSrc: string;
+  imageAlt: string;
 };
 
-export default function CutoutParallax({
-  text,
-  subtext,
-  imageSrc,
-  imageAlt,
-  ctaLabel,
-  ctaHref,
-}: Props) {
+export default function CutoutParallax({ text, subtext, ctaLabel, ctaHref, imageSrc, imageAlt }: Props) {
   const ref = useRef<HTMLDivElement>(null);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
 
-  const imageY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
-  const textScale = useTransform(scrollYProgress, [0, 0.5, 1], [0.95, 1, 1.02]);
+  const imageY = useTransform(scrollYProgress, [0, 1], ["160px", "0px"]);
 
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-charcoal"
+      className="relative h-[45vh] min-h-[300px] max-h-[420px] overflow-hidden"
       aria-label={text}
     >
-      {/* Background parallax image */}
+      {/* Parallax image — taller than section so it has room to travel */}
       <motion.div
         style={{ y: imageY }}
-        className="absolute inset-0 scale-110"
+        className="absolute inset-x-0 -top-[160px] bottom-0"
       >
         <Image
           src={imageSrc}
           alt={imageAlt}
           fill
-          className="object-cover opacity-60"
+          className="object-cover"
           sizes="100vw"
         />
       </motion.div>
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-charcoal/50" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-charcoal/55" />
 
-      {/* Cutout text — giant display text that blends with image */}
-      <div className="relative z-10 py-24 md:py-36 px-6 flex flex-col items-center justify-center text-center">
-        <motion.h2
-          style={{
-            WebkitTextStroke: "1px rgba(245, 240, 232, 0.35)",
-            scale: textScale,
-          }}
-          className="font-display text-display-xl text-cream/10 select-none leading-none tracking-tight"
-          aria-hidden="true"
-        >
-          {text}
-        </motion.h2>
-
-        {/* Readable overlay content */}
-        <div className="mt-8 md:mt-12 max-w-xl">
-          {subtext && (
-            <p className="font-body text-cream/75 text-base md:text-lg leading-relaxed mb-8">
-              {subtext}
-            </p>
-          )}
-          {ctaLabel && ctaHref && (
-            <Link href={ctaHref} className="btn-outline">
-              {ctaLabel}
-            </Link>
-          )}
+      {/* Centered text */}
+      <div className="relative z-10 h-full flex flex-col items-center justify-center gap-5 px-6 text-center">
+        <div className="flex items-center gap-5">
+          <div className="h-px w-10 bg-cream/35" />
+          <p className="font-display text-display-md text-cream uppercase leading-none tracking-tight text-balance">
+            {text}
+          </p>
+          <div className="h-px w-10 bg-cream/35" />
         </div>
+        {subtext && (
+          <p className="font-body text-cream/70 text-sm md:text-base leading-relaxed max-w-md">
+            {subtext}
+          </p>
+        )}
+        {ctaLabel && ctaHref && (
+          <Link href={ctaHref} className="btn-outline">
+            {ctaLabel}
+          </Link>
+        )}
       </div>
     </section>
   );

@@ -83,7 +83,7 @@ export default function StatsSection() {
   const isInView = useInView(ref, { once: true, margin: "-20%" });
 
   return (
-    <section ref={ref} className="bg-primary py-20 px-6 overflow-hidden">
+    <section ref={ref} className="bg-primary py-12 px-6 overflow-hidden">
       {/* Top rule that draws in */}
       <div className="max-w-8xl mx-auto">
         <motion.div
