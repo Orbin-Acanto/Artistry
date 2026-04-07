@@ -10,8 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#1e3a5f",
-          dark: "#132540",
+          DEFAULT: "#335654",
+          dark: "#223228",
           light: "#2d5282",
         },
         cream: "#F5F0E8",
@@ -34,6 +34,10 @@ const config: Config = {
         "display-md": [
           "clamp(1.75rem, 3.5vw, 3rem)",
           { lineHeight: "1.15", letterSpacing: "-0.01em" },
+        ],
+        "display-section": [
+          "3.5rem",
+          { lineHeight: "1.1", letterSpacing: "-0.01em" },
         ],
       },
       spacing: {

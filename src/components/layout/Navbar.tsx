@@ -119,7 +119,7 @@ function NavItemComponent({
             "hover:after:scale-x-100",
             isActive
               ? "text-primary after:scale-x-100"
-              : "text-primary hover:text-primary-dark",
+              : "text-primary-dark hover:text-primary",
           )}
         >
           {item.label}
@@ -134,7 +134,7 @@ function NavItemComponent({
               <Link
                 key={child.href}
                 href={child.href}
-                className="block px-5 py-3 font-body text-sm uppercase tracking-[0.18em] text-primary/75 hover:text-primary-dark hover:bg-primary/5 transition-all duration-150"
+                className="block px-5 py-3 font-body text-sm uppercase tracking-[0.18em] text-primary-dark hover:text-primary hover:bg-primary/5 transition-all duration-150"
               >
                 {child.label}
               </Link>
@@ -156,7 +156,7 @@ function NavItemComponent({
           "hover:after:scale-x-100",
           isActive
             ? "text-primary after:scale-x-100"
-            : "text-primary hover:text-primary-dark",
+            : "text-primary-dark hover:text-primary",
         )}
       >
         {item.label}

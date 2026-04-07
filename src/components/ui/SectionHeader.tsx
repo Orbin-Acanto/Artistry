@@ -31,7 +31,7 @@ export default function SectionHeader({
       )}
       <h2
         className={cn(
-          "font-display text-display-md text-balance",
+          "font-display text-[56px] text-balance uppercase",
           light ? "text-cream" : "text-charcoal"
         )}
       >
