@@ -16,24 +16,29 @@
 
   body {
     font-family: var(--font-montserrat), system-ui, sans-serif;
-    background-color: #F5F0E8;
+    background-color: #f5f0e8;
     color: #1a1a1a;
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-gilda), Georgia, serif;
   }
 
   ::selection {
     background-color: #1e3a5f;
-    color: #F5F0E8;
+    color: #f5f0e8;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-3.5 bg-primary text-cream font-body font-medium text-sm tracking-widest uppercase transition-all duration-300 hover:bg-primary-dark hover:tracking-[0.2em] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-8 py-3.5 bg-primary text-cream font-body font-medium text-sm tracking-widest uppercase transition-all duration-300 hover:bg-primary-dark  focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
   }
 
   .btn-outline {

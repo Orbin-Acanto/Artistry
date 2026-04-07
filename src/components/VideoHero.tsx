@@ -19,7 +19,7 @@ export default function VideoHero() {
   return (
     <section
       ref={ref}
-      className="relative h-screen min-h-[600px] max-h-[1000px] overflow-hidden"
+      className="relative h-screen min-h-[600px] max-h-[1000px] overflow-hidden mt-16"
       aria-label="Hero section"
     >
       {/* Video background */}
@@ -50,7 +50,7 @@ export default function VideoHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="section-label text-cream/70 mb-5"
+          className="section-label text-cream/70 mb-5 text-base"
         >
           Nassau County Museum of Art · Roslyn, NY
         </motion.p>
@@ -95,16 +95,16 @@ export default function VideoHero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
+        className="absolute bottom-16 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
       >
-        <span className="font-body text-[10px] tracking-[0.3em] uppercase text-cream/40">
+        <span className="font-body text-[10px] tracking-[0.3em] uppercase text-cream/60">
           Scroll
         </span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
         >
-          <ArrowDown size={16} className="text-cream/40" />
+          <ArrowDown size={16} className="text-cream/60" />
         </motion.div>
       </motion.div>
     </section>
