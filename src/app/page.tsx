@@ -3,6 +3,7 @@ import VideoHero from "@/components/VideoHero";
 import CutoutParallax from "@/components/CutoutParallax";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ContactForm from "@/components/ui/ContactForm";
+import AboutImageScroller from "@/components/AboutImageScroller";
 import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/data/site";
@@ -67,12 +68,12 @@ export default function HomePage() {
             <SectionHeader
               label="The Venue"
               title="Art as the Architecture of Every Celebration"
-              description="Artistry is nestled within the breathtaking grounds of the Nassau County Museum of Art in Roslyn, New York — one of Long Island's most celebrated cultural destinations. Here, every event unfolds amid world-class sculpture, manicured gardens, and a Beaux-Arts mansion that has stood for over a century."
+              description="Artistry is nestled within the breathtaking grounds of the Nassau County Museum of Art in Roslyn, New York one of Long Island's most celebrated cultural destinations. Here, every event unfolds amid world-class sculpture, manicured gardens, and a Beaux-Arts mansion that has stood for over a century."
             />
             <p className="prose-venue mt-5">
               Under the stewardship of FIDI Hospitality and the culinary
               excellence of Tardis Catering, Artistry transforms special
-              occasions into indelible experiences — where the art on the walls
+              occasions into indelible experiences where the art on the walls
               and the art of hospitality become one.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
@@ -85,16 +86,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80"
-                alt="Artistry event venue exterior at Nassau County Museum of Art"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/20 -z-10" />
+            <AboutImageScroller />
           </div>
         </div>
       </section>

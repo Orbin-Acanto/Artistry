@@ -22,8 +22,8 @@ export default function SectionHeader({
       {label && (
         <p
           className={cn(
-            "section-label mb-3",
-            light ? "text-cream/60" : "text-primary"
+            "section-label mb-3 text-[11px] tracking-[0.22em] sm:text-xs sm:tracking-[0.3em]",
+            light ? "text-cream/60" : "text-primary",
           )}
         >
           {label}
@@ -31,8 +31,8 @@ export default function SectionHeader({
       )}
       <h2
         className={cn(
-          "font-display text-[56px] text-balance uppercase",
-          light ? "text-cream" : "text-charcoal"
+          "font-display text-[clamp(2.25rem,8vw,3.5rem)] text-balance break-words uppercase",
+          light ? "text-cream" : "text-primary-dark",
         )}
       >
         {title}
@@ -40,9 +40,9 @@ export default function SectionHeader({
       {description && (
         <p
           className={cn(
-            "font-body text-base leading-relaxed mt-4 max-w-2xl",
+            "font-body text-sm leading-relaxed mt-4 max-w-3xl sm:text-base",
             centered && "mx-auto",
-            light ? "text-cream/65" : "text-charcoal/65"
+            light ? "text-cream/65" : "text-charcoal/65",
           )}
         >
           {description}
