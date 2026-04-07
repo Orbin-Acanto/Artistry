@@ -5,6 +5,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import ContactForm from "@/components/ui/ContactForm";
 import VenueSticky from "@/components/VenueSticky";
 import StatsSection from "@/components/StatsSection";
+import EventHighlights from "@/components/EventHighlights";
 import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/data/site";
@@ -16,41 +17,6 @@ export const metadata: Metadata = {
     "Artistry is a premier event venue at Nassau County Museum of Art in Roslyn, NY. Host weddings, corporate events, social celebrations, and milestone occasions surrounded by stunning art and lush grounds.",
 };
 
-const eventHighlights = [
-  {
-    title: "Weddings",
-    description:
-      "Exchange vows and celebrate surrounded by art, sculpture gardens, and sweeping estate grounds. A setting unlike any other on Long Island.",
-    image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80",
-    href: "/events/weddings",
-  },
-  {
-    title: "Corporate Events",
-    description:
-      "From intimate dinners to large-scale galas and conferences — inspire your team and impress your clients in a truly unique environment.",
-    image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
-    href: "/events/corporate",
-  },
-  {
-    title: "Social Events",
-    description:
-      "Bar Mitzvahs, milestone birthdays, anniversaries and more — celebrate life's most meaningful moments with elegance and warmth.",
-    image:
-      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80",
-    href: "/events/social",
-  },
-  {
-    title: "Celebrate Life",
-    description:
-      "Honor a life well-lived with a dignified, heartfelt gathering in one of our serene and beautiful spaces.",
-    image:
-      "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=800&q=80",
-    href: "/events/celebrate-life",
-  },
-];
-
 
 export default function HomePage() {
   return (
@@ -61,48 +27,7 @@ export default function HomePage() {
 
       <StatsSection />
 
-      <section className="bg-cream py-section px-6">
-        <div className="max-w-8xl mx-auto">
-          <SectionHeader
-            label="Events"
-            title="Every Occasion, Elevated"
-            description="From intimate ceremonies to grand celebrations — Artistry provides the perfect canvas for every chapter of life."
-            centered
-            className="mb-14"
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {eventHighlights.map((event) => (
-              <Link
-                key={event.href}
-                href={event.href}
-                className="group block relative overflow-hidden"
-              >
-                <div className="relative aspect-[3/4] overflow-hidden">
-                  <Image
-                    src={event.image}
-                    alt={event.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="font-display text-2xl text-cream mb-2">
-                      {event.title}
-                    </h3>
-                    <p className="font-body text-sm text-cream/70 leading-relaxed line-clamp-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {event.description}
-                    </p>
-                    <span className="inline-block mt-3 font-body text-xs tracking-widest uppercase text-cream/50 group-hover:text-cream transition-colors">
-                      Learn More →
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <EventHighlights />
 
       <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
         <Image
