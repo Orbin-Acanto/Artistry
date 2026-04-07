@@ -50,7 +50,7 @@ export default function VideoHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="section-label text-cream/70 mb-5 text-base"
+          className="section-label text-cream/70 mb-5 text-xs sm:text-sm md:text-base"
         >
           Nassau County Museum of Art · Roslyn, NY
         </motion.p>
