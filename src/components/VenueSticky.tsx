@@ -43,21 +43,22 @@ function ImageCard({
   const exitEnd = exitStart + slot * 0.8;
   const fadeInEnd = entryStart + slot * ENTRY_FADE_PORTION;
 
+  const slideDelay = index === total - 1 ? slot * 0.4 : 0;
   const x = useTransform(
     scrollYProgress,
-    [entryStart, entryEnd],
+    [entryStart + slideDelay, entryEnd + slideDelay],
     [ENTRY_X, "0%"],
   );
-  const rotate = useTransform(scrollYProgress, [entryStart, entryEnd], [14, 0]);
+  const rotate = useTransform(scrollYProgress, [entryStart + slideDelay, entryEnd + slideDelay], [14, 0]);
 
   const opacityInputs =
     index === 0
       ? [entryStart, exitStart, exitEnd]
       : index < total - 1
         ? [entryStart, fadeInEnd, exitStart, exitEnd]
-        : [entryStart, 1];
+        : [entryStart + slideDelay, entryStart + slideDelay + slot * ENTRY_FADE_PORTION, 1];
   const opacityOutputs =
-    index === 0 ? [1, 1, 0] : index < total - 1 ? [0, 1, 1, 0] : [1, 1];
+    index === 0 ? [1, 1, 0] : index < total - 1 ? [0, 1, 1, 0] : [1, 1, 1];
 
   const opacity = useTransform(scrollYProgress, opacityInputs, opacityOutputs);
 
