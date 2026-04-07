@@ -3,7 +3,8 @@ import VideoHero from "@/components/VideoHero";
 import CutoutParallax from "@/components/CutoutParallax";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ContactForm from "@/components/ui/ContactForm";
-import AboutImageScroller from "@/components/AboutImageScroller";
+import VenueSticky from "@/components/VenueSticky";
+import StatsSection from "@/components/StatsSection";
 import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/data/site";
@@ -50,61 +51,15 @@ const eventHighlights = [
   },
 ];
 
-const venueStats = [
-  { value: "40+", label: "Acres of Estate Grounds" },
-  { value: "500+", label: "Guests Accommodated" },
-  { value: "4", label: "Distinct Event Spaces" },
-  { value: "100+", label: "Events Each Year" },
-];
 
 export default function HomePage() {
   return (
     <>
       <VideoHero />
 
-      <section className="bg-cream py-section px-6">
-        <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <SectionHeader
-              label="The Venue"
-              title="Art as the Architecture of Every Celebration"
-              description="Artistry is nestled within the breathtaking grounds of the Nassau County Museum of Art in Roslyn, New York one of Long Island's most celebrated cultural destinations. Here, every event unfolds amid world-class sculpture, manicured gardens, and a Beaux-Arts mansion that has stood for over a century."
-            />
-            <p className="prose-venue mt-5">
-              Under the stewardship of FIDI Hospitality and the culinary
-              excellence of Tardis Catering, Artistry transforms special
-              occasions into indelible experiences where the art on the walls
-              and the art of hospitality become one.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link href="/about/history" className="btn-outline-dark">
-                Our History
-              </Link>
-              <Link href="/about/location" className="btn-primary">
-                Visit Us
-              </Link>
-            </div>
-          </div>
-          <div className="relative">
-            <AboutImageScroller />
-          </div>
-        </div>
-      </section>
+      <VenueSticky />
 
-      <section className="bg-primary py-16 px-6">
-        <div className="max-w-8xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-          {venueStats.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p className="font-display text-5xl md:text-6xl text-cream">
-                {stat.value}
-              </p>
-              <p className="font-body text-xs tracking-[0.2em] uppercase text-cream/55 mt-2">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <StatsSection />
 
       <section className="bg-cream py-section px-6">
         <div className="max-w-8xl mx-auto">
