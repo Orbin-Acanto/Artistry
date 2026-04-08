@@ -14,7 +14,7 @@ const config: Config = {
           dark: "#223228",
           light: "#2d5282",
         },
-        slick: "#d4af37",
+        slick: "#d2b371",
         cream: "#F5F0E8",
         charcoal: "#1a1a1a",
         muted: "#6b7280",

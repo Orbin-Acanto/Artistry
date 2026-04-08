@@ -15,35 +15,35 @@ const timeline = [
     title: "The Frick Estate",
     description:
       "The property was originally developed as a country retreat by Henry Clay Frick, the prominent industrialist and art collector. The estate reflected the Gilded Age grandeur of Long Island's North Shore, a region known as the 'Gold Coast.'",
-    image: "https://images.unsplash.com/photo-1580479859052-6c5e49bbce49?auto=format&fit=crop&w=600&q=80",
+    image: "/media/images/about/Frick-1.jpg",
   },
   {
     period: "Early 20th Century",
     title: "The Clayton Era",
     description:
       "The mansion, known as 'Clayton,' became one of Long Island's most distinguished Beaux-Arts properties. Its sweeping lawns, formal gardens, and neoclassical architecture drew visitors from across society.",
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=80",
+    image: "/media/images/about/Entrance-portico-of-Clayton.jpg",
   },
   {
     period: "Mid 20th Century",
     title: "Nassau County Acquisition",
     description:
       "Nassau County acquired the property, preserving the estate and its grounds for public cultural use. The mansion and its surrounding landscape would go on to become one of Long Island's most treasured cultural assets.",
-    image: "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=600&q=80",
+    image: "/media/images/about/Modiliani Open TabHauserPhoto (2).jpg",
   },
   {
     period: "1989",
     title: "Nassau County Museum of Art",
     description:
       "The Nassau County Museum of Art was formally established, transforming the estate into a world-class cultural destination. The museum's galleries, sculpture park, and grounds became celebrated for both fine art and natural beauty.",
-    image: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=600&q=80",
+    image: "/media/images/about/20221106_111631.jpg",
   },
   {
     period: "Present Day",
     title: "Artistry by FIDI Hospitality",
     description:
       "Today, FIDI Hospitality operates Artistry within this extraordinary setting — bringing the same reverence for beauty and excellence to every event. Artistry carries forward a century of history, offering a canvas for the celebrations of tomorrow.",
-    image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80",
+    image: "/media/images/about/IMG_9958.jpg",
   },
 ];
 
@@ -52,9 +52,9 @@ export default function HistoryPage() {
     <>
       <PageHero
         label="About"
-        title="A Century of Beauty, Art & Celebration"
+        title="A Century of Art & Celebration"
         description="The story of the estate that became one of Long Island's most beloved event destinations."
-        imageSrc="https://images.unsplash.com/photo-1580479859052-6c5e49bbce49?auto=format&fit=crop&w=1920&q=80"
+        imageSrc="/media/images/about/hero.jpg"
         imageAlt="Nassau County Museum of Art estate historic exterior"
       />
 
@@ -70,22 +70,31 @@ export default function HistoryPage() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="bg-cream pb-section px-6">
-        <div className="max-w-8xl mx-auto space-y-20">
-          {timeline.map((item, idx) => (
+      <section>
+        {timeline.map((item, idx) => (
+          <div
+            key={item.period}
+            className={`px-6 lg:py-0 py-6 ${idx % 2 === 0 ? "bg-white" : "bg-cream"} ${idx === 0 ? "lg:pt-0" : ""} ${idx === timeline.length - 1 ? "lg:pb-0" : ""}`}
+          >
             <div
-              key={item.period}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                idx % 2 !== 0 ? "lg:direction-rtl" : ""
-              }`}
+              className={`max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center ${idx % 2 !== 0 ? "lg:direction-rtl" : ""}`}
             >
-              <div className={idx % 2 !== 0 ? "lg:order-2" : ""}>
-                <p className="section-label mb-2">{item.period}</p>
-                <h2 className="font-display text-display-md text-charcoal mb-4">{item.title}</h2>
-                <p className="prose-venue">{item.description}</p>
-              </div>
-              <div className={`relative aspect-[3/2] overflow-hidden ${idx % 2 !== 0 ? "lg:order-1" : ""}`}>
+              <article
+                className={` lg:px-10 lg:py-0 py-6 ${idx % 2 !== 0 ? "lg:order-2" : ""}`}
+              >
+                <time className="section-label mb-3 text-[11px] tracking-[0.22em] sm:text-xs sm:tracking-[0.3em] text-primary block">
+                  {item.period}
+                </time>
+                <h3 className="font-display text-[clamp(1.75rem,6vw,3.5rem)] leading-tight text-balance uppercase text-primary-dark mb-4">
+                  {item.title}
+                </h3>
+                <p className="font-body text-sm leading-relaxed sm:text-base text-charcoal/65">
+                  {item.description}
+                </p>
+              </article>
+              <div
+                className={`relative aspect-[3/2] overflow-hidden ${idx % 2 !== 0 ? "lg:order-1" : ""}`}
+              >
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -95,16 +104,17 @@ export default function HistoryPage() {
                 />
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </section>
 
-      {/* Quote */}
       <section className="bg-primary py-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <blockquote>
             <p className="font-display text-2xl md:text-3xl text-cream leading-relaxed">
-              &ldquo;This estate does not merely host events — it holds them. The history, the art, the grounds themselves become part of your story.&rdquo;
+              &ldquo;This estate does not merely host events, it holds them. The
+              history, the art, the grounds themselves become part of your
+              story.&rdquo;
             </p>
             <footer className="mt-8 font-body text-sm tracking-widest uppercase text-cream/50">
               — The Artistry Team

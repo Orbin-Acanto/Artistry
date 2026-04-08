@@ -31,7 +31,7 @@ export default function SectionHeader({
       )}
       <h2
         className={cn(
-          "font-display text-[clamp(2.25rem,8vw,3.5rem)] text-balance break-words uppercase",
+          "font-display text-[clamp(1.75rem,6vw,3.5rem)] leading-tight text-balance break-words uppercase",
           light ? "text-cream" : "text-primary-dark",
         )}
       >
