@@ -49,14 +49,22 @@ function ImageCard({
     [entryStart + slideDelay, entryEnd + slideDelay],
     [ENTRY_X, "0%"],
   );
-  const rotate = useTransform(scrollYProgress, [entryStart + slideDelay, entryEnd + slideDelay], [14, 0]);
+  const rotate = useTransform(
+    scrollYProgress,
+    [entryStart + slideDelay, entryEnd + slideDelay],
+    [14, 0],
+  );
 
   const opacityInputs =
     index === 0
       ? [entryStart, exitStart, exitEnd]
       : index < total - 1
         ? [entryStart, fadeInEnd, exitStart, exitEnd]
-        : [entryStart + slideDelay, entryStart + slideDelay + slot * ENTRY_FADE_PORTION, 1];
+        : [
+            entryStart + slideDelay,
+            entryStart + slideDelay + slot * ENTRY_FADE_PORTION,
+            1,
+          ];
   const opacityOutputs =
     index === 0 ? [1, 1, 0] : index < total - 1 ? [0, 1, 1, 0] : [1, 1, 1];
 
@@ -64,7 +72,11 @@ function ImageCard({
 
   return (
     <motion.div
-      style={{ x, rotate, opacity, zIndex: index + 1 }}
+      style={
+        index === 0
+          ? { opacity, zIndex: index + 1 }
+          : { x, rotate, opacity, zIndex: index + 1 }
+      }
       className="absolute inset-0 will-change-transform"
     >
       <div className="relative w-full h-full overflow-hidden shadow-2xl">
