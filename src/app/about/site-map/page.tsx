@@ -17,7 +17,8 @@ const spaces = [
     bestFor: ["Wedding Receptions", "Cocktail Hours", "Corporate Galas"],
     description:
       "An expansive stone terrace overlooking the museum's formal gardens. The perfect setting for al fresco receptions under open skies.",
-    image: "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=600&q=80",
   },
   {
     name: "The Garden Pavilion",
@@ -26,7 +27,8 @@ const spaces = [
     bestFor: ["Ceremonies", "Intimate Receptions", "Social Events"],
     description:
       "A romantic tented pavilion set within the sculpture garden, offering a magical blend of art, nature, and shelter.",
-    image: "https://images.unsplash.com/photo-1519671282429-b8b6e7b93966?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=600&q=80",
   },
   {
     name: "The Atrium",
@@ -35,7 +37,8 @@ const spaces = [
     bestFor: ["Weddings", "Corporate Dinners", "Awards Events"],
     description:
       "A light-filled grand interior space with soaring ceilings, gallery walls, and flexible layouts for any occasion.",
-    image: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=600&q=80",
   },
   {
     name: "The Estate Lawn",
@@ -44,7 +47,8 @@ const spaces = [
     bestFor: ["Outdoor Ceremonies", "Summer BBQs", "Large Receptions"],
     description:
       "Sweeping manicured lawns framed by century-old trees and classical sculptures. Our most expansive event space.",
-    image: "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=600&q=80",
   },
 ];
 
@@ -69,7 +73,11 @@ export default function SiteMapPage() {
               description="The Nassau County Museum of Art estate spans more than 40 acres of manicured grounds, sculpture gardens, and formal landscape — providing an unparalleled natural setting for events of every scale."
             />
             <p className="prose-venue">
-              From the sun-drenched Grand Terrace to the intimate Garden Pavilion, each space at Artistry has been thoughtfully designed to offer both beauty and functionality. Our team works closely with each client to select the ideal spaces and configuration for their event.
+              From the sun-drenched Grand Terrace to the intimate Garden
+              Pavilion, each space at Artistry has been thoughtfully designed to
+              offer both beauty and functionality. Our team works closely with
+              each client to select the ideal spaces and configuration for their
+              event.
             </p>
           </div>
 
@@ -103,7 +111,9 @@ export default function SiteMapPage() {
                   </div>
                 </div>
                 <div className="flex items-start justify-between gap-4 mb-3">
-                  <h3 className="font-display text-2xl text-charcoal">{space.name}</h3>
+                  <h3 className="font-display text-2xl text-charcoal">
+                    {space.name}
+                  </h3>
                   <span className="font-body text-xs text-charcoal/50 tracking-wide whitespace-nowrap mt-2">
                     {space.capacity}
                   </span>

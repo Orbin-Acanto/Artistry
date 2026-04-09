@@ -25,7 +25,7 @@ export default function ImageGallery({ images }: { images: GalleryImage[] }) {
             onClick={() => setLightboxIndex(idx)}
             className={cn(
               "relative overflow-hidden group focus:outline-none focus:ring-2 focus:ring-primary",
-              idx === 0 || idx === 3 ? "aspect-[4/3]" : "aspect-square"
+              "aspect-[4/3]"
             )}
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
