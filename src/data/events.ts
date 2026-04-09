@@ -286,9 +286,8 @@ export const corporateEventTypes: CorporateEventType[] = [
     slug: "summer-bbq",
     description:
       "Celebrate the season with a bespoke outdoor gathering on our estate grounds. From casual BBQ spreads to elevated al fresco dining, we create the perfect team experience.",
-    capacity: "50 – 500 guests",
-    image:
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+    capacity: "50 – 300 guests",
+    image: "/media/images/events/corporate/bbq.png",
     highlights: [
       "Custom BBQ stations",
       "Lawn games & activities",
@@ -302,8 +301,7 @@ export const corporateEventTypes: CorporateEventType[] = [
     description:
       "Host a refined client dinner or executive gathering in one of our intimate, beautifully appointed dining spaces, with menus curated by Tardis Catering.",
     capacity: "10 – 150 guests",
-    image:
-      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/corporate/dinner.jpg",
     highlights: [
       "Private dining rooms",
       "Custom prix-fixe menus",
@@ -317,8 +315,7 @@ export const corporateEventTypes: CorporateEventType[] = [
     description:
       "State-of-the-art meeting spaces within an inspiring artistic environment — the ideal setting to drive creativity and focus for your team.",
     capacity: "10 – 200 guests",
-    image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/corporate/meeting.jpg",
     highlights: [
       "A/V & presentation tech",
       "Breakout room options",
@@ -332,8 +329,7 @@ export const corporateEventTypes: CorporateEventType[] = [
     description:
       "Sophisticated cocktail receptions among world-class art — perfect for client entertaining, product launches, and networking events.",
     capacity: "50 – 400 guests",
-    image:
-      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/corporate/cocktail.jpg",
     highlights: [
       "Passed hors d'oeuvres",
       "Custom bar program",
@@ -347,8 +343,7 @@ export const corporateEventTypes: CorporateEventType[] = [
     description:
       "A grand, memorable stage for your company's most important moments — from award ceremonies to annual galas and product reveals.",
     capacity: "100 – 500 guests",
-    image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/corporate/awards.jpg",
     highlights: [
       "Stage & podium setup",
       "Full A/V & lighting",
@@ -360,25 +355,49 @@ export const corporateEventTypes: CorporateEventType[] = [
 
 export const corporateGallery: GalleryImage[] = [
   {
-    src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80",
-    alt: "Corporate dinner at Artistry",
-    width: 1200,
-    height: 800,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80",
+    src: "/media/images/events/corporate/1.jpg",
     alt: "Cocktail reception on terrace",
     width: 800,
     height: 1000,
   },
   {
-    src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80",
+    src: "/media/images/events/corporate/2.jpg",
+    alt: "Corporate dinner at Artistry",
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: "/media/images/events/corporate/3.jpg",
     alt: "Awards ceremony night",
     width: 1200,
     height: 800,
   },
   {
-    src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+    src: "/media/images/events/corporate/4.jpg",
+    alt: "Conference meeting room setup",
+    width: 800,
+    height: 800,
+  },
+  {
+    src: "/media/images/events/corporate/5.jpg",
+    alt: "Conference meeting room setup",
+    width: 800,
+    height: 800,
+  },
+  {
+    src: "/media/images/events/corporate/6.jpg",
+    alt: "Conference meeting room setup",
+    width: 800,
+    height: 800,
+  },
+  {
+    src: "/media/images/events/corporate/7.jpg",
+    alt: "Conference meeting room setup",
+    width: 800,
+    height: 800,
+  },
+  {
+    src: "/media/images/events/corporate/8.jpg",
     alt: "Conference meeting room setup",
     width: 800,
     height: 800,

@@ -33,7 +33,7 @@ export default function PageHero({
     <section
       ref={ref}
       className={cn(
-        "relative h-[100vh] min-h-[380px] overflow-hidden",
+        "relative min-h-[55vh] sm:min-h-[60vh] md:aspect-video md:min-h-[420px] overflow-hidden",
         className,
       )}
     >
@@ -48,13 +48,13 @@ export default function PageHero({
         />
       </motion.div>
       <div className="absolute inset-0 bg-charcoal/55" />
-      <div className="absolute inset-0 flex flex-col items-center justify-center pt-20 px-6 text-center z-10">
+      <div className="absolute inset-0 flex flex-col items-center justify-center pt-16 sm:pt-20 px-5 sm:px-8 text-center z-10">
         {label && (
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="section-label text-cream/70 mb-5 text-xs sm:text-sm md:text-base"
+            className="section-label text-cream/70 mb-3 sm:mb-5 text-xs sm:text-sm"
           >
             {label}
           </motion.p>
@@ -63,7 +63,7 @@ export default function PageHero({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="font-display text-display-lg uppercase text-cream text-balance max-w-7xl"
+          className="font-display text-display-lg uppercase text-cream text-balance max-w-xs sm:max-w-2xl md:max-w-4xl lg:max-w-7xl"
         >
           {title}
         </motion.h1>
@@ -72,7 +72,7 @@ export default function PageHero({
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="font-body text-cream/70 text-base md:text-lg max-w-xl mt-6 leading-relaxed"
+            className="font-body text-cream/70 text-sm sm:text-base md:text-lg max-w-xs sm:max-w-sm md:max-w-xl mt-4 sm:mt-6 leading-relaxed"
           >
             {description}
           </motion.p>

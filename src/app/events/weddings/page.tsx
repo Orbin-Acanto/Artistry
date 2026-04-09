@@ -36,8 +36,8 @@ export default function WeddingsPage() {
         imageAlt="Wedding ceremony at Artistry Nassau County Museum of Art"
       />
 
-      <section className="bg-cream py-section px-6">
-        <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="bg-cream py-12 md:py-section px-6">
+        <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
             <SectionHeader
               label="Wedding Ceremonies & Receptions"
@@ -60,7 +60,7 @@ export default function WeddingsPage() {
               </Link>
             </div>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden">
+          <div className="relative aspect-[4/3] sm:aspect-[4/4] lg:aspect-[4/5] overflow-hidden">
             <Image
               src="/media/images/events/wedding/flower.jpg"
               alt="Elegant wedding reception at Artistry"
@@ -73,16 +73,16 @@ export default function WeddingsPage() {
       </section>
 
       {/* Ceremony Locations */}
-      <section className="bg-primary-dark py-section px-6">
+      <section className="bg-primary-dark py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Ceremony & Reception Spaces"
             title="Eight Distinct Settings for Your Day"
             centered
             light
-            className="mb-14"
+            className="mb-10 md:mb-14"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
             {weddingLocations.map((loc) => (
               <div key={loc.name} className="group">
                 <div className="relative aspect-[4/3] overflow-hidden mb-5">
@@ -110,20 +110,20 @@ export default function WeddingsPage() {
       </section>
 
       {/* Packages */}
-      <section className="bg-cream py-section px-6">
+      <section className="bg-cream py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Wedding Packages"
             title="Thoughtfully Crafted for Your Celebration"
             description="Our packages provide a foundation of excellence — each customizable to reflect your unique vision. Pricing available upon inquiry."
             centered
-            className="mb-14"
+            className="mb-10 md:mb-14"
           />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {weddingPackages.map((pkg) => (
               <div
                 key={pkg.name}
-                className="border border-primary/20 p-8 hover:border-primary/60 transition-colors"
+                className="border border-primary/20 p-6 md:p-8 hover:border-primary/60 transition-colors"
               >
                 <h3 className="font-display text-2xl text-charcoal mb-3">
                   {pkg.name}
@@ -154,15 +154,15 @@ export default function WeddingsPage() {
       </section>
 
       {/* Enhancements */}
-      <section className="bg-primary/10 py-section px-6">
+      <section className="bg-primary/10 py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Wedding Enhancements"
             title="Elevate Every Detail"
             description="Personalize your wedding with our curated collection of add-on enhancements."
-            className="mb-12"
+            className="mb-8 md:mb-12"
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {weddingEnhancements.map((enh) => (
               <div key={enh.name} className="bg-cream p-6">
                 <h4 className="font-display text-lg text-charcoal mb-2">
@@ -188,25 +188,25 @@ export default function WeddingsPage() {
       />
 
       {/* Gallery */}
-      <section className="bg-cream py-section px-6">
+      <section className="bg-cream py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Wedding Gallery"
             title="Celebrations in Full Bloom"
             centered
-            className="mb-10"
+            className="mb-8 md:mb-10"
           />
           <ImageGallery images={weddingGallery} />
         </div>
       </section>
 
       {/* Brochure CTA */}
-      <section className="bg-primary py-16 px-6 text-center">
+      <section className="bg-primary py-12 md:py-16 px-6 text-center">
         <p className="section-label text-cream/50 mb-3">Download</p>
-        <h2 className="font-display text-display-md text-cream mb-6">
+        <h2 className="font-display text-display-md text-cream mb-4 md:mb-6 uppercase">
           Wedding Brochure
         </h2>
-        <p className="font-body text-cream/65 text-sm max-w-md mx-auto mb-8">
+        <p className="font-body text-cream/65 text-sm max-w-md mx-auto mb-6 md:mb-8">
           Download our complete wedding brochure for full details on spaces,
           packages, and the Artistry experience.
         </p>

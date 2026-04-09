@@ -49,12 +49,12 @@ export default function CutoutParallax({ text, subtext, ctaLabel, ctaHref, image
 
       {/* Centered text */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center gap-5 px-6 text-center">
-        <div className="flex items-center gap-5">
-          <div className="h-px w-10 bg-cream/35" />
+        <div className="flex items-center gap-4">
+          <div className="h-px w-6 sm:w-10 bg-cream/35 shrink-0" />
           <p className="font-display text-display-md text-cream uppercase leading-none tracking-tight text-balance">
             {text}
           </p>
-          <div className="h-px w-10 bg-cream/35" />
+          <div className="h-px w-6 sm:w-10 bg-cream/35 shrink-0" />
         </div>
         {subtext && (
           <p className="font-body text-cream/70 text-sm md:text-base leading-relaxed max-w-md">
