@@ -31,16 +31,14 @@ export const weddingLocations: EventLocation[] = [
     description:
       "The glass-walled Pavilion offers panoramic views of the surrounding lawns and sculptures and direct access to the Mansion's galleries. Versatility reigns supreme in the Tented Pavilion, making it the ideal venue for a myriad of events, from corporate gatherings to weddings and milestone celebrations.",
     capacity: "Up to 300 guests",
-    image:
-      "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/wedding/15.jpeg",
   },
   {
     name: "The Formal Garden",
     description:
       "The historical and enchanting Formal Gardens offer a quintessential English garden setting that serves as the perfect picturesque backdrop for a myriad of events. From sophisticated cocktail receptions and fairy-tale wedding ceremonies to corporate retreats and captivating photoshoots.",
     capacity: "Up to 150 guests",
-    image:
-      "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/wedding/formal.jpg",
   },
   {
     name: "Great Lawn",
@@ -71,24 +69,21 @@ export const weddingLocations: EventLocation[] = [
     description:
       "Experience open-air cocktails or a delightful dinner on the East Terrace, a truly captivating space that offers panoramic views of the serene pond and glimpses of the stunning sculpture collection.",
     capacity: "Up to 500 guests",
-    image:
-      "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/wedding/EastTerrace1.jpg",
   },
   {
     name: "North Terrace",
     description:
       "Capture the essence of beauty and artistic grandeur on the North Terrace, where you'll be treated to a spectacular view of some of the most unique and breathtaking art sculptures. This exceptional vantage point not only showcases wonderful artwork but also provides a one-of-a-kind historical backdrop - the prestigious Frick Estate.",
     capacity: "Up to 500 guests",
-    image:
-      "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/wedding/NorthTerrace1.jpg",
   },
   {
     name: "Gazebo",
     description:
       "The open air Gazebo stands as the perfect location for photographs, a sophisticated cocktail party or an intimate sit-down dinner while guests enjoy the fresh air and beautiful scenery.",
     capacity: "Up to 500 guests",
-    image:
-      "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/wedding/gazebo.jpg",
   },
 ];
 
