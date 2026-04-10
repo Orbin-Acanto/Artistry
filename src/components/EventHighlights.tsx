@@ -11,32 +11,28 @@ const eventHighlights = [
     title: "Weddings",
     description:
       "Exchange vows and celebrate surrounded by art, sculpture gardens, and sweeping estate grounds. A setting unlike any other on Long Island.",
-    image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/home/wedding.jpeg",
     href: "/events/weddings",
   },
   {
     title: "Corporate Events",
     description:
-      "From intimate dinners to large-scale galas and conferences — inspire your team and impress your clients in a truly unique environment.",
-    image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
+      "From intimate dinners to large-scale galas and conferences, inspire your team and impress your clients in a truly unique environment.",
+    image: "/media/images/home/corporate.jpg",
     href: "/events/corporate",
   },
   {
     title: "Social Events",
     description:
-      "Bar Mitzvahs, milestone birthdays, anniversaries and more — celebrate life's most meaningful moments with elegance and warmth.",
-    image:
-      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80",
+      "Bar Mitzvahs, milestone birthdays, anniversaries and more, celebrate life's most meaningful moments with elegance and warmth.",
+    image: "/media/images/home/social.jpg",
     href: "/events/social",
   },
   {
     title: "Celebrate Life",
     description:
       "Honor a life well-lived with a dignified, heartfelt gathering in one of our serene and beautiful spaces.",
-    image:
-      "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/home/celebrate.jpg",
     href: "/events/celebrate-life",
   },
 ];

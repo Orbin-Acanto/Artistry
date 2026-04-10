@@ -4,7 +4,6 @@ import CutoutParallax from "@/components/CutoutParallax";
 import VenueSticky from "@/components/VenueSticky";
 import StatsSection from "@/components/StatsSection";
 import EventHighlights from "@/components/EventHighlights";
-import Image from "next/image";
 import TardisSection from "@/components/TardisSection";
 import ContactSection from "@/components/ContactSection";
 
@@ -25,24 +24,23 @@ export default function HomePage() {
 
       <EventHighlights />
 
-      <section className="relative h-[50vh] min-h-[400px] overflow-hidden">
-        <Image
-          src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80"
-          alt="Artistry event venue grounds and gardens"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-charcoal/40" />
-        <div className="absolute inset-0 flex items-center justify-center text-center px-6">
-          <div>
-            <p className="section-label text-cream/60 mb-4">
-              Long Island&apos;s Premier
-            </p>
-            <h2 className="font-display text-display-lg text-cream max-w-2xl text-balance">
-              A Stage Set in Nature, Framed by Art
-            </h2>
-          </div>
+      <section
+        className="relative flex aspect-[4/1] min-h-[400px] items-center justify-center text-center px-6 overflow-hidden"
+        style={{
+          backgroundImage: "url('/media/images/home/divider.png')",
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 pointer-events-none bg-charcoal/50" />
+        <div className="relative z-10">
+          <p className="section-label text-cream/60 mb-4">
+            Long Island&apos;s Premier
+          </p>
+          <h2 className="font-display text-display-lg text-cream max-w-2xl text-balance">
+            A Stage Set in Nature, Framed by Art
+          </h2>
         </div>
       </section>
 
