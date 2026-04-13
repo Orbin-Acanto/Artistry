@@ -115,14 +115,23 @@ export default function VenueSticky() {
           <div>
             <SectionHeader
               label="The Venue"
-              title="Art as the Architecture of Every Celebration"
-              description="Artistry is nestled within the breathtaking grounds of the Nassau County Museum of Art in Roslyn, New York — one of Long Island's most celebrated cultural destinations. Here, every event unfolds amid world-class sculpture, manicured gardens, and a Beaux-Arts mansion that has stood for over a century."
+              title="Our Venue: Artistry at the Nassau County Museum of Art"
+              description="Located on the prestigious Gold Coast of Long Island’s North Shore, Artistry at the Nassau County Museum of Art offers a truly exceptional setting for both corporate and private events. Situated in Roslyn, New York, this one of a kind venue is surrounded by expansive landscaped gardens, renowned sculpture installations, and the timeless elegance of a historic Beaux Arts mansion."
             />
             <p className="prose-venue mt-5">
-              Under the stewardship of FIDI Hospitality and the culinary
-              excellence of Tardis Catering, Artistry transforms special
-              occasions into indelible experiences where the art on the walls
-              and the art of hospitality become one.
+              Artistry provides a distinctive backdrop where culture, history,
+              and natural beauty converge, creating an inspiring environment for
+              meetings, conferences, celebrations, and social gatherings alike.
+              Whether hosting a corporate function or a private event, guests
+              are immersed in a setting that is both sophisticated and
+              memorable.
+            </p>
+            <p className="prose-venue mt-5">
+              Under the direction of FIDI Hospitality, and complemented by the
+              culinary expertise of Tardis Catering, Artistry delivers a
+              seamless blend of elevated service and exceptional cuisine. Every
+              event is thoughtfully curated, ensuring that the artistry of the
+              surroundings is matched by the artistry of the experience.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/about/history" className="btn-outline-dark">
