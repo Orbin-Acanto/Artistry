@@ -47,8 +47,8 @@ export default function EventHighlights() {
         <motion.div initial="hidden" animate={isInView ? "visible" : "hidden"}>
           <SectionHeader
             label="Events"
-            title="Every Occasion, Elevated"
-            description="From intimate ceremonies to grand celebrations. Artistry provides the perfect canvas for every chapter of life."
+            title="Every moment, redefined in luxury."
+            description="From intimate gatherings to grand celebrations, Artistry sets the stage for life’s most extraordinary chapters."
             centered
             className="mb-14"
           />
