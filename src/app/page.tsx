@@ -36,7 +36,7 @@ export default function HomePage() {
         <div className="absolute inset-0 pointer-events-none bg-charcoal/50" />
         <div className="relative z-10">
           <p className="section-label text-cream/60 mb-4">
-            North Shore Long Island's premier destination
+            North Shore Long Island&apos;s premier destination
           </p>
           <h2 className="font-display text-display-lg text-cream max-w-2xl text-balance">
             Where nature sets the stage and art frames the experience.
