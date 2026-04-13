@@ -4,7 +4,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/data/site";
-import MenuBrochureEmbed from "@/components/MenuBrochureEmbed";
+import MenuBrochureClient from "@/components/MenuBrochureClient";
 
 export const metadata: Metadata = {
   title: "Tardis Catering | Culinary Excellence at Artistry",
@@ -67,7 +67,7 @@ export default function TardisCateringPage() {
       </section>
 
       {/* Menu Highlights — embedded PDF brochure */}
-      <section className="bg-primary-dark py-section px-6">
+      <section className="bg-primary py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Sample Menu"
@@ -77,7 +77,7 @@ export default function TardisCateringPage() {
             light
             className="mb-10"
           />
-          <MenuBrochureEmbed />
+          <MenuBrochureClient />
           <p className="font-body text-xs text-cream/35 text-center mt-8 tracking-wide">
             Full menus, custom options, and dietary accommodations available upon consultation.
           </p>
