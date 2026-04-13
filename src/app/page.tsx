@@ -36,10 +36,10 @@ export default function HomePage() {
         <div className="absolute inset-0 pointer-events-none bg-charcoal/50" />
         <div className="relative z-10">
           <p className="section-label text-cream/60 mb-4">
-            Long Island&apos;s Premier
+            North Shore Long Island's premier destination
           </p>
           <h2 className="font-display text-display-lg text-cream max-w-2xl text-balance">
-            A Stage Set in Nature, Framed by Art
+            Where nature sets the stage and art frames the experience.
           </h2>
         </div>
       </section>
@@ -48,10 +48,10 @@ export default function HomePage() {
 
       <CutoutParallax
         text="Your Event Awaits"
-        subtext="Begin planning the celebration of a lifetime. Our event team is ready to bring your vision to life at Artistry."
+        subtext="Step into a world of possibility and begin planning an unforgettable experience. At Artistry, our dedicated event team is poised to transform your vision into a seamless, extraordinary celebration, crafted with precision, style, and distinction."
         ctaLabel="Start Planning"
         ctaHref="/#contact"
-        imageSrc="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1920&q=80"
+        imageSrc="/media/images/home/frame.png"
         imageAlt="Artistry venue at dusk"
       />
 

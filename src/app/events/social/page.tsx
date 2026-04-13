@@ -26,7 +26,7 @@ export default function SocialEventsPage() {
         label="Social Events"
         title="Life's Most Meaningful Milestones Deserve an Extraordinary Setting"
         description="From sacred celebrations to joyful gatherings — Artistry honors every milestone with warmth, elegance, and exceptional hospitality."
-        imageSrc="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1920&q=80"
+        imageSrc="/media/images/events/Social%20Events/52161352704_f08a6f394d_h-edit_02.jpeg"
         imageAlt="Social event celebration at Artistry"
       />
 

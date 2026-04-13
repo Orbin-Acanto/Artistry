@@ -416,7 +416,7 @@ export const socialEventTypes: SocialEventType[] = [
     description:
       "Celebrate this sacred milestone in a venue that matches the grandeur of the occasion. Artistry provides the perfect backdrop for a joyful, deeply meaningful celebration.",
     image:
-      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80",
+      "/media/images/events/Social%20Events/IMG_2316.jpg",
     details:
       "Our team works closely with families to craft a deeply personal experience — from the ceremony to the reception, with custom décor, kosher-friendly menu options, and entertainment coordination.",
   },
@@ -426,7 +426,7 @@ export const socialEventTypes: SocialEventType[] = [
     description:
       "Mark a child's spiritual milestone with an elegant celebration surrounded by art, nature, and exceptional hospitality.",
     image:
-      "https://images.unsplash.com/photo-1519671282429-b8b6e7b93966?auto=format&fit=crop&w=800&q=80",
+      "/media/images/events/Social%20Events/H-22.jpg",
     details:
       "Intimate and refined, our communion packages include beautiful outdoor spaces, personalized menus, and dedicated event staffing.",
   },
@@ -436,7 +436,7 @@ export const socialEventTypes: SocialEventType[] = [
     description:
       "Birthdays, anniversaries, retirements, and beyond — every milestone deserves a setting as extraordinary as the moment itself.",
     image:
-      "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=800&q=80",
+      "/media/images/events/Social%20Events/20230510_172459.jpg",
     details:
       "From intimate gatherings to grand celebrations, Artistry offers flexible spaces and fully customizable experiences for every kind of milestone.",
   },
@@ -470,28 +470,40 @@ export const socialPackages: EventPackage[] = [
 
 export const socialGallery: GalleryImage[] = [
   {
-    src: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1200&q=80",
-    alt: "Milestone celebration at Artistry",
-    width: 1200,
-    height: 800,
+    src: "/media/images/events/Social%20Events/H-23.jpg",
+    alt: "Elegant reception setup at Artistry",
+    width: 5472,
+    height: 3648,
   },
   {
-    src: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80",
-    alt: "Bar Mitzvah reception",
-    width: 800,
-    height: 1000,
+    src: "/media/images/events/Social%20Events/H-25.jpg",
+    alt: "Floral tablescape with gold chargers",
+    width: 3865,
+    height: 5797,
   },
   {
-    src: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=80",
-    alt: "Communion celebration",
-    width: 1200,
-    height: 800,
+    src: "/media/images/events/Social%20Events/20230908_152912-edit.jpg",
+    alt: "Tented celebration with floral centerpieces at Artistry",
+    width: 4000,
+    height: 3000,
   },
   {
-    src: "https://images.unsplash.com/photo-1519671282429-b8b6e7b93966?auto=format&fit=crop&w=800&q=80",
-    alt: "Anniversary dinner",
-    width: 800,
-    height: 800,
+    src: "/media/images/events/Social%20Events/IMG_7501.jpg",
+    alt: "Blue and white reception table setting",
+    width: 3024,
+    height: 4032,
+  },
+  {
+    src: "/media/images/events/Social%20Events/H-24.jpg",
+    alt: "Suspended floral chandelier over fountain at Artistry",
+    width: 3478,
+    height: 5217,
+  },
+  {
+    src: "/media/images/events/Social%20Events/IMG_6127.jpg",
+    alt: "White and gold banquet hall setup at Artistry",
+    width: 4032,
+    height: 3024,
   },
 ];
 

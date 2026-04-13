@@ -14,7 +14,14 @@ type Props = {
   imageAlt: string;
 };
 
-export default function CutoutParallax({ text, subtext, ctaLabel, ctaHref, imageSrc, imageAlt }: Props) {
+export default function CutoutParallax({
+  text,
+  subtext,
+  ctaLabel,
+  ctaHref,
+  imageSrc,
+  imageAlt,
+}: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -27,10 +34,9 @@ export default function CutoutParallax({ text, subtext, ctaLabel, ctaHref, image
   return (
     <section
       ref={ref}
-      className="relative h-[45vh] min-h-[300px] max-h-[420px] overflow-hidden"
+      className="relative h-[55vh] min-h-[300px] max-h-[580px] overflow-hidden"
       aria-label={text}
     >
-      {/* Parallax image — taller than section so it has room to travel */}
       <motion.div
         style={{ y: imageY }}
         className="absolute inset-x-0 -top-[160px] bottom-0"
@@ -39,15 +45,13 @@ export default function CutoutParallax({ text, subtext, ctaLabel, ctaHref, image
           src={imageSrc}
           alt={imageAlt}
           fill
-          className="object-cover"
+          className="object-cover object-center scale-x-[120%]"
           sizes="100vw"
         />
       </motion.div>
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-charcoal/55" />
 
-      {/* Centered text */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center gap-5 px-6 text-center">
         <div className="flex items-center gap-4">
           <div className="h-px w-6 sm:w-10 bg-cream/35 shrink-0" />
@@ -57,7 +61,7 @@ export default function CutoutParallax({ text, subtext, ctaLabel, ctaHref, image
           <div className="h-px w-6 sm:w-10 bg-cream/35 shrink-0" />
         </div>
         {subtext && (
-          <p className="font-body text-cream/70 text-sm md:text-base leading-relaxed max-w-md">
+          <p className="font-body text-cream/70 text-sm md:text-base leading-relaxed max-w-lg">
             {subtext}
           </p>
         )}
