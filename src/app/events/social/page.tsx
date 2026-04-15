@@ -9,7 +9,7 @@ import { socialEventTypes, socialPackages, socialGallery } from "@/data/events";
 export const metadata: Metadata = {
   title: "Social Events | Bar Mitzvahs, Communions & Milestone Celebrations",
   description:
-    "Host Bar & Bat Mitzvahs, Communions, Confirmations, and milestone celebrations at Artistry in Roslyn, NY — a premier social event venue at Nassau County Museum of Art on Long Island.",
+    "Host Bar & Bat Mitzvahs, Communions, Confirmations, and milestone celebrations at Artistry in Roslyn, NY — a social event venue at Nassau County Museum of Art on Long Island.",
   keywords: [
     "Bar Mitzvah venue Long Island",
     "Bat Mitzvah venue NY",
@@ -24,33 +24,34 @@ export default function SocialEventsPage() {
     <>
       <PageHero
         label="Social Events"
-        title="Life's Most Meaningful Milestones Deserve an Extraordinary Setting"
-        description="From sacred celebrations to joyful gatherings — Artistry honors every milestone with warmth, elegance, and exceptional hospitality."
+        title="Life's Most Meaningful Moments Deserve a Setting to Match"
+        description="From sacred milestones to joyful gatherings, Artistry provides the space and the hospitality to do them justice."
         imageSrc="/media/images/events/Social%20Events/52161352704_f08a6f394d_h-edit_02.jpeg"
         imageAlt="Social event celebration at Artistry"
       />
 
-      {/* Intro */}
-      <section className="bg-cream py-section px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <SectionHeader
-            label="Social Events"
-            title="Celebrate What Matters Most"
-            description="At Artistry, we understand that social events are deeply personal. Whether you are marking a religious milestone, a decade birthday, or a family anniversary, our team brings the same care and creativity to every celebration."
-            centered
-          />
-        </div>
-      </section>
-
       {/* Event Types */}
-      <section className="bg-cream pb-section px-6">
-        <div className="max-w-8xl mx-auto space-y-16">
+      <section className="bg-primary-dark py-12 md:py-section px-6">
+        <div className="max-w-8xl mx-auto">
+          <div className="max-w-3xl mb-12 md:mb-16">
+            <SectionHeader
+              label="Social Events"
+              title="Every Celebration Is Personal"
+              description="Whether you are marking a religious milestone, a round birthday, or a family anniversary, our team gives each event the same care and attention. No two gatherings at Artistry are the same."
+              light
+            />
+          </div>
+          <div className="space-y-16 md:space-y-24">
           {socialEventTypes.map((type, idx) => (
             <div
               key={type.slug}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center`}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center"
             >
-              <div className={`relative aspect-[4/3] overflow-hidden ${idx % 2 !== 0 ? "lg:order-2" : ""}`}>
+              <div
+                className={`relative aspect-[4/3] overflow-hidden ${
+                  idx % 2 !== 0 ? "lg:order-2" : ""
+                }`}
+              >
                 <Image
                   src={type.image}
                   alt={type.name}
@@ -60,43 +61,78 @@ export default function SocialEventsPage() {
                 />
               </div>
               <div className={idx % 2 !== 0 ? "lg:order-1" : ""}>
-                <h2 className="font-display text-display-md text-charcoal mb-4">{type.name}</h2>
-                <p className="prose-venue mb-4">{type.description}</p>
-                <p className="font-body text-sm text-charcoal/60 leading-relaxed">{type.details}</p>
-                <Link href="/#contact" className="btn-primary mt-8 inline-flex">
+                <h2 className="font-display text-display-md text-cream mb-4">
+                  {type.name}
+                </h2>
+                <p className="font-body text-base leading-relaxed text-cream/70 max-w-3xl mb-4">{type.description}</p>
+                <p className="font-body text-sm text-cream/55 leading-relaxed">
+                  {type.details}
+                </p>
+                <Link href="/#contact" className="btn-outline mt-8 inline-flex">
                   Inquire About {type.name}
                 </Link>
               </div>
             </div>
           ))}
+          </div>
         </div>
       </section>
 
       {/* Packages */}
-      <section className="bg-primary-dark py-section px-6">
+      <section className="bg-cream py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
-            label="Social Event Packages"
-            title="Designed Around Your Celebration"
-            description="Our social event packages are a starting point — each fully customizable to match the scale, style, and spirit of your occasion."
+            label="Event Packages"
+            title="Pick a Starting Point"
+            description="All packages are priced per person and can be adjusted to fit your guest count and preferences. Pricing is available upon request."
             centered
-            light
-            className="mb-12"
+            className="mb-10 md:mb-14"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {socialPackages.map((pkg) => (
-              <div key={pkg.name} className="border border-cream/15 p-8">
-                <h3 className="font-display text-2xl text-cream mb-3">{pkg.name}</h3>
-                <p className="font-body text-sm text-cream/60 leading-relaxed mb-6">{pkg.description}</p>
-                <ul className="space-y-2 mb-8">
-                  {pkg.includes.map((item) => (
-                    <li key={item} className="flex gap-2 items-start">
-                      <span className="text-cream/40 mt-1 shrink-0">—</span>
-                      <span className="font-body text-sm text-cream/70">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/#contact" className="btn-outline w-full text-center">
+              <div
+                key={pkg.name}
+                className="border border-primary/20 p-6 md:p-8 hover:border-primary/50 transition-colors flex flex-col"
+              >
+                {pkg.subtitle && (
+                  <p className="section-label text-primary/60 mb-2">{pkg.subtitle}</p>
+                )}
+                <h3 className="font-display text-2xl text-charcoal mb-1">{pkg.name}</h3>
+                {pkg.minGuests && (
+                  <p className="font-body text-xs tracking-widest uppercase text-charcoal/35 mb-4">
+                    {pkg.minGuests}
+                  </p>
+                )}
+                <p className="font-body text-sm text-charcoal/65 leading-relaxed mb-6">
+                  {pkg.description}
+                </p>
+                <div className="flex-1 mb-8 space-y-3">
+                  {pkg.inherits ? (
+                    <>
+                      <p className="font-body text-xs uppercase tracking-widest text-charcoal/40">
+                        All of {pkg.inherits}, and adds:
+                      </p>
+                      <ul className="space-y-2.5">
+                        {pkg.adds!.map((item) => (
+                          <li key={item} className="flex gap-3 items-start">
+                            <span className="w-1 h-1 rounded-full bg-primary shrink-0 mt-2" />
+                            <span className="font-body text-sm text-charcoal/75">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : (
+                    <ul className="space-y-2.5">
+                      {pkg.includes.map((item) => (
+                        <li key={item} className="flex gap-3 items-start">
+                          <span className="w-1 h-1 rounded-full bg-primary shrink-0 mt-2" />
+                          <span className="font-body text-sm text-charcoal/75">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+                <Link href="/#contact" className="btn-primary w-full text-center mt-auto">
                   Inquire
                 </Link>
               </div>
@@ -106,11 +142,11 @@ export default function SocialEventsPage() {
       </section>
 
       {/* Gallery */}
-      <section className="bg-cream py-section px-6">
+      <section className="bg-primary/10 py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Social Events Gallery"
-            title="Moments Worth Celebrating"
+            title="A Few of Our Favorite Occasions"
             centered
             className="mb-10"
           />
@@ -118,14 +154,19 @@ export default function SocialEventsPage() {
         </div>
       </section>
 
-      {/* Brochure */}
-      <section className="bg-primary py-16 px-6 text-center">
-        <p className="section-label text-cream/50 mb-3">Download</p>
-        <h2 className="font-display text-display-md text-cream mb-6">Social Events Brochure</h2>
-        <p className="font-body text-cream/65 text-sm max-w-md mx-auto mb-8">
-          Download our social events brochure for full information on spaces, packages, and the Artistry experience.
-        </p>
-        <a href="#" className="btn-outline">Download Brochure (PDF)</a>
+      {/* Brochure CTA */}
+      <section className="bg-primary py-12 md:py-16 px-6 text-center">
+        <SectionHeader
+          label="Take It With You"
+          title="Our Social Events Brochure"
+          description="A full overview of our spaces, packages, and what to expect when you host your celebration at Artistry."
+          centered
+          light
+          className="mb-8"
+        />
+        <Link href="/brochures/social" className="btn-outline">
+          View Brochure
+        </Link>
       </section>
     </>
   );

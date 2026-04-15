@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     "Tardis Catering is the exclusive culinary partner of Artistry at Nassau County Museum of Art. Bespoke menus, world-class chefs, and exceptional service for weddings and events in Roslyn, NY.",
 };
 
-
 export default function TardisCateringPage() {
   return (
     <>
@@ -34,13 +33,21 @@ export default function TardisCateringPage() {
               description="Tardis Catering was founded on a single belief: that great food is not just sustenance — it is memory. A taste that recalls a moment. A dish that defines a celebration."
             />
             <p className="prose-venue mt-5">
-              As the exclusive catering partner of Artistry, Tardis brings together an award-winning culinary team trained in the finest kitchens of New York and Europe. Every menu is developed in close collaboration with the client — seasonal ingredients, artisan techniques, and a deep respect for dietary needs and cultural traditions.
+              As the exclusive catering partner of Artistry, Tardis brings
+              together an award-winning culinary team trained in the finest
+              kitchens of New York and Europe. Every menu is developed in close
+              collaboration with the client — seasonal ingredients, artisan
+              techniques, and a deep respect for dietary needs and cultural
+              traditions.
             </p>
             <p className="prose-venue mt-4">
-              Under {SITE.catering.name}, the dining experience is never an afterthought. It is the centerpiece.
+              Under {SITE.catering.name}, the dining experience is never an
+              afterthought. It is the centerpiece.
             </p>
             <div className="mt-8">
-              <Link href="/#contact" className="btn-primary">Plan Your Menu</Link>
+              <Link href="/#contact" className="btn-primary">
+                Plan Your Menu
+              </Link>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -66,7 +73,6 @@ export default function TardisCateringPage() {
         </div>
       </section>
 
-      {/* Menu Highlights — embedded PDF brochure */}
       <section className="bg-primary py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
@@ -79,7 +85,8 @@ export default function TardisCateringPage() {
           />
           <MenuBrochureClient />
           <p className="font-body text-xs text-cream/35 text-center mt-8 tracking-wide">
-            Full menus, custom options, and dietary accommodations available upon consultation.
+            Full menus, custom options, and dietary accommodations available
+            upon consultation.
           </p>
         </div>
       </section>
@@ -87,17 +94,43 @@ export default function TardisCateringPage() {
       {/* Gallery */}
       <section className="bg-cream py-section px-6">
         <div className="max-w-8xl mx-auto">
-          <SectionHeader label="Gallery" title="Where Food Becomes Art" centered className="mb-10" />
+          <SectionHeader
+            label="Gallery"
+            title="Where Food Becomes Art"
+            centered
+            className="mb-10"
+          />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { src: "/media/images/Tardis%20Catering/IMG_2868.jpg", alt: "Tardis Catering black and gold banquet table" },
-              { src: "/media/images/Tardis%20Catering/20231005_111742.jpg", alt: "Tardis Catering plated grain bowl with chickpeas" },
-              { src: "/media/images/Tardis%20Catering/IMG_1928.jpg", alt: "Tardis Catering buffet spread with pasta and salads" },
-              { src: "/media/images/Tardis%20Catering/20231005_111004.jpg", alt: "Tardis Catering table setting with plated salads" },
-              { src: "/media/images/Tardis%20Catering/20231130_183207.jpg", alt: "Tardis Catering skewer station at winter event" },
-              { src: "/media/images/Tardis%20Catering/IMG_2866.jpg", alt: "Tardis Catering shrimp salad table under tent" },
+              {
+                src: "/media/images/Tardis%20Catering/IMG_2868.jpg",
+                alt: "Tardis Catering black and gold banquet table",
+              },
+              {
+                src: "/media/images/Tardis%20Catering/20231005_111742.jpg",
+                alt: "Tardis Catering plated grain bowl with chickpeas",
+              },
+              {
+                src: "/media/images/Tardis%20Catering/IMG_1928.jpg",
+                alt: "Tardis Catering buffet spread with pasta and salads",
+              },
+              {
+                src: "/media/images/Tardis%20Catering/20231005_111004.jpg",
+                alt: "Tardis Catering table setting with plated salads",
+              },
+              {
+                src: "/media/images/Tardis%20Catering/20231130_183207.jpg",
+                alt: "Tardis Catering skewer station at winter event",
+              },
+              {
+                src: "/media/images/Tardis%20Catering/IMG_2866.jpg",
+                alt: "Tardis Catering shrimp salad table under tent",
+              },
             ].map((img) => (
-              <div key={img.src} className="relative aspect-square overflow-hidden group">
+              <div
+                key={img.src}
+                className="relative aspect-square overflow-hidden group"
+              >
                 <Image
                   src={img.src}
                   alt={img.alt}
@@ -114,11 +147,16 @@ export default function TardisCateringPage() {
       {/* Cafe link */}
       <section className="bg-primary py-16 px-6 text-center">
         <p className="section-label text-cream/50 mb-3">Also by Tardis</p>
-        <h2 className="font-display text-display-md text-cream mb-4">Visit Tardis Cafe</h2>
+        <h2 className="font-display text-display-md text-cream mb-4">
+          Visit Tardis Cafe
+        </h2>
         <p className="font-body text-cream/65 text-sm max-w-md mx-auto mb-8">
-          Stop by our Tardis Cafe for artisan coffee, seasonal bites, and light fare — open to museum visitors and event guests alike.
+          Stop by our Tardis Cafe for artisan coffee, seasonal bites, and light
+          fare — open to museum visitors and event guests alike.
         </p>
-        <Link href="/tardis-cafe" className="btn-outline">Explore Tardis Cafe</Link>
+        <Link href="/tardis-cafe" className="btn-outline">
+          Explore Tardis Cafe
+        </Link>
       </section>
     </>
   );

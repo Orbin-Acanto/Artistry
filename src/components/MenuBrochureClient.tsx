@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import type { MenuBrochureEmbedProps } from "./MenuBrochureEmbed";
 
 const MenuBrochureEmbed = dynamic(() => import("./MenuBrochureEmbed"), {
   ssr: false,
@@ -14,6 +15,12 @@ const MenuBrochureEmbed = dynamic(() => import("./MenuBrochureEmbed"), {
   ),
 });
 
-export default function MenuBrochureClient() {
-  return <MenuBrochureEmbed />;
+type Props = Partial<MenuBrochureEmbedProps>;
+
+export default function MenuBrochureClient({
+  pdfPath = "/media/pdfs/catering.pdf",
+  downloadName = "Tardis-Catering-Menu.pdf",
+  label = "Menu",
+}: Props = {}) {
+  return <MenuBrochureEmbed pdfPath={pdfPath} downloadName={downloadName} label={label} />;
 }

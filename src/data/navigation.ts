@@ -37,8 +37,13 @@ export const navigation: NavItem[] = [
     ],
   },
   {
-    label: "Vendors",
-    href: "/vendors",
+    label: "Brochures",
+    href: "/brochures/corporate",
+    children: [
+      { label: "Corporate", href: "/brochures/corporate" },
+      { label: "Wedding", href: "/brochures/wedding" },
+      { label: "Social Events", href: "/brochures/social" },
+    ],
   },
   {
     label: "Tardis Catering",

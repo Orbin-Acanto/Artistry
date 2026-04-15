@@ -92,7 +92,9 @@ function NavItemComponent({
   pathname: string;
 }) {
   const [open, setOpen] = useState(false);
-  const isActive = pathname.startsWith(item.href) && item.href !== "/";
+  const isActive =
+    (pathname.startsWith(item.href) && item.href !== "/") ||
+    (item.children?.some((c) => pathname.startsWith(c.href)) ?? false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleMouseEnter = () => {
@@ -173,7 +175,9 @@ function MobileNavItem({
   pathname: string;
 }) {
   const [open, setOpen] = useState(false);
-  const isActive = pathname.startsWith(item.href) && item.href !== "/";
+  const isActive =
+    (pathname.startsWith(item.href) && item.href !== "/") ||
+    (item.children?.some((c) => pathname.startsWith(c.href)) ?? false);
 
   if (item.children) {
     return (

@@ -1,7 +1,14 @@
 export type EventPackage = {
   name: string;
+  subtitle?: string;
   description: string;
   includes: string[];
+  /** Items inherited from a previous package — shown as "Everything in X, plus:" */
+  inherits?: string;
+  /** New items added on top of the inherited base */
+  adds?: string[];
+  minGuests?: string;
+  highlight?: string;
 };
 
 export type EventEnhancement = {
@@ -87,47 +94,126 @@ export const weddingLocations: EventLocation[] = [
   },
 ];
 
+// Ceremony-only packages (no minimum guest count)
+export const weddingCeremonyPackages: EventPackage[] = [
+  {
+    name: "When Two Hearts Come Together",
+    subtitle: "Intimate Ceremony",
+    description:
+      "For couples planning a close gathering, this package covers everything needed to hold a beautiful ceremony on the grounds.",
+    includes: [
+      "50 White Folding Chairs",
+      "Two-Speaker Audio Sound System",
+      "One Audio Technician",
+      "One Wireless Microphone with Stand",
+      "Wedding Aisle Runner",
+    ],
+  },
+  {
+    name: "Everlasting Love",
+    subtitle: "Grand Ceremony",
+    description:
+      "Designed for larger ceremonies, this package provides full seating and professional audio production for every moment of your procession.",
+    includes: [
+      "100 White Folding Chairs",
+      "Two-Speaker Audio Sound System",
+      "One Audio Technician",
+      "One Wireless Microphone with Stand",
+      "Wedding Aisle Runner",
+    ],
+  },
+];
+
+// Full reception packages (50 guest minimum)
 export const weddingPackages: EventPackage[] = [
   {
+    name: "The Celebration",
+    subtitle: "Package One",
+    description:
+      "A cocktail hour followed by a full reception with beer, wine, and a buffet dinner. The foundation of a complete wedding evening at Artistry.",
+    minGuests: "50 Guest Minimum",
+    includes: [
+      "1-Hour Cocktail Reception + 4-Hour Reception",
+      "5-Hour Beer & Wine Bar",
+      "Butlered Passed Hors D'Oeuvres (3 Hot & 3 Cold)",
+      "One-Hour Buffet Service",
+      "Dinner Buffet & Butler Service Dessert",
+      "In-House China, Glassware & Flatware",
+      "Tables, Chairs, Bars & Crisp House Linens",
+    ],
+  },
+  {
+    name: "The Garden Affair",
+    subtitle: "Package Two",
+    description:
+      "All of Package One, with a full spirits bar and LED uplighting added to set the mood from cocktail hour through the last dance.",
+    minGuests: "50 Guest Minimum",
+    includes: [
+      "1-Hour Cocktail Reception + 4-Hour Reception",
+      "5-Hour Full Spirits Bar",
+      "Butlered Passed Hors D'Oeuvres (3 Hot & 3 Cold)",
+      "One-Hour Buffet Service",
+      "Dinner Buffet & Butler Service Dessert",
+      "In-House China, Glassware & Flatware",
+      "Tables, Chairs, Bars & Crisp House Linens",
+      "Votive Candles & LED Uplighting",
+    ],
+    inherits: "Package One",
+    adds: [
+      "5-Hour Full Spirits Bar",
+      "Votive Candles & LED Uplighting",
+    ],
+  },
+  {
+    name: "The Grand Soirée",
+    subtitle: "Package Three",
+    description:
+      "All of Package Two, with a Farmers Market Display and gold table settings added for a more dressed evening.",
+    minGuests: "50 Guest Minimum",
+    includes: [
+      "1-Hour Cocktail Reception + 4-Hour Reception",
+      "5-Hour Full Spirits Bar",
+      "Butlered Passed Hors D'Oeuvres (3 Hot & 3 Cold)",
+      "Farmers Market Display",
+      "One-Hour Buffet Service",
+      "Dinner Buffet & Butler Service Dessert",
+      "Gold Chargers, Gold Silverware & Napkin Rings",
+      "In-House China, Glassware & Flatware",
+      "Tables, Chairs, Bars & Crisp House Linens",
+      "Votive Candles & LED Uplighting",
+    ],
+    inherits: "Package Two",
+    adds: [
+      "Farmers Market Display",
+      "Gold Chargers, Gold Silverware & Napkin Rings",
+    ],
+  },
+  {
     name: "The Artistry Signature",
+    subtitle: "Package Four",
     description:
-      "Our most complete and personalized wedding experience, crafted for couples who desire a seamless, full-service celebration.",
+      "All of Package Three, with plated service throughout: a first course, salad, choice of entrées, and dessert, plus butler-served wine at the table.",
+    minGuests: "50 Guest Minimum",
     includes: [
-      "Exclusive venue access (up to 8 hours)",
-      "Dedicated event coordinator",
-      "Full Tardis Catering menu consultation",
-      "Custom floral design consultation",
-      "Ceremony and reception setup",
-      "Bridal suite access",
-      "Complimentary menu tasting for two",
+      "1-Hour Cocktail Reception + 4-Hour Reception",
+      "5-Hour Full Spirits Bar",
+      "Butler-Served Wine During Dinner",
+      "Butlered Passed Hors D'Oeuvres (3 Hot & 3 Cold)",
+      "Farmers Market Display",
+      "Four-Hour Buffet Reception",
+      "Plated First Course, Salad & Choice of Entrées",
+      "Plated Dessert",
+      "Gold Chargers, Gold Silverware & Napkin Rings",
+      "In-House China, Glassware & Flatware",
+      "Tables, Chairs, Bars & Crisp House Linens",
+      "Votive Candles & LED Uplighting",
     ],
-  },
-  {
-    name: "The Garden Ceremony",
-    description:
-      "An intimate, elegant ceremony package set within the sculpture garden, ideal for couples seeking a refined and artistic setting.",
-    includes: [
-      "Garden or terrace ceremony space (up to 4 hours)",
-      "Event coordinator on-site",
-      "Floral design consultation",
-      "Ceremony setup and breakdown",
-      "Bar service",
-      "Cocktail hour space",
-      "Audio equipment",
-    ],
-  },
-  {
-    name: "The Reception Collection",
-    description:
-      "A curated reception experience focused on extraordinary cuisine, ambiance, and service in our most stunning indoor spaces.",
-    includes: [
-      "Indoor reception space (up to 6 hours)",
-      "Multi-course dinner by Tardis Catering",
-      "Bar service",
-      "Ceremony setup and breakdown",
-      "Dedicated maitre d'",
-      "Dance floor",
-      "Custom lighting package",
+    inherits: "Package Three",
+    adds: [
+      "Butler-Served Wine During Dinner",
+      "Four-Hour Buffet Reception",
+      "Plated First Course, Salad & Choice of Entrées",
+      "Plated Dessert",
     ],
   },
 ];
@@ -442,25 +528,92 @@ export const socialEventTypes: SocialEventType[] = [
 export const socialPackages: EventPackage[] = [
   {
     name: "The Celebration",
+    subtitle: "Package One",
     description:
-      "A complete package for milestone social events, covering venue, catering, and coordination.",
+      "A cocktail hour followed by a full reception with beer, wine, and a buffet dinner. A solid starting point for any social event.",
+    minGuests: "50 Guest Minimum",
     includes: [
-      "Venue access (up to 6 hours)",
-      "Event coordinator",
-      "Plated or buffet dining",
-      "Bar service",
-      "Custom décor consultation",
+      "1-Hour Cocktail Reception + 4-Hour Reception",
+      "5-Hour Beer & Wine Bar",
+      "Butlered Passed Hors D'Oeuvres (3 Hot & 3 Cold)",
+      "One-Hour Buffet Service",
+      "Dinner Buffet & Butler Service Dessert",
+      "In-House China, Glassware & Flatware",
+      "Tables, Chairs, Bars & Crisp House Linens",
     ],
   },
   {
-    name: "The Intimate Gathering",
+    name: "The Gathering",
+    subtitle: "Package Two",
     description:
-      "Designed for smaller, more personal celebrations of up to 75 guests.",
+      "All of Package One, with a full spirits bar and LED uplighting added to bring the right energy to the room.",
+    minGuests: "50 Guest Minimum",
     includes: [
-      "Private dining space",
-      "3-course dinner",
-      "Bar service",
-      "Dedicated server team",
+      "1-Hour Cocktail Reception + 4-Hour Reception",
+      "5-Hour Full Spirits Bar",
+      "Butlered Passed Hors D'Oeuvres (3 Hot & 3 Cold)",
+      "One-Hour Buffet Service",
+      "Dinner Buffet & Butler Service Dessert",
+      "In-House China, Glassware & Flatware",
+      "Tables, Chairs, Bars & Crisp House Linens",
+      "Votive Candles & LED Uplighting",
+    ],
+    inherits: "Package One",
+    adds: [
+      "5-Hour Full Spirits Bar",
+      "Votive Candles & LED Uplighting",
+    ],
+  },
+  {
+    name: "The Grand Occasion",
+    subtitle: "Package Three",
+    description:
+      "All of Package Two, with a Farmers Market Display and gold table settings for a more polished evening.",
+    minGuests: "50 Guest Minimum",
+    includes: [
+      "1-Hour Cocktail Reception + 4-Hour Reception",
+      "5-Hour Full Spirits Bar",
+      "Butlered Passed Hors D'Oeuvres (3 Hot & 3 Cold)",
+      "Farmers Market Display",
+      "One-Hour Buffet Service",
+      "Dinner Buffet & Butler Service Dessert",
+      "Gold Chargers, Gold Silverware & Napkin Rings",
+      "In-House China, Glassware & Flatware",
+      "Tables, Chairs, Bars & Crisp House Linens",
+      "Votive Candles & LED Uplighting",
+    ],
+    inherits: "Package Two",
+    adds: [
+      "Farmers Market Display",
+      "Gold Chargers, Gold Silverware & Napkin Rings",
+    ],
+  },
+  {
+    name: "The Artistry Experience",
+    subtitle: "Package Four",
+    description:
+      "All of Package Three, with plated service throughout: first course, salad, choice of entrées, dessert, and butler-served wine at the table.",
+    minGuests: "50 Guest Minimum",
+    includes: [
+      "1-Hour Cocktail Reception + 4-Hour Reception",
+      "5-Hour Full Spirits Bar",
+      "Butler-Served Wine During Dinner",
+      "Butlered Passed Hors D'Oeuvres (3 Hot & 3 Cold)",
+      "Farmers Market Display",
+      "Four-Hour Buffet Reception",
+      "Plated First Course, Salad & Choice of Entrées",
+      "Plated Dessert",
+      "Gold Chargers, Gold Silverware & Napkin Rings",
+      "In-House China, Glassware & Flatware",
+      "Tables, Chairs, Bars & Crisp House Linens",
+      "Votive Candles & LED Uplighting",
+    ],
+    inherits: "Package Three",
+    adds: [
+      "Butler-Served Wine During Dinner",
+      "Four-Hour Buffet Reception",
+      "Plated First Course, Salad & Choice of Entrées",
+      "Plated Dessert",
     ],
   },
 ];
@@ -508,27 +661,93 @@ export const socialGallery: GalleryImage[] = [
 
 export const celebrateLifePackages: EventPackage[] = [
   {
-    name: "The Legacy Gathering",
+    name: "The Gathering",
+    subtitle: "Package One",
     description:
-      "A dignified and warm gathering to honor a life lived fully, set within the serene and beautiful grounds of Artistry.",
+      "A cocktail hour followed by a full reception with beer, wine, and a buffet dinner. Room for family and friends to gather, share a meal, and take their time.",
+    minGuests: "50 Guest Minimum",
     includes: [
-      "Venue access (up to 4 hours)",
-      "Reception-style service",
-      "Catering by Tardis",
-      "Dedicated coordinator",
-      "Audio/visual support",
+      "1-Hour Cocktail Reception + 4-Hour Reception",
+      "5-Hour Beer & Wine Bar",
+      "Butlered Passed Hors D'Oeuvres (3 Hot & 3 Cold)",
+      "One-Hour Buffet Service",
+      "Dinner Buffet & Butler Service Dessert",
+      "In-House China, Glassware & Flatware",
+      "Tables, Chairs, Bars & Crisp House Linens",
     ],
   },
   {
-    name: "The Celebration of Life",
+    name: "The Remembrance",
+    subtitle: "Package Two",
     description:
-      "A joyful tribute — because a life fully lived deserves more than a somber farewell. We help families create a warm, memory-filled gathering.",
+      "All of Package One, with a full spirits bar and candlelit LED uplighting to create a warm, settled atmosphere throughout the evening.",
+    minGuests: "50 Guest Minimum",
     includes: [
-      "Indoor or outdoor space",
-      "Custom menu consultation",
-      "Memory display station",
-      "Photo slideshow support",
-      "Floral arrangements",
+      "1-Hour Cocktail Reception + 4-Hour Reception",
+      "5-Hour Full Spirits Bar",
+      "Butlered Passed Hors D'Oeuvres (3 Hot & 3 Cold)",
+      "One-Hour Buffet Service",
+      "Dinner Buffet & Butler Service Dessert",
+      "In-House China, Glassware & Flatware",
+      "Tables, Chairs, Bars & Crisp House Linens",
+      "Votive Candles & LED Uplighting",
+    ],
+    inherits: "Package One",
+    adds: [
+      "5-Hour Full Spirits Bar",
+      "Votive Candles & LED Uplighting",
+    ],
+  },
+  {
+    name: "The Legacy",
+    subtitle: "Package Three",
+    description:
+      "All of Package Two, with a Farmers Market Display and gold table settings for a more considered, memorable table.",
+    minGuests: "50 Guest Minimum",
+    includes: [
+      "1-Hour Cocktail Reception + 4-Hour Reception",
+      "5-Hour Full Spirits Bar",
+      "Butlered Passed Hors D'Oeuvres (3 Hot & 3 Cold)",
+      "Farmers Market Display",
+      "One-Hour Buffet Service",
+      "Dinner Buffet & Butler Service Dessert",
+      "Gold Chargers, Gold Silverware & Napkin Rings",
+      "In-House China, Glassware & Flatware",
+      "Tables, Chairs, Bars & Crisp House Linens",
+      "Votive Candles & LED Uplighting",
+    ],
+    inherits: "Package Two",
+    adds: [
+      "Farmers Market Display",
+      "Gold Chargers, Gold Silverware & Napkin Rings",
+    ],
+  },
+  {
+    name: "The Artistry Tribute",
+    subtitle: "Package Four",
+    description:
+      "All of Package Three, with full plated service: first course, salad, entrée, and dessert served at the table, with wine poured throughout dinner.",
+    minGuests: "50 Guest Minimum",
+    includes: [
+      "1-Hour Cocktail Reception + 4-Hour Reception",
+      "5-Hour Full Spirits Bar",
+      "Butler-Served Wine During Dinner",
+      "Butlered Passed Hors D'Oeuvres (3 Hot & 3 Cold)",
+      "Farmers Market Display",
+      "Four-Hour Buffet Reception",
+      "Plated First Course, Salad & Choice of Entrées",
+      "Plated Dessert",
+      "Gold Chargers, Gold Silverware & Napkin Rings",
+      "In-House China, Glassware & Flatware",
+      "Tables, Chairs, Bars & Crisp House Linens",
+      "Votive Candles & LED Uplighting",
+    ],
+    inherits: "Package Three",
+    adds: [
+      "Butler-Served Wine During Dinner",
+      "Four-Hour Buffet Reception",
+      "Plated First Course, Salad & Choice of Entrées",
+      "Plated Dessert",
     ],
   },
 ];

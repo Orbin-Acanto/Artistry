@@ -9,8 +9,6 @@ import { Download, Maximize2, Minimize2, Printer } from "lucide-react";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
 
-const PDF_PATH = "/media/pdfs/catering.pdf";
-
 type FlipBookApi = {
   flipNext: () => void;
   flipPrev: () => void;
@@ -28,30 +26,40 @@ function isFlipEvent(value: unknown): value is FlipEvent {
   if (typeof value !== "object" || value === null || !("data" in value)) {
     return false;
   }
-
   const { data } = value as { data: unknown };
   return typeof data === "number" || typeof data === "string";
 }
 
-const Page = React.forwardRef<HTMLDivElement, { src: string; pageNumber: number }>(
-  function Page({ src, pageNumber }, ref) {
-    return (
-      <div ref={ref} className="relative w-full h-full bg-white">
-        <Image
-          src={src}
-          alt={`Menu page ${pageNumber}`}
-          fill
-          unoptimized
-          sizes="(max-width: 767px) 100vw, 50vw"
-          className="object-cover"
-          draggable={false}
-        />
-      </div>
-    );
-  }
-);
+const Page = React.forwardRef<
+  HTMLDivElement,
+  { src: string; pageNumber: number; label: string }
+>(function Page({ src, pageNumber, label }, ref) {
+  return (
+    <div ref={ref} className="relative w-full h-full bg-white">
+      <Image
+        src={src}
+        alt={`${label} page ${pageNumber}`}
+        fill
+        unoptimized
+        sizes="(max-width: 767px) 100vw, 50vw"
+        className="object-cover"
+        draggable={false}
+      />
+    </div>
+  );
+});
 
-export default function MenuBrochureEmbed() {
+export interface MenuBrochureEmbedProps {
+  pdfPath: string;
+  downloadName: string;
+  label?: string;
+}
+
+export default function MenuBrochureEmbed({
+  pdfPath,
+  downloadName,
+  label = "Brochure",
+}: MenuBrochureEmbedProps) {
   const [pages, setPages] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(0);
@@ -63,11 +71,16 @@ export default function MenuBrochureEmbed() {
   const bookRef = useRef<FlipBookRef | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Render PDF pages to images
   useEffect(() => {
+    setLoading(true);
+    setPages([]);
+    setCurrentPage(0);
+    setTotalPages(0);
+    setAspectRatio(null);
+
     async function renderPDF() {
       try {
-        const pdf = await pdfjsLib.getDocument(PDF_PATH).promise;
+        const pdf = await pdfjsLib.getDocument(pdfPath).promise;
         setTotalPages(pdf.numPages);
 
         const firstPage = await pdf.getPage(1);
@@ -81,7 +94,10 @@ export default function MenuBrochureEmbed() {
           const canvas = document.createElement("canvas");
           canvas.width = viewport.width;
           canvas.height = viewport.height;
-          await page.render({ canvasContext: canvas.getContext("2d")!, viewport }).promise;
+          await page.render({
+            canvasContext: canvas.getContext("2d")!,
+            viewport,
+          }).promise;
           rendered.push(canvas.toDataURL("image/png"));
         }
 
@@ -92,10 +108,10 @@ export default function MenuBrochureEmbed() {
         setLoading(false);
       }
     }
-    renderPDF();
-  }, []);
 
-  // Responsive dimensions
+    renderPDF();
+  }, [pdfPath]);
+
   useEffect(() => {
     if (aspectRatio === null) return;
     function updateSize() {
@@ -109,7 +125,10 @@ export default function MenuBrochureEmbed() {
         const pw = w - 32;
         const ph = Math.round(pw * aspectRatio!);
         if (ph > availH) {
-          setDimensions({ width: Math.round(availH / aspectRatio!), height: availH });
+          setDimensions({
+            width: Math.round(availH / aspectRatio!),
+            height: availH,
+          });
         } else {
           setDimensions({ width: pw, height: ph });
         }
@@ -117,7 +136,10 @@ export default function MenuBrochureEmbed() {
         const pw = Math.round((w - 120) / 2);
         const ph = Math.round(pw * aspectRatio!);
         if (ph > availH) {
-          setDimensions({ width: Math.round(availH / aspectRatio!), height: availH });
+          setDimensions({
+            width: Math.round(availH / aspectRatio!),
+            height: availH,
+          });
         } else {
           setDimensions({ width: pw, height: ph });
         }
@@ -125,7 +147,10 @@ export default function MenuBrochureEmbed() {
         const pw = Math.round(Math.min(w - 160, 1400) / 2);
         const ph = Math.round(pw * aspectRatio!);
         if (ph > availH) {
-          setDimensions({ width: Math.round(availH / aspectRatio!), height: availH });
+          setDimensions({
+            width: Math.round(availH / aspectRatio!),
+            height: availH,
+          });
         } else {
           setDimensions({ width: pw, height: ph });
         }
@@ -136,7 +161,6 @@ export default function MenuBrochureEmbed() {
     return () => window.removeEventListener("resize", updateSize);
   }, [aspectRatio]);
 
-  // Fullscreen sync
   useEffect(() => {
     const fn = () => setIsFullscreen(!!document.fullscreenElement);
     document.addEventListener("fullscreenchange", fn);
@@ -169,15 +193,15 @@ export default function MenuBrochureEmbed() {
   const displayPage = isMobile
     ? currentPage + 1
     : currentPage === 0
-    ? 1
-    : Math.min(currentPage + 1, totalPages);
+      ? 1
+      : Math.min(currentPage + 1, totalPages);
 
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center bg-primary py-32 gap-4">
         <div className="w-10 h-10 border-2 border-cream/30 border-t-cream rounded-full animate-spin" />
         <span className="font-body text-xs tracking-widest uppercase text-cream/50">
-          Rendering menu…
+          Rendering {label.toLowerCase()}…
         </span>
       </div>
     );
@@ -186,9 +210,11 @@ export default function MenuBrochureEmbed() {
   if (pages.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center bg-primary py-24 gap-5">
-        <p className="font-body text-sm text-cream/50">Could not load the menu brochure.</p>
+        <p className="font-body text-sm text-cream/50">
+          Could not load the {label.toLowerCase()}.
+        </p>
         <a
-          href={PDF_PATH}
+          href={pdfPath}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 h-9 px-5 border border-cream/30 text-cream/60 hover:text-cream font-body text-xs tracking-widest uppercase transition-colors"
@@ -208,7 +234,7 @@ export default function MenuBrochureEmbed() {
         </span>
         <div className="flex items-center gap-2">
           <button
-            onClick={() => window.open(PDF_PATH, "_blank")}
+            onClick={() => window.open(pdfPath, "_blank")}
             title="Print"
             className="flex items-center gap-2 h-9 px-4 border border-cream/20 text-cream/55 hover:text-cream hover:border-cream/50 font-body text-xs tracking-widest uppercase transition-colors"
           >
@@ -223,8 +249,8 @@ export default function MenuBrochureEmbed() {
             {isFullscreen ? "Exit" : "Fullscreen"}
           </button>
           <a
-            href={PDF_PATH}
-            download="Tardis-Catering-Menu.pdf"
+            href={pdfPath}
+            download={downloadName}
             className="flex items-center gap-2 h-9 px-4 border border-cream/20 text-cream/55 hover:text-cream hover:border-cream/50 font-body text-xs tracking-widest uppercase transition-colors"
           >
             <Download size={13} /> Download
@@ -241,8 +267,18 @@ export default function MenuBrochureEmbed() {
             className="hidden md:flex absolute left-2 lg:left-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 bg-cream/10 backdrop-blur-sm rounded-full items-center justify-center text-cream/70 hover:text-cream hover:bg-cream/20 transition-all"
             aria-label="Previous page"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
           </button>
 
@@ -274,7 +310,7 @@ export default function MenuBrochureEmbed() {
             disableFlipByClick={false}
           >
             {pages.map((src, i) => (
-              <Page key={i} src={src} pageNumber={i + 1} />
+              <Page key={i} src={src} pageNumber={i + 1} label={label} />
             ))}
           </HTMLFlipBook>
 
@@ -284,8 +320,18 @@ export default function MenuBrochureEmbed() {
             className="hidden md:flex absolute right-2 lg:right-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 bg-cream/10 backdrop-blur-sm rounded-full items-center justify-center text-cream/70 hover:text-cream hover:bg-cream/20 transition-all"
             aria-label="Next page"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </button>
         </div>
@@ -297,8 +343,18 @@ export default function MenuBrochureEmbed() {
             className="md:hidden w-10 h-10 bg-cream/10 rounded-full flex items-center justify-center text-cream/70 hover:text-cream transition-all"
             aria-label="Previous page"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
           </button>
           <span className="font-body text-xs tracking-widest uppercase text-cream/40">
@@ -309,8 +365,18 @@ export default function MenuBrochureEmbed() {
             className="md:hidden w-10 h-10 bg-cream/10 rounded-full flex items-center justify-center text-cream/70 hover:text-cream transition-all"
             aria-label="Next page"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </button>
         </div>
