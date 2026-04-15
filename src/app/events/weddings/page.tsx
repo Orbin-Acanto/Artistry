@@ -30,8 +30,8 @@ export default function WeddingsPage() {
     <>
       <PageHero
         label="Weddings"
-        title="Your Wedding, Set in a Living Work of Art"
-        description="From intimate ceremonies to grand celebrations, Artistry offers an unparalleled setting for the most important day of your life."
+        title="Your Wedding, Immersed in a Living Work of Art"
+        description="An Extraordinary Setting for Your Unforgettable Day"
         imageSrc="/media/images/events/wedding/hero.jpeg"
         imageAlt="Wedding ceremony at Artistry Nassau County Museum of Art"
       />
@@ -41,15 +41,16 @@ export default function WeddingsPage() {
           <div>
             <SectionHeader
               label="Wedding Ceremonies & Receptions"
-              title="A Setting That Becomes Part of Your Story"
-              description="At Artistry, your wedding is more than an event. It is an experience woven into one of Long Island's most beautiful and culturally rich settings. Exchange vows amid world-class sculpture, celebrate on sweeping estate lawns, or dance under the stars on our grand terraces."
+              title=" A Setting That Becomes Part of Your Legacy"
+              description="At Artistry, your wedding is more than just an event. It is an immersive experience set within one of Long Island’s most beautiful and culturally rich landscapes. You can exchange vows surrounded by world-class sculpture, celebrate on sweeping estate lawns, and dance beneath the stars on our grand terraces."
             />
             <p className="prose-venue mt-5">
-              Our dedicated wedding team works alongside you from the very first
-              inquiry through every last detail of your celebration. We&apos;re
-              coordinating seamlessly with Tardis Catering, our preferred
-              vendors, and the museum&apos;s own team to ensure a flawless,
-              magical day.
+              From your first inquiry to the final moments of your celebration,
+              our dedicated wedding team will be with you every step of the way.
+              Working seamlessly alongside Tardis Catering, our exclusive
+              partners, and the museum team, we ensure every detail is
+              thoughtfully handled, creating a day that feels effortless,
+              refined, and truly unforgettable.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/#contact" className="btn-primary">
