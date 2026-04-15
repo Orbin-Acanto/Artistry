@@ -3,8 +3,8 @@ import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ImageGallery from "@/components/ui/ImageGallery";
 import AutoImageSlider from "@/components/ui/AutoImageSlider";
+import WeddingLocationsSection from "@/components/ui/WeddingLocationsSection";
 import CutoutParallax from "@/components/CutoutParallax";
-import Image from "next/image";
 import Link from "next/link";
 import {
   weddingLocations,
@@ -72,8 +72,8 @@ export default function WeddingsPage() {
               <Link href="/#contact" className="btn-primary">
                 Request a Tour
               </Link>
-              <Link href="/vendors" className="btn-outline-dark">
-                View Vendors
+              <Link href="#wedding-gallery" className="btn-outline-dark">
+                Gallery
               </Link>
             </div>
           </div>
@@ -89,35 +89,13 @@ export default function WeddingsPage() {
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Ceremony & Reception Spaces"
-            title="Eight Distinct Settings for Your Day"
+            title="The Perfect Setting for “I Do” & Beyond"
+            description="Eight Signature Settings. One Extraordinary Day"
             centered
             light
             className="mb-10 md:mb-14"
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
-            {weddingLocations.map((loc) => (
-              <div key={loc.name} className="group">
-                <div className="relative aspect-[4/3] overflow-hidden mb-5">
-                  <Image
-                    src={loc.image}
-                    alt={loc.name}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-                <p className="section-label text-cream/50 mb-1">
-                  {loc.capacity}
-                </p>
-                <h3 className="font-display text-2xl text-cream mb-2">
-                  {loc.name}
-                </h3>
-                <p className="font-body text-sm text-cream/65 leading-relaxed">
-                  {loc.description}
-                </p>
-              </div>
-            ))}
-          </div>
+          <WeddingLocationsSection locations={weddingLocations} />
         </div>
       </section>
 
@@ -200,7 +178,10 @@ export default function WeddingsPage() {
       />
 
       {/* Gallery */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section
+        id="wedding-gallery"
+        className="bg-cream py-12 md:py-section px-6"
+      >
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Wedding Gallery"
