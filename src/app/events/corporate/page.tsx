@@ -97,7 +97,9 @@ export default function CorporatePage() {
               </div>
               <div
                 className={`flex flex-col justify-center p-6 sm:p-10 lg:p-16 ${
-                  idx % 2 !== 0 ? "lg:order-1 bg-primary" : "bg-primary-dark"
+                  idx % 2 !== 0
+                    ? "lg:order-1 bg-primary-dark"
+                    : "bg-primary-dark"
                 }`}
               >
                 <p className="section-label text-cream/50 mb-2">
