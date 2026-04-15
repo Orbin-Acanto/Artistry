@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
+import Image from "next/image";
 import HTMLFlipBook from "react-pageflip";
 import * as pdfjsLib from "pdfjs-dist";
 import React from "react";
@@ -10,14 +11,39 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.j
 
 const PDF_PATH = "/media/pdfs/catering.pdf";
 
+type FlipBookApi = {
+  flipNext: () => void;
+  flipPrev: () => void;
+};
+
+type FlipBookRef = {
+  pageFlip: () => FlipBookApi | undefined;
+};
+
+type FlipEvent = {
+  data: number | string;
+};
+
+function isFlipEvent(value: unknown): value is FlipEvent {
+  if (typeof value !== "object" || value === null || !("data" in value)) {
+    return false;
+  }
+
+  const { data } = value as { data: unknown };
+  return typeof data === "number" || typeof data === "string";
+}
+
 const Page = React.forwardRef<HTMLDivElement, { src: string; pageNumber: number }>(
   function Page({ src, pageNumber }, ref) {
     return (
-      <div ref={ref} className="bg-white">
-        <img
+      <div ref={ref} className="relative w-full h-full bg-white">
+        <Image
           src={src}
           alt={`Menu page ${pageNumber}`}
-          className="w-full h-full object-cover"
+          fill
+          unoptimized
+          sizes="(max-width: 767px) 100vw, 50vw"
+          className="object-cover"
           draggable={false}
         />
       </div>
@@ -34,7 +60,7 @@ export default function MenuBrochureEmbed() {
   const [isMobile, setIsMobile] = useState(false);
   const [aspectRatio, setAspectRatio] = useState<number | null>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const bookRef = useRef<any>(null);
+  const bookRef = useRef<FlipBookRef | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Render PDF pages to images
@@ -122,7 +148,11 @@ export default function MenuBrochureEmbed() {
       ? document.exitFullscreen()
       : containerRef.current?.requestFullscreen();
 
-  const onFlip = useCallback((e: any) => setCurrentPage(e.data), []);
+  const onFlip = useCallback((event: unknown) => {
+    if (isFlipEvent(event) && typeof event.data === "number") {
+      setCurrentPage(event.data);
+    }
+  }, []);
 
   const goNext = () => bookRef.current?.pageFlip()?.flipNext();
   const goPrev = () => bookRef.current?.pageFlip()?.flipPrev();
