@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ImageGallery from "@/components/ui/ImageGallery";
+import AutoImageSlider from "@/components/ui/AutoImageSlider";
 import CutoutParallax from "@/components/CutoutParallax";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,6 +25,21 @@ export const metadata: Metadata = {
     "museum wedding venue",
   ],
 };
+
+const weddingIntroImages = [
+  {
+    src: "/media/images/events/wedding/flower.jpg",
+    alt: "Elegant wedding reception florals at Artistry",
+  },
+  {
+    src: "/media/images/events/wedding/formal.jpg",
+    alt: "Formal wedding celebration at Artistry",
+  },
+  {
+    src: "/media/images/events/wedding/gazebo.jpg",
+    alt: "Wedding couple portrait near the gazebo at Artistry",
+  },
+];
 
 export default function WeddingsPage() {
   return (
@@ -61,15 +77,10 @@ export default function WeddingsPage() {
               </Link>
             </div>
           </div>
-          <div className="relative aspect-[4/3] sm:aspect-[4/4] lg:aspect-[4/5] overflow-hidden">
-            <Image
-              src="/media/images/events/wedding/flower.jpg"
-              alt="Elegant wedding reception at Artistry"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </div>
+          <AutoImageSlider
+            images={weddingIntroImages}
+            className="aspect-[4/3] sm:aspect-[4/4] lg:aspect-[4/5]"
+          />
         </div>
       </section>
 
