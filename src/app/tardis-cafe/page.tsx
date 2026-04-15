@@ -24,19 +24,19 @@ export default function TardisCafePage() {
       <PageHero
         label="Tardis Cafe"
         title="A Perfect Pause Among Art and Nature"
-        description="Artisan coffee, seasonal fare, and warm hospitality — a tranquil retreat within the Nassau County Museum of Art grounds."
+        description="Artisan coffee, seasonal fare, and warm hospitality. A tranquil retreat within the Nassau County Museum of Art grounds."
         imageSrc="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1920&q=80"
         imageAlt="Tardis Cafe at Nassau County Museum of Art"
       />
 
       {/* About */}
-      <section className="bg-cream py-section px-6">
+      <section className="bg-cream py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <SectionHeader
               label="The Cafe"
               title="Where the Museum Grounds Meet a Warm Cup"
-              description="Tardis Cafe was born from a desire to offer museum visitors and event guests a moment of true comfort — a beautifully crafted coffee, a seasonal bite, a place to pause and reflect."
+              description="Tardis Cafe was born from a desire to offer museum visitors and event guests a moment of true comfort: a beautifully crafted coffee, a seasonal bite, a place to pause and reflect."
             />
             <p className="prose-venue mt-5">
               Located within the museum grounds, the Tardis Cafe is the perfect companion to a morning stroll through the sculpture garden or a quiet lunch before an afternoon event. Every item on our menu reflects the same attention to craft and quality that defines Tardis Catering.
@@ -72,7 +72,7 @@ export default function TardisCafePage() {
       </section>
 
       {/* Menu */}
-      <section className="bg-primary-dark py-section px-6">
+      <section className="bg-primary-dark py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Our Menu"
@@ -89,9 +89,9 @@ export default function TardisCafePage() {
                 </h3>
                 <ul className="space-y-3">
                   {section.items.map((item) => (
-                    <li key={item} className="flex gap-2 items-start">
-                      <span className="text-cream/30 shrink-0 mt-1">—</span>
-                      <span className="font-display text-base text-cream/80">{item}</span>
+                    <li key={item} className="flex gap-3 items-start">
+                      <span className="w-1 h-1 rounded-full bg-cream/60 shrink-0 mt-2" />
+                      <span className="font-body text-sm text-cream/75 leading-relaxed">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -105,8 +105,8 @@ export default function TardisCafePage() {
       </section>
 
       {/* Photo strip */}
-      <section className="bg-cream py-section px-6">
-        <div className="max-w-8xl mx-auto grid grid-cols-3 gap-4">
+      <section className="bg-cream py-12 md:py-section px-6">
+        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
             { src: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80", alt: "Coffee at Tardis Cafe" },
             { src: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80", alt: "Seasonal pastry" },
@@ -126,12 +126,15 @@ export default function TardisCafePage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary py-14 px-6 text-center">
-        <p className="section-label text-cream/50 mb-3">Also by Tardis</p>
-        <h2 className="font-display text-2xl text-cream mb-4">Hosting an Event?</h2>
-        <p className="font-body text-cream/65 text-sm max-w-sm mx-auto mb-6">
-          Tardis Catering handles full event menus and service at Artistry. Explore our catering experience.
-        </p>
+      <section className="bg-primary py-12 md:py-16 px-6 text-center">
+        <SectionHeader
+          label="Also by Tardis"
+          title="Hosting an Event?"
+          description="Tardis Catering handles full event menus and service at Artistry. Explore our catering experience."
+          centered
+          light
+          className="mb-8"
+        />
         <Link href="/tardis-catering" className="btn-outline">Explore Tardis Catering</Link>
       </section>
     </>

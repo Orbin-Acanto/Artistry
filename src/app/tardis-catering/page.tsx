@@ -18,25 +18,25 @@ export default function TardisCateringPage() {
       <PageHero
         label="Tardis Catering"
         title="Cuisine as Artful as the Setting"
-        description="The exclusive culinary partner of Artistry — where every dish is crafted with the same attention to beauty and detail as the venue itself."
+        description="The exclusive culinary partner of Artistry. Every dish is crafted with the same attention to beauty and detail as the venue itself."
         imageSrc="/media/images/Tardis%20Catering/IMG_2866.jpg"
         imageAlt="Tardis Catering cuisine at Artistry"
       />
 
       {/* Who We Are */}
-      <section className="bg-cream py-section px-6">
+      <section className="bg-cream py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <SectionHeader
               label="Who We Are"
               title="Culinary Craft at the Heart of Every Event"
-              description="Tardis Catering was founded on a single belief: that great food is not just sustenance — it is memory. A taste that recalls a moment. A dish that defines a celebration."
+              description="Tardis Catering was founded on a single belief: that great food is not just sustenance. It is memory. A taste that recalls a moment. A dish that defines a celebration."
             />
             <p className="prose-venue mt-5">
               As the exclusive catering partner of Artistry, Tardis brings
               together an award-winning culinary team trained in the finest
               kitchens of New York and Europe. Every menu is developed in close
-              collaboration with the client — seasonal ingredients, artisan
+              collaboration with the client. Seasonal ingredients, artisan
               techniques, and a deep respect for dietary needs and cultural
               traditions.
             </p>
@@ -73,12 +73,12 @@ export default function TardisCateringPage() {
         </div>
       </section>
 
-      <section className="bg-primary py-section px-6">
+      <section className="bg-primary py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Sample Menu"
             title="A Taste of What We Offer"
-            description="Every menu is fully customized. Browse our sample menu brochure below — download, print, or view fullscreen."
+            description="Every menu is fully customized. Browse our sample menu brochure below. Download, print, or view fullscreen."
             centered
             light
             className="mb-10"
@@ -92,7 +92,7 @@ export default function TardisCateringPage() {
       </section>
 
       {/* Gallery */}
-      <section className="bg-cream py-section px-6">
+      <section className="bg-cream py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Gallery"
@@ -145,15 +145,15 @@ export default function TardisCateringPage() {
       </section>
 
       {/* Cafe link */}
-      <section className="bg-primary py-16 px-6 text-center">
-        <p className="section-label text-cream/50 mb-3">Also by Tardis</p>
-        <h2 className="font-display text-display-md text-cream mb-4">
-          Visit Tardis Cafe
-        </h2>
-        <p className="font-body text-cream/65 text-sm max-w-md mx-auto mb-8">
-          Stop by our Tardis Cafe for artisan coffee, seasonal bites, and light
-          fare — open to museum visitors and event guests alike.
-        </p>
+      <section className="bg-primary py-12 md:py-16 px-6 text-center">
+        <SectionHeader
+          label="Also by Tardis"
+          title="Visit Tardis Cafe"
+          description="Stop by our Tardis Cafe for artisan coffee, seasonal bites, and light fare, open to museum visitors and event guests alike."
+          centered
+          light
+          className="mb-8"
+        />
         <Link href="/tardis-cafe" className="btn-outline">
           Explore Tardis Cafe
         </Link>

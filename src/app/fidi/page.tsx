@@ -16,34 +16,55 @@ const venues = [
     name: "Artistry",
     subtitle: "Nassau County Museum of Art, Roslyn, NY",
     description:
-      "A premier event venue nestled within 40+ acres of the Nassau County Museum of Art estate — Long Island's most culturally rich event setting.",
-    image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80",
+      "A premier event venue set within 40+ acres of the Nassau County Museum of Art estate on Long Island. Weddings, corporate events, and social celebrations in a world-class cultural setting.",
+    image:
+      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80",
     href: "/",
     current: true,
   },
   {
-    name: "Venue Two",
-    subtitle: "New York Metropolitan Area",
+    name: "FiDi Mezzanine",
+    subtitle: "Financial District, New York City",
     description:
-      "Another signature FIDI venue offering world-class event spaces in the greater New York area.",
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80",
-    href: "#",
+      "A sophisticated event space in the heart of Manhattan's Financial District. An elevated setting for corporate gatherings, private dinners, and social occasions of all sizes.",
+    image:
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80",
+    href: "https://www.fidimezzanine.com/",
+    external: true,
   },
   {
-    name: "Venue Three",
-    subtitle: "New York Metropolitan Area",
+    name: "48 Wall Street",
+    subtitle: "Financial District, New York City",
     description:
-      "A stunning space for intimate and large-scale celebrations, operated with the same FIDI commitment to excellence.",
-    image: "https://images.unsplash.com/photo-1580479859052-6c5e49bbce49?auto=format&fit=crop&w=600&q=80",
-    href: "#",
+      "An iconic venue housed inside a landmark building in the heart of downtown Manhattan. Historic architecture and modern event capabilities make it one of New York's most distinctive spaces.",
+    image:
+      "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80",
+    href: "https://www.48wallnyc.com/",
+    external: true,
   },
 ];
 
 const values = [
-  { title: "Excellence", description: "Every FIDI venue is held to the highest standards of hospitality, design, and culinary craft." },
-  { title: "Place", description: "We believe the setting of an event is as important as the celebration itself. Each venue is chosen for its singular character." },
-  { title: "Partnership", description: "We work alongside our clients as true collaborators — listening deeply, planning meticulously, and executing flawlessly." },
-  { title: "Legacy", description: "FIDI venues carry history. We steward extraordinary properties, honoring their past while creating new memories for generations." },
+  {
+    title: "Excellence",
+    description:
+      "Every FIDI venue is held to the highest standards of hospitality, design, and culinary craft.",
+  },
+  {
+    title: "Place",
+    description:
+      "We believe the setting of an event is as important as the celebration itself. Each venue is chosen for its singular character.",
+  },
+  {
+    title: "Partnership",
+    description:
+      "We work alongside our clients as true collaborators. We listen deeply, plan meticulously, and execute flawlessly.",
+  },
+  {
+    title: "Legacy",
+    description:
+      "FIDI venues carry history. We steward extraordinary properties, honoring their past while creating new memories for generations.",
+  },
 ];
 
 export default function FidiPage() {
@@ -58,7 +79,7 @@ export default function FidiPage() {
       />
 
       {/* About FIDI */}
-      <section className="bg-cream py-section px-6">
+      <section className="bg-cream py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <SectionHeader
@@ -67,7 +88,13 @@ export default function FidiPage() {
               description={SITE.parent.description}
             />
             <p className="prose-venue mt-5">
-              FIDI Hospitality was founded on the belief that truly extraordinary events require extraordinary settings — and that the hospitality experience should match the grandeur of the venue. From Artistry at the Nassau County Museum of Art to our growing portfolio of signature properties, FIDI brings together the finest in event management, culinary excellence via Tardis Catering, and unwavering commitment to client vision.
+              FIDI Hospitality was founded on the belief that truly
+              extraordinary events require extraordinary settings, where the
+              hospitality experience matches the grandeur of the venue. From
+              Artistry at the Nassau County Museum of Art to our growing
+              portfolio of signature properties, FIDI brings together the finest
+              in event management, culinary excellence via Tardis Catering, and
+              unwavering commitment to client vision.
             </p>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden">
@@ -83,7 +110,7 @@ export default function FidiPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-primary py-section px-6">
+      <section className="bg-primary py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Our Philosophy"
@@ -95,8 +122,12 @@ export default function FidiPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((val) => (
               <div key={val.title} className="text-center">
-                <h3 className="font-display text-2xl text-cream mb-3">{val.title}</h3>
-                <p className="font-body text-sm text-cream/60 leading-relaxed">{val.description}</p>
+                <h3 className="font-display text-2xl text-cream mb-3">
+                  {val.title}
+                </h3>
+                <p className="font-body text-sm text-cream/65 leading-relaxed">
+                  {val.description}
+                </p>
               </div>
             ))}
           </div>
@@ -104,7 +135,7 @@ export default function FidiPage() {
       </section>
 
       {/* Venues */}
-      <section className="bg-cream py-section px-6">
+      <section className="bg-cream py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Our Venues"
@@ -132,14 +163,29 @@ export default function FidiPage() {
                   )}
                 </div>
                 <p className="section-label mb-1">{venue.subtitle}</p>
-                <h3 className="font-display text-2xl text-charcoal mb-2">{venue.name}</h3>
-                <p className="font-body text-sm text-charcoal/65 leading-relaxed mb-4">{venue.description}</p>
-                <Link
-                  href={venue.href}
-                  className="font-body text-xs tracking-widest uppercase text-primary hover:text-primary-dark transition-colors"
-                >
-                  {venue.current ? "Explore Artistry →" : "Coming Soon"}
-                </Link>
+                <h3 className="font-display text-2xl text-charcoal mb-2">
+                  {venue.name}
+                </h3>
+                <p className="font-body text-sm text-charcoal/65 leading-relaxed mb-4">
+                  {venue.description}
+                </p>
+                {venue.external ? (
+                  <a
+                    href={venue.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-body text-xs tracking-widest uppercase text-primary hover:text-primary-dark transition-colors"
+                  >
+                    Visit Website →
+                  </a>
+                ) : (
+                  <Link
+                    href={venue.href}
+                    className="font-body text-xs tracking-widest uppercase text-primary hover:text-primary-dark transition-colors"
+                  >
+                    Explore Artistry →
+                  </Link>
+                )}
               </div>
             ))}
           </div>
@@ -147,7 +193,7 @@ export default function FidiPage() {
       </section>
 
       {/* Contact */}
-      <section className="bg-primary-dark py-16 px-6 text-center">
+      <section className="bg-primary py-12 md:py-16 px-6 text-center">
         <SectionHeader
           label="FIDI Hospitality"
           title="Interested in Working With Us?"
@@ -156,7 +202,9 @@ export default function FidiPage() {
           light
           className="mb-8"
         />
-        <Link href="/#contact" className="btn-outline">Get in Touch</Link>
+        <Link href="/#contact" className="btn-outline">
+          Get in Touch
+        </Link>
       </section>
     </>
   );

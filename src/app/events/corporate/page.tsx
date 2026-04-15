@@ -26,7 +26,7 @@ export default function CorporatePage() {
       <PageHero
         label="Corporate Events"
         title="Inspire Your Team. Impress Your Clients."
-        description="Artistry provides an extraordinary backdrop for corporate gatherings of every kind — where business meets beauty."
+        description="Artistry provides an extraordinary backdrop for corporate gatherings of every kind, where business meets beauty."
         imageSrc="/media/images/events/corporate/hero.jpg"
         imageAlt="Corporate event at Artistry Nassau County Museum of Art"
       />

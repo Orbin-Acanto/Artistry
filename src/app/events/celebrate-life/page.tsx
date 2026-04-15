@@ -38,14 +38,14 @@ export default function CelebrateLifePage() {
               {
                 label: "The Setting",
                 title: "Spaces for Every Size",
-                body: "Gardens, pavilions, terraces — for 20 guests or 200.",
+                body: "Gardens, pavilions, terraces, for 20 guests or 200.",
                 img: "/media/images/events/Social%20Events/H-23.jpg",
                 alt: "Elegant reception setup at Artistry",
               },
               {
                 label: "The Food",
                 title: "Menus for the Occasion",
-                body: "Tardis Catering builds the menu around you — buffet, plated, or passed.",
+                body: "Tardis Catering builds the menu around you: buffet, plated, or passed.",
                 img: "/media/images/events/Social%20Events/H-25.jpg",
                 alt: "Floral tablescape with gold chargers",
               },

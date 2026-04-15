@@ -42,7 +42,7 @@ const timeline = [
     period: "Present Day",
     title: "Artistry by FIDI Hospitality",
     description:
-      "Today, FIDI Hospitality operates Artistry within this extraordinary setting — bringing the same reverence for beauty and excellence to every event. Artistry carries forward a century of history, offering a canvas for the celebrations of tomorrow.",
+      "Today, FIDI Hospitality operates Artistry within this extraordinary setting, bringing the same reverence for beauty and excellence to every event. Artistry carries forward a century of history, offering a canvas for the celebrations of tomorrow.",
     image: "/media/images/about/IMG_9958.jpg",
   },
 ];
@@ -59,12 +59,12 @@ export default function HistoryPage() {
       />
 
       {/* Intro */}
-      <section className="bg-cream py-section px-6">
+      <section className="bg-cream py-12 md:py-section px-6">
         <div className="max-w-4xl mx-auto text-center">
           <SectionHeader
             label="History of the Property"
             title="Where Every Gathering Is Part of a Larger Story"
-            description="The estate that houses Artistry carries more than a century of history — from Gilded Age grandeur to cultural landmark, from private retreat to public treasure. Today, it serves as the stage for life's most important celebrations."
+            description="The estate that houses Artistry carries more than a century of history: from Gilded Age grandeur to cultural landmark, from private retreat to public treasure. Today, it serves as the stage for life's most important celebrations."
             centered
           />
         </div>
@@ -108,7 +108,7 @@ export default function HistoryPage() {
         ))}
       </section>
 
-      <section className="bg-primary py-20 px-6">
+      <section className="bg-primary py-12 md:py-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <blockquote>
             <p className="font-display text-2xl md:text-3xl text-cream leading-relaxed">

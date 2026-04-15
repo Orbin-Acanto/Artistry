@@ -17,7 +17,7 @@ export default function SiteMapPage() {
       <PageHero
         label="About"
         title="Explore Our Grounds"
-        description="Eight distinct event spaces set within the Nassau County Museum of Art estate — each with its own character, capacity, and atmosphere."
+        description="Eight distinct event spaces set within the Nassau County Museum of Art estate, each with its own character, capacity, and atmosphere."
         imageSrc="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=1920&q=80"
         imageAlt="Aerial view of Nassau County Museum of Art estate grounds"
       />

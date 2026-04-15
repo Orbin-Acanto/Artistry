@@ -21,6 +21,7 @@ export default function MenuBrochureClient({
   pdfPath = "/media/pdfs/catering.pdf",
   downloadName = "Tardis-Catering-Menu.pdf",
   label = "Menu",
+  variant = "dark",
 }: Props = {}) {
-  return <MenuBrochureEmbed pdfPath={pdfPath} downloadName={downloadName} label={label} />;
+  return <MenuBrochureEmbed pdfPath={pdfPath} downloadName={downloadName} label={label} variant={variant} />;
 }

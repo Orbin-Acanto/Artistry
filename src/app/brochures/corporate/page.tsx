@@ -19,12 +19,13 @@ export default function CorporateBrochurePage() {
         imageAlt="Corporate event at Artistry"
       />
 
-      <section className="bg-primary py-section px-6">
+      <section className="bg-cream py-section px-6">
         <div className="max-w-8xl mx-auto">
           <MenuBrochureClient
             pdfPath="/media/pdfs/corporate.pdf"
             downloadName="Artistry-Corporate-Brochure.pdf"
             label="Corporate Brochure"
+            variant="light"
           />
         </div>
       </section>

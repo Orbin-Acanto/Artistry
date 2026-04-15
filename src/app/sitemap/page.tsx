@@ -52,7 +52,7 @@ const sitemapSections = [
 
 export default function SitemapPage() {
   return (
-    <div className="bg-cream min-h-screen pt-40 pb-section px-6">
+    <div className="bg-cream min-h-screen pt-28 md:pt-40 pb-12 md:pb-section px-6">
       <div className="max-w-4xl mx-auto">
         <p className="section-label mb-3">Navigation</p>
         <h1 className="font-display text-display-lg text-charcoal mb-12">Site Map</h1>

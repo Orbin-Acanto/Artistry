@@ -22,7 +22,7 @@ const events = [
   {
     title: "Corporate Events",
     description:
-      "From summer outings to award galas, dinners to conferences — inspire your team and impress your clients in a setting that elevates every gathering.",
+      "From summer outings to award galas, dinners to conferences. Inspire your team and impress your clients in a setting that elevates every gathering.",
     image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
     href: "/events/corporate",
     cta: "Explore Corporate",
@@ -30,7 +30,7 @@ const events = [
   {
     title: "Social Events",
     description:
-      "Bar and Bat Mitzvahs, Communions, milestone celebrations and more — honor life's most meaningful chapters with warmth, elegance, and unforgettable hospitality.",
+      "Bar and Bat Mitzvahs, Communions, milestone celebrations and more. Honor life's most meaningful chapters with warmth, elegance, and unforgettable hospitality.",
     image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80",
     href: "/events/social",
     cta: "Explore Social Events",
@@ -51,18 +51,18 @@ export default function EventsPage() {
       <PageHero
         label="Events"
         title="Every Occasion, an Unforgettable Experience"
-        description="From intimate ceremonies to grand galas — Artistry is the stage for life's most extraordinary moments."
+        description="From intimate ceremonies to grand galas. Artistry is the stage for life's most extraordinary moments."
         imageSrc="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1920&q=80"
         imageAlt="Events at Artistry Nassau County Museum of Art"
       />
 
-      <section className="bg-cream py-section px-6">
+      <section className="bg-cream py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="What We Host"
             title="A Venue for Every Chapter"
             centered
-            className="mb-16"
+            className="mb-10 md:mb-16"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {events.map((event) => (
