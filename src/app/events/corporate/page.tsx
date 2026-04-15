@@ -38,7 +38,7 @@ export default function CorporatePage() {
             <SectionHeader
               label="Why Artistry for Corporate"
               title="A Setting That Commands Attention"
-              description="When your venue reflects the caliber of your brand, every detail is elevated. Artistry offers a rare combination of natural beauty, architectural grandeur, and world-class hospitality — making every corporate event a statement."
+              description="When your venue reflects the caliber of your brand, every detail is elevated. Artistry offers a rare combination of natural beauty, architectural grandeur, and world-class hospitality that makes every corporate event a statement."
             />
             <p className="prose-venue mt-5">
               From intimate executive dinners to company-wide summer outings,
@@ -76,11 +76,11 @@ export default function CorporatePage() {
             className="mb-10 md:mb-14"
           />
         </div>
-        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-0">
+        <div className="max-w-8xl mx-auto px-6 lg:px-0 divide-y divide-cream/10">
           {corporateEventTypes.map((type, idx) => (
             <div
               key={type.slug}
-              className="grid grid-cols-1 lg:grid-cols-2 mb-4 lg:mb-0"
+              className="grid grid-cols-1 lg:grid-cols-2"
             >
               <div
                 className={`relative aspect-[4/3] lg:aspect-auto lg:h-[480px] overflow-hidden ${
@@ -96,10 +96,8 @@ export default function CorporatePage() {
                 />
               </div>
               <div
-                className={`flex flex-col justify-center p-6 sm:p-10 lg:p-16 ${
-                  idx % 2 !== 0
-                    ? "lg:order-1 bg-primary-dark"
-                    : "bg-primary-dark"
+                className={`flex flex-col justify-center p-6 sm:p-10 lg:p-16 bg-primary-dark ${
+                  idx % 2 !== 0 ? "lg:order-1" : ""
                 }`}
               >
                 <p className="section-label text-cream/50 mb-2">
@@ -111,11 +109,11 @@ export default function CorporatePage() {
                 <p className="font-body text-sm text-cream/65 leading-relaxed mb-6">
                   {type.description}
                 </p>
-                <ul className="space-y-2">
+                <ul className="space-y-2.5">
                   {type.highlights.map((h) => (
-                    <li key={h} className="flex gap-2 items-center">
-                      <span className="w-1 h-1 rounded-full bg-cream/40 shrink-0" />
-                      <span className="font-body text-sm text-cream/60">
+                    <li key={h} className="flex gap-3 items-start">
+                      <span className="w-1 h-1 rounded-full bg-cream/60 shrink-0 mt-2" />
+                      <span className="font-body text-sm text-cream/75">
                         {h}
                       </span>
                     </li>
@@ -128,7 +126,7 @@ export default function CorporatePage() {
       </section>
 
       {/* Gallery */}
-      <section className="bg-cream py-section px-6">
+      <section className="bg-cream py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Corporate Gallery"
@@ -140,27 +138,19 @@ export default function CorporatePage() {
         </div>
       </section>
 
-      {/* Brochure */}
-      <section className="bg-primary py-16 px-6 text-center">
-        <p className="section-label text-cream/50 mb-3">Download</p>
-        <h2 className="font-display text-display-md text-cream mb-6 uppercase">
-          Corporate Events Brochure
-        </h2>
-        <p className="font-body text-cream/65 text-sm max-w-md mx-auto mb-8">
-          Download our corporate events brochure for full details on spaces,
-          packages, catering menus, and A/V capabilities.
-        </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <a href="#" className="btn-outline">
-            Download Brochure (PDF)
-          </a>
-          <Link
-            href="/#contact"
-            className="btn-primary bg-cream text-primary hover:bg-cream/90"
-          >
-            Request a Proposal
-          </Link>
-        </div>
+      {/* Brochure CTA */}
+      <section className="bg-primary py-12 md:py-16 px-6 text-center">
+        <SectionHeader
+          label="Take It With You"
+          title="Our Corporate Events Brochure"
+          description="A full overview of our spaces, packages, catering menus, and A/V capabilities."
+          centered
+          light
+          className="mb-8"
+        />
+        <Link href="/brochures/corporate" className="btn-outline">
+          View Brochure
+        </Link>
       </section>
     </>
   );

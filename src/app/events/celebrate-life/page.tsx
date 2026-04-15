@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ImageGallery from "@/components/ui/ImageGallery";
+import Image from "next/image";
 import Link from "next/link";
 import { celebrateLifePackages, celebrateLifeGallery } from "@/data/events";
 
@@ -24,16 +25,58 @@ export default function CelebrateLifePage() {
 
       {/* Intro */}
       <section className="bg-cream py-12 md:py-section px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <SectionHeader
-            label="Celebrate Life"
-            title="A Gathering Worth Getting Right"
-            description="Anniversaries that span decades, birthdays that open new chapters, retirements that mark a life's work, gatherings that keep a memory alive. Artistry holds space for all of them."
-            centered
-          />
-          <p className="font-body text-sm md:text-base text-charcoal/65 leading-relaxed mt-6 max-w-2xl mx-auto">
-            Our team works with families to shape an experience that feels personal and unhurried. From the setting to the menu, every detail is handled with care.
-          </p>
+        <div className="max-w-8xl mx-auto">
+          <div className="mb-10 md:mb-12">
+            <SectionHeader
+              label="Celebrate Life"
+              title="A Gathering Worth Getting Right"
+              description="Anniversaries, milestone birthdays, retirements, memorials. Artistry holds space for all of them. Our team shapes each event around the people it is for. Personal, unhurried, and handled with care."
+            />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              {
+                label: "The Setting",
+                title: "Spaces for Every Size",
+                body: "Gardens, pavilions, terraces — for 20 guests or 200.",
+                img: "/media/images/events/Social%20Events/H-23.jpg",
+                alt: "Elegant reception setup at Artistry",
+              },
+              {
+                label: "The Food",
+                title: "Menus for the Occasion",
+                body: "Tardis Catering builds the menu around you — buffet, plated, or passed.",
+                img: "/media/images/events/Social%20Events/H-25.jpg",
+                alt: "Floral tablescape with gold chargers",
+              },
+              {
+                label: "The Team",
+                title: "One Contact Throughout",
+                body: "Your coordinator handles setup, timing, and staffing so you can be present.",
+                img: "/media/images/events/Social%20Events/20230908_152912-edit.jpg",
+                alt: "Tented celebration at Artistry",
+              },
+            ].map((card) => (
+              <div key={card.label} className="flex flex-col">
+                <div className="relative aspect-[3/2] overflow-hidden mb-4">
+                  <Image
+                    src={card.img}
+                    alt={card.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, 33vw"
+                  />
+                </div>
+                <p className="section-label text-primary mb-2">{card.label}</p>
+                <h3 className="font-display text-lg md:text-xl text-charcoal mb-2">
+                  {card.title}
+                </h3>
+                <p className="font-body text-sm text-charcoal/65 leading-relaxed">
+                  {card.body}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -114,11 +157,11 @@ export default function CelebrateLifePage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary py-12 md:py-20 px-6 text-center">
+      {/* Brochure CTA */}
+      <section className="bg-primary py-12 md:py-16 px-6 text-center">
         <SectionHeader
-          label="We Are Here for You"
-          title="Let Us Help You Plan the Gathering"
+          label="Take It With You"
+          title="Plan Your Gathering at Artistry"
           description="Reach out whenever you are ready. We will listen first and plan from there."
           centered
           light
