@@ -31,92 +31,106 @@ export default function SocialEventsPage() {
       />
 
       {/* Event Types */}
-      <section className="bg-primary-dark py-12 md:py-section px-6">
+      <section className="bg-cream py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
-          <div className="max-w-3xl mb-12 md:mb-16">
+          <div className="mb-12 md:mb-16">
             <SectionHeader
               label="Social Events"
               title="Every Celebration Is Personal"
               description="Whether you are marking a religious milestone, a round birthday, or a family anniversary, our team gives each event the same care and attention. No two gatherings at Artistry are the same."
-              light
+              centered
             />
           </div>
-          <div className="space-y-16 md:space-y-24">
-          {socialEventTypes.map((type, idx) => (
-            <div
-              key={type.slug}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center"
-            >
+          <div className="divide-y divide-primary/10">
+            {socialEventTypes.map((type, idx) => (
               <div
-                className={`relative aspect-[4/3] overflow-hidden ${
-                  idx % 2 !== 0 ? "lg:order-2" : ""
-                }`}
+                key={type.slug}
+                className="grid grid-cols-1 lg:grid-cols-2 items-center"
               >
-                <Image
-                  src={type.image}
-                  alt={type.name}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+                <div
+                  className={`relative aspect-[4/3] overflow-hidden ${
+                    idx % 2 !== 0 ? "lg:order-2" : ""
+                  }`}
+                >
+                  <Image
+                    src={type.image}
+                    alt={type.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+                <div
+                  className={`py-8 px-4 md:px-8 lg:px-12 ${idx % 2 !== 0 ? "lg:order-1" : ""}`}
+                >
+                  <h2 className="font-display text-display-md text-charcoal mb-4">
+                    {type.name}
+                  </h2>
+                  <p className="font-body text-base leading-relaxed text-charcoal/65 max-w-3xl mb-4">
+                    {type.description}
+                  </p>
+                  <p className="font-body text-sm text-charcoal/55 leading-relaxed">
+                    {type.details}
+                  </p>
+                  <Link
+                    href="/#contact"
+                    className="btn-primary mt-8 inline-flex"
+                  >
+                    Inquire About {type.name}
+                  </Link>
+                </div>
               </div>
-              <div className={idx % 2 !== 0 ? "lg:order-1" : ""}>
-                <h2 className="font-display text-display-md text-cream mb-4">
-                  {type.name}
-                </h2>
-                <p className="font-body text-base leading-relaxed text-cream/70 max-w-3xl mb-4">{type.description}</p>
-                <p className="font-body text-sm text-cream/55 leading-relaxed">
-                  {type.details}
-                </p>
-                <Link href="/#contact" className="btn-outline mt-8 inline-flex">
-                  Inquire About {type.name}
-                </Link>
-              </div>
-            </div>
-          ))}
+            ))}
           </div>
         </div>
       </section>
 
       {/* Packages */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-primary-dark py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Event Packages"
             title="Pick a Starting Point"
             description="All packages are priced per person and can be adjusted to fit your guest count and preferences. Pricing is available upon request."
             centered
+            light
             className="mb-10 md:mb-14"
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {socialPackages.map((pkg) => (
               <div
                 key={pkg.name}
-                className="border border-primary/20 p-6 md:p-8 hover:border-primary/50 transition-colors flex flex-col"
+                className="border border-cream/20 p-6 md:p-8 hover:border-cream/50 transition-colors flex flex-col"
               >
                 {pkg.subtitle && (
-                  <p className="section-label text-primary/60 mb-2">{pkg.subtitle}</p>
+                  <p className="section-label text-cream/50 mb-2">
+                    {pkg.subtitle}
+                  </p>
                 )}
-                <h3 className="font-display text-2xl text-charcoal mb-1">{pkg.name}</h3>
+                <h3 className="font-display text-2xl text-cream mb-1">
+                  {pkg.name}
+                </h3>
                 {pkg.minGuests && (
-                  <p className="font-body text-xs tracking-widest uppercase text-charcoal/35 mb-4">
+                  <p className="font-body text-xs tracking-widest uppercase text-cream/35 mb-4">
                     {pkg.minGuests}
                   </p>
                 )}
-                <p className="font-body text-sm text-charcoal/65 leading-relaxed mb-6">
+                <p className="font-body text-sm text-cream/65 leading-relaxed mb-6">
                   {pkg.description}
                 </p>
                 <div className="flex-1 mb-8 space-y-3">
                   {pkg.inherits ? (
                     <>
-                      <p className="font-body text-xs uppercase tracking-widest text-charcoal/40">
+                      <p className="font-body text-xs uppercase tracking-widest text-cream/40">
                         All of {pkg.inherits}, and adds:
                       </p>
                       <ul className="space-y-2.5">
                         {pkg.adds!.map((item) => (
                           <li key={item} className="flex gap-3 items-start">
-                            <span className="w-1 h-1 rounded-full bg-primary shrink-0 mt-2" />
-                            <span className="font-body text-sm text-charcoal/75">{item}</span>
+                            <span className="w-1 h-1 rounded-full bg-cream/60 shrink-0 mt-2" />
+                            <span className="font-body text-sm text-cream/75">
+                              {item}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -125,14 +139,19 @@ export default function SocialEventsPage() {
                     <ul className="space-y-2.5">
                       {pkg.includes.map((item) => (
                         <li key={item} className="flex gap-3 items-start">
-                          <span className="w-1 h-1 rounded-full bg-primary shrink-0 mt-2" />
-                          <span className="font-body text-sm text-charcoal/75">{item}</span>
+                          <span className="w-1 h-1 rounded-full bg-cream/60 shrink-0 mt-2" />
+                          <span className="font-body text-sm text-cream/75">
+                            {item}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   )}
                 </div>
-                <Link href="/#contact" className="btn-primary w-full text-center mt-auto">
+                <Link
+                  href="/#contact"
+                  className="btn-outline w-full text-center mt-auto"
+                >
                   Inquire
                 </Link>
               </div>

@@ -500,28 +500,28 @@ export const socialEventTypes: SocialEventType[] = [
     name: "Bar & Bat Mitzvahs",
     slug: "bar-bat-mitzvah",
     description:
-      "Celebrate this sacred milestone in a venue that matches the grandeur of the occasion. Artistry provides the perfect backdrop for a joyful, deeply meaningful celebration.",
+      "This is one of the most significant days in a family's life. Artistry gives it the setting it deserves: beautiful grounds, attentive staff, and a team that treats your celebration as its own.",
     image: "/media/images/events/Social%20Events/IMG_2316.jpg",
     details:
-      "Our team works closely with families to craft a deeply personal experience — from the ceremony to the reception, with custom décor, kosher-friendly menu options, and entertainment coordination.",
+      "We work closely with families from the first conversation through the final toast. Custom décor, kosher-friendly menu options, and entertainment coordination are all part of what we handle together.",
   },
   {
     name: "Communions & Confirmations",
     slug: "communions",
     description:
-      "Mark a child's spiritual milestone with an elegant celebration surrounded by art, nature, and exceptional hospitality.",
+      "A child's spiritual milestone calls for a celebration that feels as meaningful as the occasion itself. Our spaces and staff make it easy to focus on what matters.",
     image: "/media/images/events/Social%20Events/H-22.jpg",
     details:
-      "Intimate and refined, our communion packages include beautiful outdoor spaces, personalized menus, and dedicated event staffing.",
+      "Whether you are hosting a small family lunch or a larger reception, we offer beautiful outdoor settings, personalized menus, and dedicated staffing to keep the day running smoothly.",
   },
   {
     name: "Milestone Celebrations",
     slug: "milestone",
     description:
-      "Birthdays, anniversaries, retirements, and beyond — every milestone deserves a setting as extraordinary as the moment itself.",
+      "A landmark birthday, a fiftieth anniversary, a retirement after decades of work. These moments deserve more than a banquet hall.",
     image: "/media/images/events/Social%20Events/20230510_172459.jpg",
     details:
-      "From intimate gatherings to grand celebrations, Artistry offers flexible spaces and fully customizable experiences for every kind of milestone.",
+      "Artistry has the spaces to host gatherings of any size, and a team that takes the time to get the details right. Bring your vision and we will take it from there.",
   },
 ];
 
