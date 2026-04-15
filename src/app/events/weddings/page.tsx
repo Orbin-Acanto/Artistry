@@ -4,14 +4,15 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import ImageGallery from "@/components/ui/ImageGallery";
 import AutoImageSlider from "@/components/ui/AutoImageSlider";
 import WeddingLocationsSection from "@/components/ui/WeddingLocationsSection";
+import WeddingEnhancementsSection from "@/components/ui/WeddingEnhancementsSection";
 import CutoutParallax from "@/components/CutoutParallax";
 import Link from "next/link";
 import {
   weddingLocations,
   weddingPackages,
-  weddingEnhancements,
   weddingGallery,
 } from "@/data/events";
+import { weddingEnhancements } from "@/data/weddingEnhancements";
 
 export const metadata: Metadata = {
   title: "Wedding Venue Long Island | Weddings at Artistry",
@@ -103,9 +104,9 @@ export default function WeddingsPage() {
       <section className="bg-cream py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
-            label="Wedding Packages"
-            title="Thoughtfully Crafted for Your Celebration"
-            description="Our packages provide a foundation of excellence — each customizable to reflect your unique vision. Pricing available upon inquiry."
+            label="A Collection of Celebrations"
+            title="Artfully curated for your celebration"
+            description="Our packages deliver a luxurious foundation of excellence, thoughtfully designed and fully customizable to reflect the unique vision of each bride and groom. Pricing is available upon request."
             centered
             className="mb-10 md:mb-14"
           />
@@ -148,29 +149,18 @@ export default function WeddingsPage() {
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Wedding Enhancements"
-            title="Elevate Every Detail"
-            description="Personalize your wedding with our curated collection of add-on enhancements."
+            title="Signature Upgrades That Shape the Experience"
+            description="Explore immersive enhancements designed to personalize the atmosphere, delight your guests, and bring a more cinematic sense of detail to the celebration."
             className="mb-8 md:mb-12"
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {weddingEnhancements.map((enh) => (
-              <div key={enh.name} className="bg-cream p-6">
-                <h4 className="font-display text-lg text-charcoal mb-2">
-                  {enh.name}
-                </h4>
-                <p className="font-body text-sm text-charcoal/65 leading-relaxed">
-                  {enh.description}
-                </p>
-              </div>
-            ))}
-          </div>
+          <WeddingEnhancementsSection enhancements={weddingEnhancements} />
         </div>
       </section>
 
       {/* Cutout CTA */}
       <CutoutParallax
         text="Your Wedding Day"
-        subtext="Let us show you what Artistry can do for the most important day of your life."
+        subtext="Elevated by Artistry"
         imageSrc="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1920&q=80"
         imageAlt="Wedding at Artistry"
         ctaLabel="Schedule a Tour"
@@ -197,14 +187,14 @@ export default function WeddingsPage() {
       <section className="bg-primary py-12 md:py-16 px-6 text-center">
         <p className="section-label text-cream/50 mb-3">Download</p>
         <h2 className="font-display text-display-md text-cream mb-4 md:mb-6 uppercase">
-          Wedding Brochure
+          Our Wedding Brochure
         </h2>
         <p className="font-body text-cream/65 text-sm max-w-md mx-auto mb-6 md:mb-8">
-          Download our complete wedding brochure for full details on spaces,
-          packages, and the Artistry experience.
+          A curated overview of our distinctive spaces, signature offerings, and
+          the Artistry experience
         </p>
         <a href="#" className="btn-outline">
-          Download Brochure (PDF)
+          Brochure
         </a>
       </section>
     </>

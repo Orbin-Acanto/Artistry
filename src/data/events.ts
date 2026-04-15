@@ -29,22 +29,22 @@ export const weddingLocations: EventLocation[] = [
   {
     name: "The Tented Pavilion",
     description:
-      "The glass-walled Pavilion offers panoramic views of the surrounding lawns and sculptures and direct access to the Mansion's galleries. Versatility reigns supreme in the Tented Pavilion, making it the ideal venue for a myriad of events, from corporate gatherings to weddings and milestone celebrations.",
-    capacity: "Up to 300 guests",
+      "The glass-walled Pavilion presents breathtaking views of manicured lawns and striking sculptures, complemented by direct access to the Mansion’s galleries. Designed with versatility in mind, the Tented Pavilion serves as an elegant backdrop for corporate events, weddings, and milestone occasions.",
+    capacity: "Up to 125 guests",
     image: "/media/images/events/wedding/15.jpeg",
   },
   {
     name: "The Formal Garden",
     description:
-      "The historical and enchanting Formal Gardens offer a quintessential English garden setting that serves as the perfect picturesque backdrop for a myriad of events. From sophisticated cocktail receptions and fairy-tale wedding ceremonies to corporate retreats and captivating photoshoots.",
-    capacity: "Up to 150 guests",
+      "The historic Formal Gardens present an enchanting, quintessential English landscape, offering an exquisite backdrop for everything from refined cocktail receptions and fairytale wedding ceremonies to corporate retreats and captivating photoshoots.",
+    capacity: "Up to 500 guests",
     image: "/media/images/events/wedding/formal.jpg",
   },
   {
     name: "Great Lawn",
     description:
-      "Transform your visions into reality on the magnificent blank canvas of the Great Lawn, a versatile and expansive space awaiting your unique touch. Our dedicated event services team stands ready to provide the ideal tent size and flooring options to set the perfect stage.",
-    capacity: "Up to 250 guests",
+      "Transform your vision into reality on the magnificent blank canvas of the Great Lawn, an expansive and versatile setting designed to reflect your unique style. Our dedicated event services team will curate the ideal tenting and flooring solutions, creating a refined and seamless foundation for your perfect event.",
+    capacity: "Up to 800 guests",
     image:
       "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80",
   },
@@ -52,7 +52,7 @@ export const weddingLocations: EventLocation[] = [
     name: "Formal Library",
     description:
       "Discover the exquisite Frick Estate Library, an idyllic haven for hosting intimate gatherings within the mansion. This versatile space lends itself seamlessly to various event styles, whether it be an elegant cocktail reception, a vibrant DJ and dance area, or an additional space for events in the Tented Pavilion.",
-    capacity: "Up to 500 guests",
+    capacity: "Up to 40 guests",
     image:
       "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80",
   },
@@ -60,29 +60,29 @@ export const weddingLocations: EventLocation[] = [
     name: "Collection Gallery",
     description:
       "Situated on the second floor of this storied estate, The Collection Gallery provides a versatile setting that can be tailored to a range of occasions, from business meetings to wedding receptions.",
-    capacity: "Up to 500 guests",
+    capacity: "Up to 100 guests",
     image:
       "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "East Terrace",
     description:
-      "Experience open-air cocktails or a delightful dinner on the East Terrace, a truly captivating space that offers panoramic views of the serene pond and glimpses of the stunning sculpture collection.",
-    capacity: "Up to 500 guests",
+      "Elevate your experience with open-air cocktails or an elegant dinner on the East Terrace, a captivating setting with panoramic views of the serene pond and glimpses of the remarkable sculpture collection.",
+    capacity: "Up to 250 guests",
     image: "/media/images/events/wedding/EastTerrace1.jpg",
   },
   {
     name: "North Terrace",
     description:
-      "Capture the essence of beauty and artistic grandeur on the North Terrace, where you'll be treated to a spectacular view of some of the most unique and breathtaking art sculptures. This exceptional vantage point not only showcases wonderful artwork but also provides a one-of-a-kind historical backdrop - the prestigious Frick Estate.",
-    capacity: "Up to 500 guests",
+      "Capture the essence of beauty and artistic grandeur on the North Terrace, where sweeping views reveal some of the most unique and breathtaking sculptures. This exceptional setting not only showcases remarkable works of art but also offers a one of a kind historic backdrop in the prestigious Frick Estate.",
+    capacity: "Up to 250 guests",
     image: "/media/images/events/wedding/NorthTerrace1.jpg",
   },
   {
     name: "Gazebo",
     description:
-      "The open air Gazebo stands as the perfect location for photographs, a sophisticated cocktail party or an intimate sit-down dinner while guests enjoy the fresh air and beautiful scenery.",
-    capacity: "Up to 500 guests",
+      "The open-air gazebo provides a stunning setting for elegant photography, refined cocktail gatherings, or intimate al fresco dining amid picturesque surroundings.",
+    capacity: "Up to 50 guests",
     image: "/media/images/events/wedding/gazebo.jpg",
   },
 ];
@@ -415,8 +415,7 @@ export const socialEventTypes: SocialEventType[] = [
     slug: "bar-bat-mitzvah",
     description:
       "Celebrate this sacred milestone in a venue that matches the grandeur of the occasion. Artistry provides the perfect backdrop for a joyful, deeply meaningful celebration.",
-    image:
-      "/media/images/events/Social%20Events/IMG_2316.jpg",
+    image: "/media/images/events/Social%20Events/IMG_2316.jpg",
     details:
       "Our team works closely with families to craft a deeply personal experience — from the ceremony to the reception, with custom décor, kosher-friendly menu options, and entertainment coordination.",
   },
@@ -425,8 +424,7 @@ export const socialEventTypes: SocialEventType[] = [
     slug: "communions",
     description:
       "Mark a child's spiritual milestone with an elegant celebration surrounded by art, nature, and exceptional hospitality.",
-    image:
-      "/media/images/events/Social%20Events/H-22.jpg",
+    image: "/media/images/events/Social%20Events/H-22.jpg",
     details:
       "Intimate and refined, our communion packages include beautiful outdoor spaces, personalized menus, and dedicated event staffing.",
   },
@@ -435,8 +433,7 @@ export const socialEventTypes: SocialEventType[] = [
     slug: "milestone",
     description:
       "Birthdays, anniversaries, retirements, and beyond — every milestone deserves a setting as extraordinary as the moment itself.",
-    image:
-      "/media/images/events/Social%20Events/20230510_172459.jpg",
+    image: "/media/images/events/Social%20Events/20230510_172459.jpg",
     details:
       "From intimate gatherings to grand celebrations, Artistry offers flexible spaces and fully customizable experiences for every kind of milestone.",
   },
