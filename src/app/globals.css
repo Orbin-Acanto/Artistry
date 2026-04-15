@@ -65,7 +65,6 @@
     @apply font-body text-base leading-relaxed text-charcoal/65 max-w-3xl;
   }
 }
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
