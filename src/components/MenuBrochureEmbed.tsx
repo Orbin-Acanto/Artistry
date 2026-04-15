@@ -7,7 +7,7 @@ import * as pdfjsLib from "pdfjs-dist";
 import React from "react";
 import { Download, Maximize2, Minimize2, Printer } from "lucide-react";
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+pdfjsLib.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.js";
 
 type FlipBookApi = {
   flipNext: () => void;
