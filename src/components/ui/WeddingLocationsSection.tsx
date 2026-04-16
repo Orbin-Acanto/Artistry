@@ -5,7 +5,6 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import type { EventLocation } from "@/data/events";
-import { placeholderGalleryImages } from "@/data/about";
 
 type ModalView = "floor-plan" | "gallery";
 
@@ -46,20 +45,13 @@ export default function WeddingLocationsSection({
 
   const galleryImages = useMemo(() => {
     if (!modal) return [];
-
-    return [
-      {
-        src: modal.location.image,
-        alt: `${modal.location.name} gallery image`,
-      },
-      ...placeholderGalleryImages,
-    ];
+    return modal.location.gallery;
   }, [modal]);
 
   const floorPlanImage = modal
     ? {
         src: modal.location.image,
-        alt: `${modal.location.name} floor plan placeholder`,
+        alt: `${modal.location.name} at Artistry`,
       }
     : null;
 
@@ -139,33 +131,23 @@ export default function WeddingLocationsSection({
                 <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.25fr)_minmax(320px,0.75fr)]">
                   <div className="relative min-h-[320px] bg-white lg:min-h-[620px]">
                     {modal.view === "floor-plan" && floorPlanImage && (
-                      <>
-                        <Image
-                          src={floorPlanImage.src}
-                          alt={floorPlanImage.alt}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 1024px) 100vw, 70vw"
-                        />
-                        <div className="absolute left-4 top-4 bg-cream/90 px-3 py-1 font-body text-[11px] uppercase tracking-[0.22em] text-primary">
-                          Placeholder Floor Plan
-                        </div>
-                      </>
+                      <Image
+                        src={floorPlanImage.src}
+                        alt={floorPlanImage.alt}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 70vw"
+                      />
                     )}
 
                     {modal.view === "gallery" && galleryImages.length > 0 && (
-                      <>
-                        <Image
-                          src={galleryImages[galleryIndex].src}
-                          alt={galleryImages[galleryIndex].alt}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 1024px) 100vw, 70vw"
-                        />
-                        <div className="absolute left-4 top-4 bg-cream/90 px-3 py-1 font-body text-[11px] uppercase tracking-[0.22em] text-primary">
-                          Placeholder Gallery
-                        </div>
-                      </>
+                      <Image
+                        src={galleryImages[galleryIndex].src}
+                        alt={galleryImages[galleryIndex].alt}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 70vw"
+                      />
                     )}
                   </div>
 
@@ -173,16 +155,17 @@ export default function WeddingLocationsSection({
                     <div>
                       <p className="section-label mb-3 text-primary/70">
                         {modal.view === "floor-plan"
-                          ? "Floor Plan"
-                          : "Location Gallery"}
+                          ? "Wedding Ceremony Space"
+                          : "Wedding Gallery"}
                       </p>
                       <h3 className="font-display text-3xl text-primary-dark">
                         {modal.location.name}
                       </h3>
+                      <p className="mt-1 font-body text-xs tracking-widest uppercase text-charcoal/40">
+                        {modal.location.capacity}
+                      </p>
                       <p className="mt-4 font-body text-sm leading-relaxed text-charcoal/70">
-                        {modal.view === "floor-plan"
-                          ? "A dedicated floor plan for this space will go here. For now, this is using a placeholder image so we can finalize the modal flow and button behavior."
-                          : "These gallery images are placeholders for this location. Once you have the final assets, we can swap them in without changing the modal layout."}
+                        {modal.location.description}
                       </p>
                     </div>
 
@@ -208,18 +191,6 @@ export default function WeddingLocationsSection({
                             />
                           </button>
                         ))}
-                      </div>
-                    )}
-
-                    {modal.view === "floor-plan" && (
-                      <div className="mt-8 border border-primary/15 bg-primary/5 p-4">
-                        <p className="font-body text-xs uppercase tracking-[0.18em] text-primary/70">
-                          Placeholder
-                        </p>
-                        <p className="mt-2 font-body text-sm leading-relaxed text-charcoal/70">
-                          Replace this image later with the actual floor plan for{" "}
-                          {modal.location.name}.
-                        </p>
                       </div>
                     )}
                   </div>

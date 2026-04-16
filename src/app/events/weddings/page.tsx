@@ -8,7 +8,7 @@ import WeddingEnhancementsSection from "@/components/ui/WeddingEnhancementsSecti
 import CutoutParallax from "@/components/CutoutParallax";
 import Link from "next/link";
 import {
-  weddingLocations,
+  weddingPageLocations,
   weddingCeremonyPackages,
   weddingPackages,
   weddingGallery,
@@ -81,7 +81,7 @@ export default function WeddingsPage() {
             light
             className="mb-10 md:mb-14"
           />
-          <WeddingLocationsSection locations={weddingLocations} />
+          <WeddingLocationsSection locations={weddingPageLocations} />
         </div>
       </section>
 

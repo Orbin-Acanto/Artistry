@@ -17,7 +17,7 @@ export default function HistoryPage() {
         label="About"
         title="A Century of Art & Celebration"
         description="The story of the estate that became one of Long Island's most beloved event destinations."
-        imageSrc="/media/images/about/hero.jpg"
+        imageSrc="/media/images/about/hero.jpeg"
         imageAlt="Nassau County Museum of Art estate historic exterior"
       />
 

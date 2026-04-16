@@ -21,6 +21,7 @@ export type EventLocation = {
   description: string;
   capacity: string;
   image: string;
+  gallery: { src: string; alt: string }[];
 };
 
 export type GalleryImage = {
@@ -30,67 +31,207 @@ export type GalleryImage = {
   height: number;
 };
 
-// ─── WEDDINGS ────────────────────────────────────────────────────────────────
-
-export const weddingLocations: EventLocation[] = [
+// ─── WEDDINGS LOCATION ───────────────────────────────────────────────────────────────
+export const weddingPageLocations: EventLocation[] = [
   {
     name: "The Tented Pavilion",
     description:
-      "The glass-walled Pavilion presents breathtaking views of manicured lawns and striking sculptures, complemented by direct access to the Mansion’s galleries. Designed with versatility in mind, the Tented Pavilion serves as an elegant backdrop for corporate events, weddings, and milestone occasions.",
+      "Say your vows beneath the soaring glass-walled Pavilion, where manicured lawns and striking sculptures frame every moment. The Tented Pavilion seamlessly transitions from an intimate ceremony setting to a grand reception hall, with direct access to the Mansion's galleries adding an unmatched layer of elegance.",
     capacity: "Up to 125 guests",
-    image: "/media/images/events/wedding/15.jpeg",
+    image: "/media/images/events/wedding/location/Tented Pavilion/1.jpeg",
+    gallery: [
+      {
+        src: "/media/images/events/wedding/location/Tented Pavilion/1.jpeg",
+        alt: "The Tented Pavilion wedding ceremony",
+      },
+      {
+        src: "/media/images/events/wedding/location/Tented Pavilion/2.jpeg",
+        alt: "The Tented Pavilion wedding ceremony",
+      },
+      {
+        src: "/media/images/events/wedding/location/Tented Pavilion/3.jpeg",
+        alt: "The Tented Pavilion wedding ceremony",
+      },
+      {
+        src: "/media/images/events/wedding/location/Tented Pavilion/4.png",
+        alt: "The Tented Pavilion wedding ceremony",
+      },
+    ],
   },
   {
     name: "The Formal Garden",
     description:
-      "The historic Formal Gardens present an enchanting, quintessential English landscape, offering an exquisite backdrop for everything from refined cocktail receptions and fairytale wedding ceremonies to corporate retreats and captivating photoshoots.",
+      "Exchange vows in the heart of a quintessential English landscape, where sculpted hedgerows and formal pathways create a naturally breathtaking aisle. The Formal Gardens have set the stage for countless fairytale ceremonies, offering an outdoor setting that feels both timeless and deeply personal.",
     capacity: "Up to 500 guests",
-    image: "/media/images/events/wedding/formal.jpg",
+    image: "/media/images/events/wedding/location/Formal Gardens/1.jpeg",
+    gallery: [
+      {
+        src: "/media/images/events/wedding/location/Formal Gardens/1.jpeg",
+        alt: "The Formal Garden wedding ceremony",
+      },
+      {
+        src: "/media/images/events/wedding/location/Formal Gardens/2.jpeg",
+        alt: "The Formal Garden wedding ceremony",
+      },
+      {
+        src: "/media/images/events/wedding/location/Formal Gardens/3.jpeg",
+        alt: "The Formal Garden wedding ceremony",
+      },
+      {
+        src: "/media/images/events/wedding/location/Formal Gardens/4.jpg",
+        alt: "The Formal Garden wedding ceremony",
+      },
+    ],
   },
   {
     name: "Great Lawn",
     description:
-      "Transform your vision into reality on the magnificent blank canvas of the Great Lawn, an expansive and versatile setting designed to reflect your unique style. Our dedicated event services team will curate the ideal tenting and flooring solutions, creating a refined and seamless foundation for your perfect event.",
+      "The Great Lawn is a magnificent blank canvas — expansive enough to host your entire celebration under a custom tent, with sweeping views of the estate that make every photograph extraordinary. Our team will curate tenting, flooring, and lighting to bring your exact vision to life.",
     capacity: "Up to 800 guests",
-    image:
-      "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/wedding/location/Great Lawn/1.jpeg",
+    gallery: [
+      {
+        src: "/media/images/events/wedding/location/Great Lawn/1.jpeg",
+        alt: "Great Lawn wedding reception",
+      },
+      {
+        src: "/media/images/events/wedding/location/Great Lawn/2.jpeg",
+        alt: "Great Lawn wedding reception",
+      },
+      {
+        src: "/media/images/events/wedding/location/Great Lawn/3.jpeg",
+        alt: "Great Lawn wedding reception",
+      },
+      {
+        src: "/media/images/events/wedding/location/Great Lawn/4.jpeg",
+        alt: "Great Lawn wedding reception",
+      },
+    ],
   },
   {
     name: "Formal Library",
     description:
-      "Discover the exquisite Frick Estate Library, an idyllic haven for hosting intimate gatherings within the mansion. This versatile space lends itself seamlessly to various event styles, whether it be an elegant cocktail reception, a vibrant DJ and dance area, or an additional space for events in the Tented Pavilion.",
+      "The historic Frick Estate Library offers an intimate, warmly appointed setting for cocktail hours, quiet toasts, or a sophisticated lounge for your guests. Its rich character and storied atmosphere make it a distinctive complement to any ceremony held on the grounds.",
     capacity: "Up to 40 guests",
-    image:
-      "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/wedding/location/Formal Library/1.jpg",
+    gallery: [
+      {
+        src: "/media/images/events/wedding/location/Formal Library/1.jpg",
+        alt: "Formal Library wedding gathering",
+      },
+      {
+        src: "/media/images/events/wedding/location/Formal Library/2.jpg",
+        alt: "Formal Library wedding gathering",
+      },
+      {
+        src: "/media/images/events/wedding/location/Formal Library/3.jpg",
+        alt: "Formal Library wedding gathering",
+      },
+      {
+        src: "/media/images/events/wedding/location/Formal Library/4.jpeg",
+        alt: "Formal Library wedding gathering",
+      },
+    ],
   },
   {
     name: "Collection Gallery",
     description:
-      "Situated on the second floor of this storied estate, The Collection Gallery provides a versatile setting that can be tailored to a range of occasions, from business meetings to wedding receptions.",
+      "Host your reception amid world-class art on the second floor of the Frick Estate. The Collection Gallery lends a cultured, one-of-a-kind backdrop to wedding dinners and cocktail hours, where fine art and fine dining share the same room.",
     capacity: "Up to 100 guests",
-    image:
-      "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/wedding/location/Collection Gallery/1.jpg",
+    gallery: [
+      {
+        src: "/media/images/events/wedding/location/Collection Gallery/1.jpg",
+        alt: "Collection Gallery wedding reception",
+      },
+      {
+        src: "/media/images/events/wedding/location/Collection Gallery/2.jpeg",
+        alt: "Collection Gallery wedding reception",
+      },
+      {
+        src: "/media/images/events/wedding/location/Collection Gallery/3.jpg",
+        alt: "Collection Gallery wedding reception",
+      },
+      {
+        src: "/media/images/events/wedding/location/Collection Gallery/4.jpg",
+        alt: "Collection Gallery wedding reception",
+      },
+    ],
   },
   {
     name: "East Terrace",
     description:
-      "Elevate your experience with open-air cocktails or an elegant dinner on the East Terrace, a captivating setting with panoramic views of the serene pond and glimpses of the remarkable sculpture collection.",
+      "Celebrate with open sky above and serene pond views below on the East Terrace. Whether it is a golden-hour cocktail hour or an al fresco dinner as the sun sets over the sculpture garden, this terrace turns every moment into a memory worth keeping.",
     capacity: "Up to 250 guests",
-    image: "/media/images/events/wedding/EastTerrace1.jpg",
+    image: "/media/images/events/wedding/location/East Terrace/1.jpeg",
+    gallery: [
+      {
+        src: "/media/images/events/wedding/location/East Terrace/1.jpeg",
+        alt: "East Terrace wedding celebration",
+      },
+      {
+        src: "/media/images/events/wedding/location/East Terrace/2.jpg",
+        alt: "East Terrace wedding celebration",
+      },
+      {
+        src: "/media/images/events/wedding/location/East Terrace/3.jpg",
+        alt: "East Terrace wedding celebration",
+      },
+      {
+        src: "/media/images/events/wedding/location/East Terrace/4.jpeg",
+        alt: "East Terrace wedding celebration",
+      },
+    ],
   },
   {
     name: "North Terrace",
     description:
-      "Capture the essence of beauty and artistic grandeur on the North Terrace, where sweeping views reveal some of the most unique and breathtaking sculptures. This exceptional setting not only showcases remarkable works of art but also offers a one of a kind historic backdrop in the prestigious Frick Estate.",
+      "The North Terrace places your celebration within a living sculpture garden, offering sweeping views of the estate's most remarkable works of art. With the grandeur of the Frick Estate as your backdrop, this space delivers a ceremony or reception setting unlike anything else on Long Island.",
     capacity: "Up to 250 guests",
-    image: "/media/images/events/wedding/NorthTerrace1.jpg",
+    image: "/media/images/events/wedding/location/North Terrace/1.jpeg",
+    gallery: [
+      {
+        src: "/media/images/events/wedding/location/North Terrace/1.jpeg",
+        alt: "North Terrace wedding celebration",
+      },
+      {
+        src: "/media/images/events/wedding/location/North Terrace/2.jpg",
+        alt: "North Terrace wedding celebration",
+      },
+      {
+        src: "/media/images/events/wedding/location/North Terrace/3.jpg",
+        alt: "North Terrace wedding celebration",
+      },
+      {
+        src: "/media/images/events/wedding/location/North Terrace/4.jpeg",
+        alt: "North Terrace wedding celebration",
+      },
+    ],
   },
   {
     name: "Gazebo",
     description:
-      "The open-air gazebo provides a stunning setting for elegant photography, refined cocktail gatherings, or intimate al fresco dining amid picturesque surroundings.",
+      "The open-air Gazebo is where intimate ceremonies, portrait sessions, and champagne toasts find their most romantic setting. Nestled within the estate grounds, it offers a picturesque, garden-framed moment that photographs beautifully and feels entirely your own.",
     capacity: "Up to 50 guests",
-    image: "/media/images/events/wedding/gazebo.jpg",
+    image: "/media/images/events/wedding/location/Gazebo/1.jpeg",
+    gallery: [
+      {
+        src: "/media/images/events/wedding/location/Gazebo/1.jpeg",
+        alt: "Gazebo wedding ceremony",
+      },
+      {
+        src: "/media/images/events/wedding/location/Gazebo/2.jpeg",
+        alt: "Gazebo wedding ceremony",
+      },
+      {
+        src: "/media/images/events/wedding/location/Gazebo/3.jpeg",
+        alt: "Gazebo wedding ceremony",
+      },
+      {
+        src: "/media/images/events/wedding/location/Gazebo/4.jpeg",
+        alt: "Gazebo wedding ceremony",
+      },
+    ],
   },
 ];
 
@@ -159,10 +300,7 @@ export const weddingPackages: EventPackage[] = [
       "Votive Candles & LED Uplighting",
     ],
     inherits: "Package One",
-    adds: [
-      "5-Hour Full Spirits Bar",
-      "Votive Candles & LED Uplighting",
-    ],
+    adds: ["5-Hour Full Spirits Bar", "Votive Candles & LED Uplighting"],
   },
   {
     name: "The Grand Soirée",
@@ -520,10 +658,7 @@ export const socialPackages: EventPackage[] = [
       "Votive Candles & LED Uplighting",
     ],
     inherits: "Package One",
-    adds: [
-      "5-Hour Full Spirits Bar",
-      "Votive Candles & LED Uplighting",
-    ],
+    adds: ["5-Hour Full Spirits Bar", "Votive Candles & LED Uplighting"],
   },
   {
     name: "The Grand Occasion",
@@ -654,10 +789,7 @@ export const celebrateLifePackages: EventPackage[] = [
       "Votive Candles & LED Uplighting",
     ],
     inherits: "Package One",
-    adds: [
-      "5-Hour Full Spirits Bar",
-      "Votive Candles & LED Uplighting",
-    ],
+    adds: ["5-Hour Full Spirits Bar", "Votive Candles & LED Uplighting"],
   },
   {
     name: "The Legacy",
@@ -741,7 +873,8 @@ export const eventCards = [
     title: "Weddings",
     description:
       "Exchange vows and celebrate surrounded by sculpture gardens, manicured grounds, and timeless architecture. Artistry offers multiple ceremony and reception spaces for weddings of any size.",
-    image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80",
     href: "/events/weddings",
     cta: "Explore Weddings",
   },
@@ -749,7 +882,8 @@ export const eventCards = [
     title: "Corporate Events",
     description:
       "From summer outings to award galas, dinners to conferences. Inspire your team and impress your clients in a setting that elevates every gathering.",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
     href: "/events/corporate",
     cta: "Explore Corporate",
   },
@@ -757,7 +891,8 @@ export const eventCards = [
     title: "Social Events",
     description:
       "Bar and Bat Mitzvahs, Communions, milestone celebrations and more. Honor life's most meaningful chapters with warmth, elegance, and unforgettable hospitality.",
-    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80",
     href: "/events/social",
     cta: "Explore Social Events",
   },
@@ -765,7 +900,8 @@ export const eventCards = [
     title: "Celebrate Life",
     description:
       "A gentle, graceful space to honor a life well-lived. Artistry provides a beautiful and dignified setting for gatherings that celebrate legacy and love.",
-    image: "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=800&q=80",
     href: "/events/celebrate-life",
     cta: "Explore Celebrate Life",
   },
@@ -775,15 +911,15 @@ export const eventCards = [
 
 export const weddingIntroImages = [
   {
-    src: "/media/images/events/wedding/flower.jpg",
+    src: "/media/images/events/wedding/about/1.jpeg",
     alt: "Wedding reception florals at Artistry",
   },
   {
-    src: "/media/images/events/wedding/formal.jpg",
+    src: "/media/images/events/wedding/about/2.jpeg",
     alt: "Formal wedding celebration at Artistry",
   },
   {
-    src: "/media/images/events/wedding/gazebo.jpg",
+    src: "/media/images/events/wedding/about/3.jpeg",
     alt: "Wedding portrait near the gazebo at Artistry",
   },
 ];

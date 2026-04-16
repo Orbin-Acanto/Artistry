@@ -3,7 +3,7 @@ import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import SiteMapLocationsSection from "@/components/ui/SiteMapLocationsSection";
 import Image from "next/image";
-import { weddingLocations } from "@/data/events";
+import { locations } from "@/data/about";
 
 export const metadata: Metadata = {
   title: "Site Map",
@@ -18,7 +18,7 @@ export default function SiteMapPage() {
         label="About"
         title="Explore Our Grounds"
         description="Eight distinct event spaces set within the Nassau County Museum of Art estate, each with its own character, capacity, and atmosphere."
-        imageSrc="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=1920&q=80"
+        imageSrc="/media/images/about/hero_1.jpeg"
         imageAlt="Aerial view of Nassau County Museum of Art estate grounds"
       />
 
@@ -32,7 +32,7 @@ export default function SiteMapPage() {
           />
           <div className="relative aspect-[4/3] overflow-hidden">
             <Image
-              src="/media/images/events/wedding/formal.jpg"
+              src="/media/images/about/over_40.jpeg"
               alt="The formal gardens and estate grounds at Artistry"
               fill
               className="object-cover"
@@ -52,7 +52,7 @@ export default function SiteMapPage() {
             centered
             className="mb-10 md:mb-14"
           />
-          <SiteMapLocationsSection locations={weddingLocations} />
+          <SiteMapLocationsSection locations={locations} />
         </div>
       </section>
     </>
