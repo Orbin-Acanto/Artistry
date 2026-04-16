@@ -5,12 +5,14 @@
  * - Walks every folder under public/media/images/
  * - Compresses JPEGs and PNGs in-place
  * - Skips files already under the size threshold
+ * - Skips files already processed (tracked in scripts/.optimized-manifest.json)
  * - Never upscales — only downscales if wider than max width
  * - Prints a summary of savings
  */
 
 import fs from "fs";
 import path from "path";
+import crypto from "crypto";
 import { createRequire } from "module";
 
 const require = createRequire(import.meta.url);
@@ -18,6 +20,9 @@ const sharp = require("sharp");
 
 // ── Config ─────────────────────────────────────────────────────────────────
 const ROOT = path.resolve("public/media/images");
+
+// Manifest file — tracks which files have already been optimized
+const MANIFEST_PATH = path.resolve("scripts/.optimized-manifest.json");
 
 // Skip files already under this size (bytes) — no point reprocessing small files
 const SKIP_UNDER_BYTES = 300 * 1024; // 300 KB
@@ -42,6 +47,28 @@ let filesProcessed = 0;
 let filesSkipped = 0;
 let errors = 0;
 
+// ── Manifest helpers ────────────────────────────────────────────────────────
+
+function loadManifest() {
+  if (!fs.existsSync(MANIFEST_PATH)) return {};
+  try {
+    return JSON.parse(fs.readFileSync(MANIFEST_PATH, "utf8"));
+  } catch {
+    return {};
+  }
+}
+
+function saveManifest(manifest) {
+  fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2));
+}
+
+function fileHash(filePath) {
+  const buf = fs.readFileSync(filePath);
+  return crypto.createHash("md5").update(buf).digest("hex");
+}
+
+// ───────────────────────────────────────────────────────────────────────────
+
 function walk(dir) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   const files = [];
@@ -62,11 +89,19 @@ function formatBytes(bytes) {
   return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
 }
 
-async function optimizeFile(filePath) {
+async function optimizeFile(filePath, manifest) {
   const ext = path.extname(filePath).toLowerCase();
+  const relPath = path.relative(ROOT, filePath);
   const originalSize = fs.statSync(filePath).size;
 
   if (originalSize < SKIP_UNDER_BYTES) {
+    filesSkipped++;
+    return;
+  }
+
+  // Check manifest — skip if this file was already optimized (hash matches)
+  const currentHash = fileHash(filePath);
+  if (manifest[relPath] && manifest[relPath].hash === currentHash) {
     filesSkipped++;
     return;
   }
@@ -93,13 +128,12 @@ async function optimizeFile(filePath) {
     const optimizedBuffer = await pipeline.toBuffer();
     const optimizedSize = optimizedBuffer.length;
 
-    // Only write back if we actually made it smaller
     if (optimizedSize < originalSize) {
       fs.writeFileSync(filePath, optimizedBuffer);
       const saving = originalSize - optimizedSize;
       const pct = ((saving / originalSize) * 100).toFixed(1);
       console.log(
-        `  ✓ ${path.relative(ROOT, filePath).padEnd(55)} ${formatBytes(originalSize).padStart(9)} → ${formatBytes(optimizedSize).padStart(9)}  (−${pct}%)`
+        `  ✓ ${relPath.padEnd(55)} ${formatBytes(originalSize).padStart(9)} → ${formatBytes(optimizedSize).padStart(9)}  (−${pct}%)`
       );
       totalOriginal += originalSize;
       totalOptimized += optimizedSize;
@@ -108,6 +142,10 @@ async function optimizeFile(filePath) {
       // Already well-optimized, leave it alone
       filesSkipped++;
     }
+
+    // Record in manifest either way — file has been evaluated at this content
+    const finalHash = fileHash(filePath);
+    manifest[relPath] = { hash: finalHash, size: fs.statSync(filePath).size };
   } catch (err) {
     console.error(`  ✗ ERROR: ${filePath}\n    ${err.message}`);
     errors++;
@@ -122,16 +160,19 @@ async function main() {
     process.exit(1);
   }
 
+  const manifest = loadManifest();
   const files = walk(ROOT);
   console.log(`Found ${files.length} image files. Processing...\n`);
 
   for (const file of files) {
-    await optimizeFile(file);
+    await optimizeFile(file, manifest);
   }
+
+  saveManifest(manifest);
 
   console.log("\n─────────────────────────────────────────────────────────────");
   console.log(`  Files optimized : ${filesProcessed}`);
-  console.log(`  Files skipped   : ${filesSkipped} (already small or unchanged)`);
+  console.log(`  Files skipped   : ${filesSkipped} (already optimized or small)`);
   if (errors > 0) console.log(`  Errors          : ${errors}`);
   if (filesProcessed > 0) {
     const saved = totalOriginal - totalOptimized;
