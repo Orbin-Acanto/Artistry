@@ -3,47 +3,13 @@ import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Image from "next/image";
 import Link from "next/link";
+import { eventCards } from "@/data/events";
 
 export const metadata: Metadata = {
   title: "Events",
   description:
     "Host your wedding, corporate event, social celebration, or milestone occasion at Artistry — Nassau County Museum of Art's premier event venue in Roslyn, NY.",
 };
-
-const events = [
-  {
-    title: "Weddings",
-    description:
-      "Exchange vows and celebrate surrounded by sculpture gardens, manicured grounds, and timeless architecture. Artistry offers multiple ceremony and reception spaces for weddings of any size.",
-    image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80",
-    href: "/events/weddings",
-    cta: "Explore Weddings",
-  },
-  {
-    title: "Corporate Events",
-    description:
-      "From summer outings to award galas, dinners to conferences. Inspire your team and impress your clients in a setting that elevates every gathering.",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
-    href: "/events/corporate",
-    cta: "Explore Corporate",
-  },
-  {
-    title: "Social Events",
-    description:
-      "Bar and Bat Mitzvahs, Communions, milestone celebrations and more. Honor life's most meaningful chapters with warmth, elegance, and unforgettable hospitality.",
-    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80",
-    href: "/events/social",
-    cta: "Explore Social Events",
-  },
-  {
-    title: "Celebrate Life",
-    description:
-      "A gentle, graceful space to honor a life well-lived. Artistry provides a beautiful and dignified setting for gatherings that celebrate legacy and love.",
-    image: "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=800&q=80",
-    href: "/events/celebrate-life",
-    cta: "Explore Celebrate Life",
-  },
-];
 
 export default function EventsPage() {
   return (
@@ -65,7 +31,7 @@ export default function EventsPage() {
             className="mb-10 md:mb-16"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {events.map((event) => (
+            {eventCards.map((event) => (
               <Link
                 key={event.href}
                 href={event.href}

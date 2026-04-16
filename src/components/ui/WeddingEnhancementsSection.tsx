@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import type { WeddingEnhancement } from "@/data/weddingEnhancements";
+import type { WeddingEnhancement } from "@/data/events";
 
 type WeddingEnhancementsSectionProps = {
   enhancements: WeddingEnhancement[];

@@ -2,13 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-
-const venueStats = [
-  { value: 40, suffix: "+", label: "Acres of Estate Grounds" },
-  { value: 500, suffix: "+", label: "Guests Accommodated" },
-  { value: 4, suffix: "", label: "Distinct Event Spaces" },
-  { value: 100, suffix: "+", label: "Events Each Year" },
-];
+import { venueStats } from "@/data/home";
 
 function useCountUp(target: number, duration: number, active: boolean) {
   const [count, setCount] = useState(0);

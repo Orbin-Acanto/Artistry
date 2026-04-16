@@ -12,8 +12,9 @@ import {
   weddingCeremonyPackages,
   weddingPackages,
   weddingGallery,
+  weddingIntroImages,
 } from "@/data/events";
-import { weddingEnhancements } from "@/data/weddingEnhancements";
+import { weddingEnhancements } from "@/data/events";
 
 export const metadata: Metadata = {
   title: "Wedding Venue Long Island | Weddings at Artistry",
@@ -27,21 +28,6 @@ export const metadata: Metadata = {
     "museum wedding venue",
   ],
 };
-
-const weddingIntroImages = [
-  {
-    src: "/media/images/events/wedding/flower.jpg",
-    alt: "Wedding reception florals at Artistry",
-  },
-  {
-    src: "/media/images/events/wedding/formal.jpg",
-    alt: "Formal wedding celebration at Artistry",
-  },
-  {
-    src: "/media/images/events/wedding/gazebo.jpg",
-    alt: "Wedding portrait near the gazebo at Artistry",
-  },
-];
 
 export default function WeddingsPage() {
   return (

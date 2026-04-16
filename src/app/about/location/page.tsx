@@ -4,6 +4,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/data/site";
+import { directors } from "@/data/about";
 import { MapPin, Phone, Mail, Car, Train } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -11,27 +12,6 @@ export const metadata: Metadata = {
   description:
     "Visit Artistry at One Museum Dr, Roslyn, NY 11576, inside the Nassau County Museum of Art. Directions, contact information, and leadership team.",
 };
-
-const directors = [
-  {
-    name: "Micheal Tardi",
-    title: "Owner",
-    bio: "With 30 years in the hospitality industry, Micheal founded Artistry with a singular vision: to create a venue where art and celebration are inseparable. His deep roots in Long Island's event scene have shaped Artistry into one of the region's most distinguished destinations.",
-    image: "/media/images/about/location/michael.jpg",
-  },
-  {
-    name: "Lauren Leuci",
-    title: "Director of Sales",
-    bio: "Over 12 years in luxury events have made Lauren the trusted first point of contact for clients planning life's most meaningful moments. Her consultative approach and deep knowledge of Artistry's capabilities ensure every inquiry becomes an extraordinary event.",
-    image: "/media/images/about/location/Lauren.png",
-  },
-  {
-    name: "Andrew Heaton",
-    title: "Director of Operations",
-    bio: "With 15 years orchestrating high-end events, Andrew ensures every detail runs flawlessly. His operational expertise in vendor coordination and day-of execution is the backbone of every seamless Artistry experience.",
-    image: "/media/images/about/location/Andy.png",
-  },
-];
 
 export default function LocationPage() {
   return (

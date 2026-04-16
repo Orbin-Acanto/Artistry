@@ -218,45 +218,6 @@ export const weddingPackages: EventPackage[] = [
   },
 ];
 
-export const weddingEnhancements: EventEnhancement[] = [
-  {
-    name: "Floral Design Package",
-    description: "Lush arrangements curated by our preferred floral partners.",
-  },
-  {
-    name: "Sunset Photography Hour",
-    description: "A dedicated golden-hour session on the estate grounds.",
-  },
-  {
-    name: "Cocktail Hour Upgrade",
-    description:
-      "Expanded station menu with artisan canapés and specialty cocktails.",
-  },
-  {
-    name: "Live Musical Performance",
-    description:
-      "String quartet, jazz trio, or acoustic duo during cocktail hour.",
-  },
-  {
-    name: "Dessert Station",
-    description: "Artisan pastry display, gelato bar, or custom macaron tower.",
-  },
-  {
-    name: "Photo Booth Experience",
-    description: "Branded backdrop and instant prints for your guests.",
-  },
-  {
-    name: "Late Night Snack Station",
-    description:
-      "Comfort bites served during dancing — sliders, fries, and more.",
-  },
-  {
-    name: "Overnight Floral Preservation",
-    description:
-      "Professional preservation of your bridal bouquet as a keepsake.",
-  },
-];
-
 export const weddingGallery: GalleryImage[] = [
   {
     src: "/media/images/events/wedding/1.jpeg",
@@ -770,5 +731,197 @@ export const celebrateLifeGallery: GalleryImage[] = [
     alt: "Intimate indoor gathering",
     width: 1200,
     height: 800,
+  },
+];
+
+// ── Events index page ─────────────────────────────────────────────────────────
+
+export const eventCards = [
+  {
+    title: "Weddings",
+    description:
+      "Exchange vows and celebrate surrounded by sculpture gardens, manicured grounds, and timeless architecture. Artistry offers multiple ceremony and reception spaces for weddings of any size.",
+    image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80",
+    href: "/events/weddings",
+    cta: "Explore Weddings",
+  },
+  {
+    title: "Corporate Events",
+    description:
+      "From summer outings to award galas, dinners to conferences. Inspire your team and impress your clients in a setting that elevates every gathering.",
+    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
+    href: "/events/corporate",
+    cta: "Explore Corporate",
+  },
+  {
+    title: "Social Events",
+    description:
+      "Bar and Bat Mitzvahs, Communions, milestone celebrations and more. Honor life's most meaningful chapters with warmth, elegance, and unforgettable hospitality.",
+    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80",
+    href: "/events/social",
+    cta: "Explore Social Events",
+  },
+  {
+    title: "Celebrate Life",
+    description:
+      "A gentle, graceful space to honor a life well-lived. Artistry provides a beautiful and dignified setting for gatherings that celebrate legacy and love.",
+    image: "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=800&q=80",
+    href: "/events/celebrate-life",
+    cta: "Explore Celebrate Life",
+  },
+];
+
+// ── Weddings page ─────────────────────────────────────────────────────────────
+
+export const weddingIntroImages = [
+  {
+    src: "/media/images/events/wedding/flower.jpg",
+    alt: "Wedding reception florals at Artistry",
+  },
+  {
+    src: "/media/images/events/wedding/formal.jpg",
+    alt: "Formal wedding celebration at Artistry",
+  },
+  {
+    src: "/media/images/events/wedding/gazebo.jpg",
+    alt: "Wedding portrait near the gazebo at Artistry",
+  },
+];
+
+// ── Wedding enhancements ──────────────────────────────────────────────────────
+
+export type WeddingEnhancementGalleryImage = {
+  src: string;
+  alt: string;
+};
+
+export type WeddingEnhancement = {
+  name: string;
+  description: string;
+  image: string;
+  gallery: WeddingEnhancementGalleryImage[];
+};
+
+const createGallery = (
+  title: string,
+  sources: string[],
+): WeddingEnhancementGalleryImage[] =>
+  sources.map((src, index) => ({
+    src,
+    alt: `${title} inspiration ${index + 1}`,
+  }));
+
+export const weddingEnhancements: WeddingEnhancement[] = [
+  {
+    name: "Cocktail Reception Upgrades",
+    description:
+      "Enhance your celebration with curated beverage and cocktail experiences designed to impress. From handcrafted signature cocktails to premium spirits and refined wine selections, each offering is thoughtfully tailored to elevate every toast and create a memorable guest experience.",
+    image: "/media/images/events/wedding/1.jpeg",
+    gallery: createGallery("Cocktail Reception Upgrades", [
+      "/media/images/events/wedding/1.jpeg",
+      "/media/images/events/wedding/2.jpeg",
+      "/media/images/events/wedding/3.jpeg",
+      "/media/images/events/wedding/4.jpeg",
+      "/media/images/events/wedding/5.jpeg",
+      "/media/images/events/wedding/6.jpeg",
+    ]),
+  },
+  {
+    name: "Floral & Design Packages",
+    description:
+      "Our floral and design enhancements transform your wedding into a work of art. Featuring custom installations, refined tablescapes, and luxurious blooms, we meticulously curate each element to create a setting that is both visually stunning and uniquely yours.",
+    image: "/media/images/events/wedding/flower.jpg",
+    gallery: createGallery("Floral & Design Packages", [
+      "/media/images/events/wedding/flower.jpg",
+      "/media/images/events/wedding/7.jpeg",
+      "/media/images/events/wedding/8.jpeg",
+      "/media/images/events/wedding/9.jpeg",
+      "/media/images/events/wedding/10.jpeg",
+      "/media/images/events/wedding/11.jpeg",
+    ]),
+  },
+  {
+    name: "Live Musical Performance",
+    description:
+      "Create a vibrant and unforgettable ambiance with live music tailored to your style. Whether it is a romantic harpist, a smooth jazz group, or a high-energy performance featuring electric violin, saxophone, and percussion, our curated talent brings sophistication, energy, and excitement to your special day.",
+    image: "/media/images/events/wedding/gazebo.jpg",
+    gallery: createGallery("Live Musical Performance", [
+      "/media/images/events/wedding/gazebo.jpg",
+      "/media/images/events/wedding/12.jpeg",
+      "/media/images/events/wedding/13.jpeg",
+      "/media/images/events/wedding/14.jpeg",
+      "/media/images/events/wedding/15.jpeg",
+      "/media/images/events/wedding/EastTerrace1.jpg",
+    ]),
+  },
+  {
+    name: "Lighting",
+    description:
+      "Create a captivating atmosphere with layered lighting designed to transform your wedding from day to night. From warm uplighting and delicate pin-spot accents to custom gobos and dynamic intelligent lighting, every detail is crafted to evoke elegance, romance, and unforgettable moments.",
+    image: "/media/images/events/wedding/formal.jpg",
+    gallery: createGallery("Lighting", [
+      "/media/images/events/wedding/formal.jpg",
+      "/media/images/events/wedding/2.jpeg",
+      "/media/images/events/wedding/5.jpeg",
+      "/media/images/events/wedding/8.jpeg",
+      "/media/images/events/wedding/11.jpeg",
+      "/media/images/events/wedding/NorthTerrace1.jpg",
+    ]),
+  },
+  {
+    name: "Entertainment",
+    description:
+      "Enhance your wedding celebration with curated entertainment experiences designed to captivate and delight your guests. From hand-rolled cigar stations and elegant casino tables to engaging palm readers, strolling performers, and nostalgic retro arcade games, each offering is thoughtfully selected to create a dynamic, interactive, and unforgettable atmosphere tailored to your special day.",
+    image: "/media/images/events/wedding/6.jpeg",
+    gallery: createGallery("Entertainment", [
+      "/media/images/events/wedding/6.jpeg",
+      "/media/images/events/wedding/7.jpeg",
+      "/media/images/events/wedding/9.jpeg",
+      "/media/images/events/wedding/12.jpeg",
+      "/media/images/events/wedding/14.jpeg",
+      "/media/images/events/wedding/15.jpeg",
+    ]),
+  },
+  {
+    name: "Photo Novelty",
+    description:
+      "Elevate your wedding experience with premium photo novelties and luxury photo booth activations designed to delight your guests and capture unforgettable moments. From elegantly styled backdrops to fully customized, brand-inspired details, each experience is tailored to reflect the unique vision of the bride and groom, creating interactive, share-worthy memories that last well beyond the celebration.",
+    image: "/media/images/events/wedding/3.jpeg",
+    gallery: createGallery("Photo Novelty", [
+      "/media/images/events/wedding/3.jpeg",
+      "/media/images/events/wedding/4.jpeg",
+      "/media/images/events/wedding/8.jpeg",
+      "/media/images/events/wedding/10.jpeg",
+      "/media/images/events/wedding/13.jpeg",
+      "/media/images/events/wedding/gazebo.jpg",
+    ]),
+  },
+  {
+    name: "Food Trucks and Carts",
+    description:
+      "Enhance your wedding celebration with curated food truck and cart experiences, offering an elevated range of options, from classic hot dog and popcorn carts to luxurious caviar stations, as well as specialty coffee and tea carts, and more.",
+    image: "/media/images/events/wedding/EastTerrace1.jpg",
+    gallery: createGallery("Food Trucks and Carts", [
+      "/media/images/events/wedding/EastTerrace1.jpg",
+      "/media/images/events/wedding/1.jpeg",
+      "/media/images/events/wedding/5.jpeg",
+      "/media/images/events/wedding/9.jpeg",
+      "/media/images/events/wedding/13.jpeg",
+      "/media/images/events/wedding/NorthTerrace1.jpg",
+    ]),
+  },
+  {
+    name: "Dessert Sensation",
+    description:
+      "Add a touch of indulgence with our Dessert Sensation offerings, where creativity meets craftsmanship. From beautifully styled dessert stations to irresistible sweet bites, these upgrades create a delightful, interactive experience your guests will savor.",
+    image: "/media/images/events/wedding/11.jpeg",
+    gallery: createGallery("Dessert Sensation", [
+      "/media/images/events/wedding/11.jpeg",
+      "/media/images/events/wedding/2.jpeg",
+      "/media/images/events/wedding/4.jpeg",
+      "/media/images/events/wedding/6.jpeg",
+      "/media/images/events/wedding/10.jpeg",
+      "/media/images/events/wedding/12.jpeg",
+    ]),
   },
 ];

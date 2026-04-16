@@ -4,21 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-
-const IMAGES = [
-  {
-    src: "/media/images/Tardis%20Catering/IMG_2868.jpg",
-    alt: "Tardis Catering elegant black and gold banquet table setting",
-  },
-  {
-    src: "/media/images/Tardis%20Catering/20231005_111004.jpg",
-    alt: "Tardis Catering plated salad with crystal glassware",
-  },
-  {
-    src: "/media/images/Tardis%20Catering/IMG_1928.jpg",
-    alt: "Tardis Catering buffet spread with pasta and salads",
-  },
-];
+import { tardisSectionImages as IMAGES } from "@/data/home";
 
 const ease = [0.76, 0, 0.24, 1] as const;
 

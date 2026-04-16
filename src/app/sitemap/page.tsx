@@ -1,54 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { sitemapSections } from "@/data/about";
 
 export const metadata: Metadata = {
   title: "Site Map",
   description: "Complete site map for Artistry at Nassau County Museum of Art — browse all pages.",
 };
-
-const sitemapSections = [
-  {
-    title: "Home",
-    links: [{ label: "Homepage", href: "/" }],
-  },
-  {
-    title: "About",
-    links: [
-      { label: "History of the Property", href: "/about/history" },
-      { label: "Location & Directors", href: "/about/location" },
-      { label: "Site Map / Venue Grounds", href: "/about/site-map" },
-    ],
-  },
-  {
-    title: "Events",
-    links: [
-      { label: "All Events", href: "/events" },
-      { label: "Weddings", href: "/events/weddings" },
-      { label: "Corporate Events", href: "/events/corporate" },
-      { label: "Social Events", href: "/events/social" },
-      { label: "Celebrate Life", href: "/events/celebrate-life" },
-    ],
-  },
-  {
-    title: "Vendors",
-    links: [{ label: "Preferred Vendors", href: "/vendors" }],
-  },
-  {
-    title: "Tardis Catering",
-    links: [
-      { label: "Who We Are", href: "/tardis-catering" },
-      { label: "Tardis Cafe", href: "/tardis-cafe" },
-    ],
-  },
-  {
-    title: "FIDI Hospitality",
-    links: [{ label: "About FIDI", href: "/fidi" }],
-  },
-  {
-    title: "Contact",
-    links: [{ label: "Plan Your Event", href: "/#contact" }],
-  },
-];
 
 export default function SitemapPage() {
   return (

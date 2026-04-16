@@ -1,3 +1,14 @@
+import fs from "fs";
+import path from "path";
+
+// Copy pdfjs worker to public/ so it is served statically.
+// Runs at build time — keeps the worker version in sync with pdfjs-dist automatically.
+const workerSrc = path.resolve("node_modules/pdfjs-dist/build/pdf.worker.min.js");
+const workerDest = path.resolve("public/pdf.worker.min.js");
+if (fs.existsSync(workerSrc)) {
+  fs.copyFileSync(workerSrc, workerDest);
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack: (config) => {

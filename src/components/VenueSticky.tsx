@@ -5,21 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import SectionHeader from "@/components/ui/SectionHeader";
-
-const images = [
-  {
-    src: "/media/images/home/about.jpg",
-    alt: "Artistry event venue exterior at Nassau County Museum of Art",
-  },
-  {
-    src: "/media/images/home/about_1.jpg",
-    alt: "Artistry venue interior and grounds",
-  },
-  {
-    src: "/media/images/home/about_3.jpg",
-    alt: "Artistry venue gardens and estate",
-  },
-];
+import { venueImages as images } from "@/data/home";
 
 const ENTRY_X = "110%";
 const ENTRY_FADE_PORTION = 0.25;

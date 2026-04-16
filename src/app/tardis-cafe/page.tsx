@@ -4,6 +4,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/data/site";
+import { cafeMenu, cafePhotoStrip } from "@/data/tardis";
 import { MapPin, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -11,12 +12,6 @@ export const metadata: Metadata = {
   description:
     "Tardis Cafe at Nassau County Museum of Art in Roslyn, NY — artisan coffee, seasonal bites, and light fare for museum visitors and event guests.",
 };
-
-const cafeMenu = [
-  { category: "Coffee & Beverages", items: ["Espresso & Cappuccino", "Cold Brew", "Matcha Latte", "Seasonal Specialties", "Fresh Juices & Teas"] },
-  { category: "Light Fare", items: ["Avocado Toast", "Seasonal Grain Bowl", "Artisan Sandwiches", "Cheese & Charcuterie Board", "Seasonal Soups"] },
-  { category: "Pastries & Sweets", items: ["Croissants & Viennoiserie", "Seasonal Tarts", "House-Made Cookies", "Macarons", "Cake of the Day"] },
-];
 
 export default function TardisCafePage() {
   return (
@@ -107,11 +102,7 @@ export default function TardisCafePage() {
       {/* Photo strip */}
       <section className="bg-cream py-12 md:py-section px-6">
         <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {[
-            { src: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80", alt: "Coffee at Tardis Cafe" },
-            { src: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80", alt: "Seasonal pastry" },
-            { src: "https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=600&q=80", alt: "Outdoor seating at Tardis Cafe" },
-          ].map((img) => (
+          {cafePhotoStrip.map((img) => (
             <div key={img.src} className="relative aspect-square overflow-hidden group">
               <Image
                 src={img.src}

@@ -2,50 +2,13 @@ import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Image from "next/image";
+import { timeline } from "@/data/about";
 
 export const metadata: Metadata = {
   title: "History of the Property",
   description:
     "Explore the rich history of the Nassau County Museum of Art estate in Roslyn, NY — the storied grounds that form the backdrop for Artistry's world-class events.",
 };
-
-const timeline = [
-  {
-    period: "Late 19th Century",
-    title: "The Frick Estate",
-    description:
-      "The property was originally developed as a country retreat by Henry Clay Frick, the prominent industrialist and art collector. The estate reflected the Gilded Age grandeur of Long Island's North Shore, a region known as the 'Gold Coast.'",
-    image: "/media/images/about/Frick-1.jpg",
-  },
-  {
-    period: "Early 20th Century",
-    title: "The Clayton Era",
-    description:
-      "The mansion, known as 'Clayton,' became one of Long Island's most distinguished Beaux-Arts properties. Its sweeping lawns, formal gardens, and neoclassical architecture drew visitors from across society.",
-    image: "/media/images/about/Entrance-portico-of-Clayton.jpg",
-  },
-  {
-    period: "Mid 20th Century",
-    title: "Nassau County Acquisition",
-    description:
-      "Nassau County acquired the property, preserving the estate and its grounds for public cultural use. The mansion and its surrounding landscape would go on to become one of Long Island's most treasured cultural assets.",
-    image: "/media/images/about/Modiliani Open TabHauserPhoto (2).jpg",
-  },
-  {
-    period: "1989",
-    title: "Nassau County Museum of Art",
-    description:
-      "The Nassau County Museum of Art was formally established, transforming the estate into a world-class cultural destination. The museum's galleries, sculpture park, and grounds became celebrated for both fine art and natural beauty.",
-    image: "/media/images/about/20221106_111631.jpg",
-  },
-  {
-    period: "Present Day",
-    title: "Artistry by FIDI Hospitality",
-    description:
-      "Today, FIDI Hospitality operates Artistry within this extraordinary setting, bringing the same reverence for beauty and excellence to every event. Artistry carries forward a century of history, offering a canvas for the celebrations of tomorrow.",
-    image: "/media/images/about/IMG_9958.jpg",
-  },
-];
 
 export default function HistoryPage() {
   return (

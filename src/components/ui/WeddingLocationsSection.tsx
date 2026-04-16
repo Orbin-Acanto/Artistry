@@ -5,6 +5,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import type { EventLocation } from "@/data/events";
+import { placeholderGalleryImages } from "@/data/about";
 
 type ModalView = "floor-plan" | "gallery";
 
@@ -16,21 +17,6 @@ type ModalState = {
 type WeddingLocationsSectionProps = {
   locations: EventLocation[];
 };
-
-const placeholderGalleryImages = [
-  {
-    src: "/media/images/events/wedding/flower.jpg",
-    alt: "Wedding gallery placeholder floral detail",
-  },
-  {
-    src: "/media/images/events/wedding/formal.jpg",
-    alt: "Wedding gallery placeholder formal garden view",
-  },
-  {
-    src: "/media/images/events/wedding/gazebo.jpg",
-    alt: "Wedding gallery placeholder gazebo portrait",
-  },
-];
 
 export default function WeddingLocationsSection({
   locations,
