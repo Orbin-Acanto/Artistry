@@ -153,7 +153,7 @@ export const weddingPageLocations: EventLocation[] = [
         alt: "Collection Gallery wedding reception",
       },
       {
-        src: "/media/images/events/wedding/location/Collection Gallery/4.jpeg",
+        src: "/media/images/events/wedding/location/Collection Gallery/4.png",
         alt: "Collection Gallery wedding reception",
       },
     ],
