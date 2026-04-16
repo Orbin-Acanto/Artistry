@@ -113,18 +113,18 @@ export const weddingPageLocations: EventLocation[] = [
     description:
       "The historic Frick Estate Library offers an intimate, warmly appointed setting for cocktail hours, quiet toasts, or a sophisticated lounge for your guests. Its rich character and storied atmosphere make it a distinctive complement to any ceremony held on the grounds.",
     capacity: "Up to 40 guests",
-    image: "/media/images/events/wedding/location/Formal Library/1.jpg",
+    image: "/media/images/events/wedding/location/Formal Library/1.jpeg",
     gallery: [
       {
-        src: "/media/images/events/wedding/location/Formal Library/1.jpg",
+        src: "/media/images/events/wedding/location/Formal Library/1.jpeg",
         alt: "Formal Library wedding gathering",
       },
       {
-        src: "/media/images/events/wedding/location/Formal Library/2.jpg",
+        src: "/media/images/events/wedding/location/Formal Library/2.jpeg",
         alt: "Formal Library wedding gathering",
       },
       {
-        src: "/media/images/events/wedding/location/Formal Library/3.jpg",
+        src: "/media/images/events/wedding/location/Formal Library/3.jpeg",
         alt: "Formal Library wedding gathering",
       },
       {
@@ -952,28 +952,24 @@ export const weddingEnhancements: WeddingEnhancement[] = [
     name: "Cocktail Reception Upgrades",
     description:
       "Enhance your celebration with curated beverage and cocktail experiences designed to impress. From handcrafted signature cocktails to premium spirits and refined wine selections, each offering is thoughtfully tailored to elevate every toast and create a memorable guest experience.",
-    image: "/media/images/events/wedding/1.jpeg",
+    image: "/media/images/events/wedding/enhancement/Upgrade 1 - Cocktail Reception Upgrades/1.jpeg",
     gallery: createGallery("Cocktail Reception Upgrades", [
-      "/media/images/events/wedding/1.jpeg",
-      "/media/images/events/wedding/2.jpeg",
-      "/media/images/events/wedding/3.jpeg",
-      "/media/images/events/wedding/4.jpeg",
-      "/media/images/events/wedding/5.jpeg",
-      "/media/images/events/wedding/6.jpeg",
+      "/media/images/events/wedding/enhancement/Upgrade 1 - Cocktail Reception Upgrades/2.jpeg",
+      "/media/images/events/wedding/enhancement/Upgrade 1 - Cocktail Reception Upgrades/3.jpg",
+      "/media/images/events/wedding/enhancement/Upgrade 1 - Cocktail Reception Upgrades/4.jpg",
+      "/media/images/events/wedding/enhancement/Upgrade 1 - Cocktail Reception Upgrades/5.jpeg",
     ]),
   },
   {
     name: "Floral & Design Packages",
     description:
       "Our floral and design enhancements transform your wedding into a work of art. Featuring custom installations, refined tablescapes, and luxurious blooms, we meticulously curate each element to create a setting that is both visually stunning and uniquely yours.",
-    image: "/media/images/events/wedding/flower.jpg",
+    image: "/media/images/events/wedding/enhancement/Upgrade 2 - Floral & Design Packages/1.jpeg",
     gallery: createGallery("Floral & Design Packages", [
-      "/media/images/events/wedding/flower.jpg",
-      "/media/images/events/wedding/7.jpeg",
-      "/media/images/events/wedding/8.jpeg",
-      "/media/images/events/wedding/9.jpeg",
-      "/media/images/events/wedding/10.jpeg",
-      "/media/images/events/wedding/11.jpeg",
+      "/media/images/events/wedding/enhancement/Upgrade 2 - Floral & Design Packages/2.jpg",
+      "/media/images/events/wedding/enhancement/Upgrade 2 - Floral & Design Packages/3.jpg",
+      "/media/images/events/wedding/enhancement/Upgrade 2 - Floral & Design Packages/4.jpg",
+      "/media/images/events/wedding/enhancement/Upgrade 2 - Floral & Design Packages/5.png",
     ]),
   },
   {
