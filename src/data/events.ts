@@ -138,10 +138,10 @@ export const weddingPageLocations: EventLocation[] = [
     description:
       "Host your reception amid world-class art on the second floor of the Frick Estate. The Collection Gallery lends a cultured, one-of-a-kind backdrop to wedding dinners and cocktail hours, where fine art and fine dining share the same room.",
     capacity: "Up to 100 guests",
-    image: "/media/images/events/wedding/location/Collection Gallery/1.jpg",
+    image: "/media/images/events/wedding/location/Collection Gallery/1.jpeg",
     gallery: [
       {
-        src: "/media/images/events/wedding/location/Collection Gallery/1.jpg",
+        src: "/media/images/events/wedding/location/Collection Gallery/1.jpeg",
         alt: "Collection Gallery wedding reception",
       },
       {
@@ -149,11 +149,11 @@ export const weddingPageLocations: EventLocation[] = [
         alt: "Collection Gallery wedding reception",
       },
       {
-        src: "/media/images/events/wedding/location/Collection Gallery/3.jpg",
+        src: "/media/images/events/wedding/location/Collection Gallery/3.jpeg",
         alt: "Collection Gallery wedding reception",
       },
       {
-        src: "/media/images/events/wedding/location/Collection Gallery/4.jpg",
+        src: "/media/images/events/wedding/location/Collection Gallery/4.jpeg",
         alt: "Collection Gallery wedding reception",
       },
     ],
@@ -170,7 +170,7 @@ export const weddingPageLocations: EventLocation[] = [
         alt: "East Terrace wedding celebration",
       },
       {
-        src: "/media/images/events/wedding/location/East Terrace/2.jpg",
+        src: "/media/images/events/wedding/location/East Terrace/2.jpeg",
         alt: "East Terrace wedding celebration",
       },
       {
@@ -195,11 +195,11 @@ export const weddingPageLocations: EventLocation[] = [
         alt: "North Terrace wedding celebration",
       },
       {
-        src: "/media/images/events/wedding/location/North Terrace/2.jpg",
+        src: "/media/images/events/wedding/location/North Terrace/2.jpeg",
         alt: "North Terrace wedding celebration",
       },
       {
-        src: "/media/images/events/wedding/location/North Terrace/3.jpg",
+        src: "/media/images/events/wedding/location/North Terrace/3.jpeg",
         alt: "North Terrace wedding celebration",
       },
       {
@@ -228,7 +228,7 @@ export const weddingPageLocations: EventLocation[] = [
         alt: "Gazebo wedding ceremony",
       },
       {
-        src: "/media/images/events/wedding/location/Gazebo/4.jpeg",
+        src: "/media/images/events/wedding/location/Gazebo/4.jpg",
         alt: "Gazebo wedding ceremony",
       },
     ],
@@ -952,7 +952,8 @@ export const weddingEnhancements: WeddingEnhancement[] = [
     name: "Cocktail Reception Upgrades",
     description:
       "Enhance your celebration with curated beverage and cocktail experiences designed to impress. From handcrafted signature cocktails to premium spirits and refined wine selections, each offering is thoughtfully tailored to elevate every toast and create a memorable guest experience.",
-    image: "/media/images/events/wedding/enhancement/Upgrade 1 - Cocktail Reception Upgrades/1.jpeg",
+    image:
+      "/media/images/events/wedding/enhancement/Upgrade 1 - Cocktail Reception Upgrades/1.jpeg",
     gallery: createGallery("Cocktail Reception Upgrades", [
       "/media/images/events/wedding/enhancement/Upgrade 1 - Cocktail Reception Upgrades/2.jpeg",
       "/media/images/events/wedding/enhancement/Upgrade 1 - Cocktail Reception Upgrades/3.jpg",
@@ -964,7 +965,8 @@ export const weddingEnhancements: WeddingEnhancement[] = [
     name: "Floral & Design Packages",
     description:
       "Our floral and design enhancements transform your wedding into a work of art. Featuring custom installations, refined tablescapes, and luxurious blooms, we meticulously curate each element to create a setting that is both visually stunning and uniquely yours.",
-    image: "/media/images/events/wedding/enhancement/Upgrade 2 - Floral & Design Packages/1.jpeg",
+    image:
+      "/media/images/events/wedding/enhancement/Upgrade 2 - Floral & Design Packages/1.jpeg",
     gallery: createGallery("Floral & Design Packages", [
       "/media/images/events/wedding/enhancement/Upgrade 2 - Floral & Design Packages/2.jpg",
       "/media/images/events/wedding/enhancement/Upgrade 2 - Floral & Design Packages/3.jpg",
