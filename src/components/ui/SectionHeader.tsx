@@ -22,7 +22,7 @@ export default function SectionHeader({
       {label && (
         <p
           className={cn(
-            "section-label mb-3 text-[11px] tracking-[0.22em] sm:text-xs sm:tracking-[0.3em]",
+            "section-label mb-3",
             light ? "text-cream/60" : "text-primary",
           )}
         >
@@ -40,9 +40,9 @@ export default function SectionHeader({
       {description && (
         <p
           className={cn(
-            "font-body text-sm leading-relaxed mt-4 max-w-3xl sm:text-base",
+            "font-body text-sm md:text-base leading-relaxed mt-4 ",
             centered && "mx-auto",
-            light ? "text-cream/65" : "text-charcoal/65",
+            light ? "text-cream/70" : "text-charcoal/65",
           )}
         >
           {description}

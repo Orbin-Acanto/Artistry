@@ -26,11 +26,11 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" ref={ref} className="bg-cream py-18 overflow-hidden">
+    <section id="contact" ref={ref} className="bg-cream py-10 md:py-section overflow-hidden">
       <div className="max-w-5xl mx-auto px-8">
         <div className="text-center mb-4">
           <motion.h2
-            className="font-display text-display-lg text-primary uppercase leading-none tracking-tight"
+            className="font-display text-[clamp(1.75rem,6vw,3.5rem)] leading-tight text-balance break-words uppercase text-primary-dark"
             initial={{ opacity: 0, y: 24 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
             transition={{ duration: 0.8, delay: 0.05, ease }}
@@ -39,7 +39,7 @@ export default function ContactSection() {
           </motion.h2>
 
           <motion.p
-            className="font-body text-sm text-charcoal/55 mt-5 max-w-lg mx-auto leading-relaxed"
+            className="font-body text-sm md:text-base leading-relaxed mt-4 max-w-lg mx-auto text-charcoal/65"
             initial={{ opacity: 0, y: 16 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             transition={{ duration: 0.7, delay: 0.2, ease }}

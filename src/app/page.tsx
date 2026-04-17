@@ -38,7 +38,7 @@ export default function HomePage() {
           <p className="section-label text-cream/60 mb-4">
             North Shore Long Island&apos;s premier destination
           </p>
-          <h2 className="font-display text-display-lg text-cream max-w-2xl text-balance">
+          <h2 className="font-display text-[clamp(1.75rem,6vw,3.5rem)] leading-tight text-balance break-words uppercase text-cream">
             Where nature sets the stage and art frames the experience.
           </h2>
         </div>

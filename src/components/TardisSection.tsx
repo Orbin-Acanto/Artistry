@@ -13,7 +13,7 @@ export default function TardisSection() {
   const isInView = useInView(ref, { once: false, margin: "-10%" });
 
   return (
-    <section className="bg-cream py-18 px-6 overflow-hidden" ref={ref}>
+    <section className="bg-cream py-10 md:py-section px-6 overflow-hidden" ref={ref}>
       <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="order-2 lg:order-1 flex flex-col gap-3">
           <motion.div
@@ -84,7 +84,7 @@ export default function TardisSection() {
             Culinary Excellence by Tardis Catering
           </motion.p>
 
-          <h2 className="font-display text-display-lg text-primary-dark max-w-2xl text-balance uppercase leading-[1.1] tracking-tight overflow-hidden">
+          <h2 className="font-display text-[clamp(1.75rem,6vw,3.5rem)] leading-tight text-balance break-words uppercase text-primary-dark overflow-hidden">
             {"Tardis Catering & Tardis Cafe".split(" ").map((word, i) => (
               <span
                 key={i}
@@ -103,7 +103,7 @@ export default function TardisSection() {
           </h2>
 
           <motion.p
-            className="font-body text-sm leading-relaxed mt-6 max-w-md text-charcoal/65 sm:text-base"
+            className="font-body text-sm md:text-base leading-relaxed mt-6 max-w-lg text-charcoal/65"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.65, ease }}

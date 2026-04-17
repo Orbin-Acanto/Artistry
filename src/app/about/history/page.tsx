@@ -22,7 +22,7 @@ export default function HistoryPage() {
       />
 
       {/* Intro */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-4xl mx-auto text-center">
           <SectionHeader
             label="History of the Property"
@@ -45,13 +45,13 @@ export default function HistoryPage() {
               <article
                 className={` lg:px-10 lg:py-0 py-6 ${idx % 2 !== 0 ? "lg:order-2" : ""}`}
               >
-                <time className="section-label mb-3 text-[11px] tracking-[0.22em] sm:text-xs sm:tracking-[0.3em] text-primary block">
+                <time className="section-label mb-3 text-primary block">
                   {item.period}
                 </time>
-                <h3 className="font-display text-[clamp(1.75rem,6vw,3.5rem)] leading-tight text-balance uppercase text-primary-dark mb-4">
+                <h3 className="font-display text-[clamp(1.25rem,4vw,2.5rem)] leading-tight text-balance uppercase text-primary-dark mb-4">
                   {item.title}
                 </h3>
-                <p className="font-body text-sm leading-relaxed sm:text-base text-charcoal/65">
+                <p className="font-body text-sm md:text-base leading-relaxed max-w-lg text-charcoal/65">
                   {item.description}
                 </p>
               </article>
@@ -71,7 +71,7 @@ export default function HistoryPage() {
         ))}
       </section>
 
-      <section className="bg-primary py-12 md:py-20 px-6">
+      <section className="bg-primary py-10 md:py-section px-6">
         <div className="max-w-3xl mx-auto text-center">
           <blockquote>
             <p className="font-display text-2xl md:text-3xl text-cream leading-relaxed">

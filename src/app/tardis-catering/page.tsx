@@ -24,7 +24,7 @@ export default function TardisCateringPage() {
       />
 
       {/* Who We Are */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <SectionHeader
@@ -73,7 +73,7 @@ export default function TardisCateringPage() {
         </div>
       </section>
 
-      <section className="bg-primary py-12 md:py-section px-6">
+      <section className="bg-primary py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Sample Menu"
@@ -92,7 +92,7 @@ export default function TardisCateringPage() {
       </section>
 
       {/* Gallery */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Gallery"
@@ -145,7 +145,7 @@ export default function TardisCateringPage() {
       </section>
 
       {/* Cafe link */}
-      <section className="bg-primary py-12 md:py-16 px-6 text-center">
+      <section className="bg-primary py-10 md:py-section px-6 text-center">
         <SectionHeader
           label="Also by Tardis"
           title="Visit Tardis Cafe"

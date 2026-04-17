@@ -24,7 +24,7 @@ export default function LocationPage() {
         imageAlt="Nassau County Museum of Art exterior and grounds"
       />
 
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="w-full h-[400px] lg:h-[520px] overflow-hidden">
             <iframe
@@ -121,7 +121,7 @@ export default function LocationPage() {
         </div>
       </section>
 
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Our Team"

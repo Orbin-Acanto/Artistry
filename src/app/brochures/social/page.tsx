@@ -19,7 +19,7 @@ export default function SocialBrochurePage() {
         imageAlt="Social event at Artistry"
       />
 
-      <section className="bg-cream py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <MenuBrochureClient
             pdfPath="/media/pdfs/social.pdf"

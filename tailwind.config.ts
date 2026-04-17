@@ -42,9 +42,8 @@ const config: Config = {
         ],
       },
       spacing: {
-        "18": "4.5rem",
         "22": "5.5rem",
-        section: "6rem",
+        section: "4.5rem",
       },
       maxWidth: {
         "8xl": "88rem",

@@ -32,7 +32,7 @@ export default function CorporatePage() {
       />
 
       {/* Intro */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
             <SectionHeader
@@ -66,7 +66,7 @@ export default function CorporatePage() {
       </section>
 
       {/* Event Types */}
-      <section className="bg-primary-dark py-12 md:py-section">
+      <section className="bg-primary-dark py-10 md:py-section">
         <div className="max-w-8xl mx-auto px-6">
           <SectionHeader
             label="Corporate Event Types"
@@ -78,10 +78,7 @@ export default function CorporatePage() {
         </div>
         <div className="max-w-8xl mx-auto px-6 lg:px-0 divide-y divide-cream/10">
           {corporateEventTypes.map((type, idx) => (
-            <div
-              key={type.slug}
-              className="grid grid-cols-1 lg:grid-cols-2"
-            >
+            <div key={type.slug} className="grid grid-cols-1 lg:grid-cols-2">
               <div
                 className={`relative aspect-[4/3] lg:aspect-auto lg:h-[480px] overflow-hidden ${
                   idx % 2 !== 0 ? "lg:order-2" : ""
@@ -103,10 +100,10 @@ export default function CorporatePage() {
                 <p className="section-label text-cream/50 mb-2">
                   {type.capacity}
                 </p>
-                <h3 className="font-display text-2xl md:text-3xl text-cream mb-4">
+                <h3 className="font-display text-[clamp(1.25rem,4vw,2.5rem)] leading-tight text-balance break-words uppercase text-cream mb-4">
                   {type.name}
                 </h3>
-                <p className="font-body text-sm text-cream/65 leading-relaxed mb-6">
+                <p className="font-body text-sm md:text-base leading-relaxed max-w-lg text-cream/70 mb-6">
                   {type.description}
                 </p>
                 <ul className="space-y-2.5">
@@ -126,7 +123,7 @@ export default function CorporatePage() {
       </section>
 
       {/* Gallery */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Corporate Gallery"
@@ -139,7 +136,7 @@ export default function CorporatePage() {
       </section>
 
       {/* Brochure CTA */}
-      <section className="bg-primary py-12 md:py-16 px-6 text-center">
+      <section className="bg-primary py-10 md:py-section px-6 text-center">
         <SectionHeader
           label="Take It With You"
           title="Our Corporate Events Brochure"

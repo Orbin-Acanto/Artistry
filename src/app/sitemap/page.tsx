@@ -12,7 +12,7 @@ export default function SitemapPage() {
     <div className="bg-cream min-h-screen pt-28 md:pt-40 pb-12 md:pb-section px-6">
       <div className="max-w-4xl mx-auto">
         <p className="section-label mb-3">Navigation</p>
-        <h1 className="font-display text-display-lg text-charcoal mb-12">Site Map</h1>
+        <h1 className="font-display text-[clamp(1.75rem,6vw,3.5rem)] leading-tight text-balance break-words uppercase text-primary-dark mb-12">Site Map</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {sitemapSections.map((section) => (
             <div key={section.title}>

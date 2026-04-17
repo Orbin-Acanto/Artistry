@@ -31,7 +31,7 @@ export default function SocialEventsPage() {
       />
 
       {/* Event Types */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <div className="mb-12 md:mb-16">
             <SectionHeader
@@ -63,10 +63,10 @@ export default function SocialEventsPage() {
                 <div
                   className={`py-8 px-4 md:px-8 lg:px-12 ${idx % 2 !== 0 ? "lg:order-1" : ""}`}
                 >
-                  <h2 className="font-display text-display-md text-charcoal mb-4">
+                  <h2 className="font-display text-[clamp(1.75rem,6vw,3.5rem)] leading-tight text-balance break-words uppercase text-primary-dark mb-4">
                     {type.name}
                   </h2>
-                  <p className="font-body text-base leading-relaxed text-charcoal/65 max-w-3xl mb-4">
+                  <p className="font-body text-sm md:text-base leading-relaxed text-charcoal/65 max-w-lg mb-4">
                     {type.description}
                   </p>
                   <p className="font-body text-sm text-charcoal/55 leading-relaxed">
@@ -86,7 +86,7 @@ export default function SocialEventsPage() {
       </section>
 
       {/* Packages */}
-      <section className="bg-primary-dark py-12 md:py-section px-6">
+      <section className="bg-primary-dark py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Event Packages"
@@ -161,7 +161,7 @@ export default function SocialEventsPage() {
       </section>
 
       {/* Gallery */}
-      <section className="bg-primary/10 py-12 md:py-section px-6">
+      <section className="bg-primary/10 py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Social Events Gallery"
@@ -174,7 +174,7 @@ export default function SocialEventsPage() {
       </section>
 
       {/* Brochure CTA */}
-      <section className="bg-primary py-12 md:py-16 px-6 text-center">
+      <section className="bg-primary py-10 md:py-section px-6 text-center">
         <SectionHeader
           label="Take It With You"
           title="Our Social Events Brochure"

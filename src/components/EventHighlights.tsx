@@ -12,7 +12,7 @@ export default function EventHighlights() {
   const isInView = useInView(sectionRef, { once: true, margin: "-10%" });
 
   return (
-    <section ref={sectionRef} className="bg-cream py-18 px-6">
+    <section ref={sectionRef} className="bg-cream py-10 md:py-section px-6">
       <div className="max-w-8xl mx-auto">
         <motion.div initial="hidden" animate={isInView ? "visible" : "hidden"}>
           <SectionHeader

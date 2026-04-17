@@ -23,7 +23,7 @@ export default function SiteMapPage() {
       />
 
       {/* Estate overview */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <SectionHeader
             label="The Estate"
@@ -43,7 +43,7 @@ export default function SiteMapPage() {
       </section>
 
       {/* Spaces */}
-      <section className="bg-primary/10 py-12 md:py-section px-6">
+      <section className="bg-primary/10 py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Ceremony & Reception Spaces"

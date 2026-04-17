@@ -25,7 +25,7 @@ export default function TardisCafePage() {
       />
 
       {/* About */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <SectionHeader
@@ -67,7 +67,7 @@ export default function TardisCafePage() {
       </section>
 
       {/* Menu */}
-      <section className="bg-primary-dark py-12 md:py-section px-6">
+      <section className="bg-primary-dark py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Our Menu"
@@ -100,7 +100,7 @@ export default function TardisCafePage() {
       </section>
 
       {/* Photo strip */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
           {cafePhotoStrip.map((img) => (
             <div key={img.src} className="relative aspect-square overflow-hidden group">
@@ -117,7 +117,7 @@ export default function TardisCafePage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary py-12 md:py-16 px-6 text-center">
+      <section className="bg-primary py-10 md:py-section px-6 text-center">
         <SectionHeader
           label="Also by Tardis"
           title="Hosting an Event?"

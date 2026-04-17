@@ -22,7 +22,7 @@ export default function EventsPage() {
         imageAlt="Events at Artistry Nassau County Museum of Art"
       />
 
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="What We Host"

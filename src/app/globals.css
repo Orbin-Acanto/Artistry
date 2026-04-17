@@ -50,7 +50,8 @@
   }
 
   .section-label {
-    @apply font-body text-xs font-semibold tracking-[0.3em] uppercase text-primary;
+    @apply font-body font-semibold tracking-[0.3em] uppercase text-primary;
+    font-size: clamp(0.75rem, 2vw, 1rem);
   }
 
   .section-title {

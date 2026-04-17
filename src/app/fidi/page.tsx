@@ -24,7 +24,7 @@ export default function FidiPage() {
       />
 
       {/* About FIDI */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <SectionHeader
@@ -55,7 +55,7 @@ export default function FidiPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-primary py-12 md:py-section px-6">
+      <section className="bg-primary py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Our Philosophy"
@@ -80,7 +80,7 @@ export default function FidiPage() {
       </section>
 
       {/* Venues */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Our Venues"
@@ -138,7 +138,7 @@ export default function FidiPage() {
       </section>
 
       {/* Contact */}
-      <section className="bg-primary py-12 md:py-16 px-6 text-center">
+      <section className="bg-primary py-10 md:py-section px-6 text-center">
         <SectionHeader
           label="FIDI Hospitality"
           title="Interested in Working With Us?"

@@ -41,7 +41,7 @@ export default function WeddingsPage() {
       />
 
       {/* Intro */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
             <SectionHeader
@@ -71,7 +71,7 @@ export default function WeddingsPage() {
       </section>
 
       {/* Ceremony Locations */}
-      <section className="bg-primary-dark py-12 md:py-section px-6">
+      <section className="bg-primary-dark py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Ceremony & Reception Spaces"
@@ -86,7 +86,7 @@ export default function WeddingsPage() {
       </section>
 
       {/* Packages */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Wedding Packages"
@@ -196,7 +196,7 @@ export default function WeddingsPage() {
       </section>
 
       {/* Enhancements */}
-      <section className="bg-primary/10 py-12 md:py-section px-6">
+      <section className="bg-primary/10 py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Wedding Enhancements"
@@ -219,7 +219,7 @@ export default function WeddingsPage() {
       />
 
       {/* Gallery */}
-      <section id="wedding-gallery" className="bg-cream py-12 md:py-section px-6">
+      <section id="wedding-gallery" className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Wedding Gallery"
@@ -232,7 +232,7 @@ export default function WeddingsPage() {
       </section>
 
       {/* Brochure CTA */}
-      <section className="bg-primary py-12 md:py-16 px-6 text-center">
+      <section className="bg-primary py-10 md:py-section px-6 text-center">
         <SectionHeader
           label="Take It With You"
           title="Our Wedding Brochure"

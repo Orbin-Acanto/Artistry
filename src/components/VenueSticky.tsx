@@ -95,14 +95,14 @@ export default function VenueSticky() {
         title="Our Venue: Artistry at the Nassau County Museum of Art"
         description="Located on the prestigious Gold Coast of Long Island’s North Shore, Artistry at the Nassau County Museum of Art offers a truly exceptional setting for both corporate and private events. Situated in Roslyn, New York, this one of a kind venue is surrounded by expansive landscaped gardens, renowned sculpture installations, and the timeless elegance of a historic Beaux Arts mansion."
       />
-      <p className="prose-venue mt-5">
+      <p className="mt-5 text-charcoal/65">
         Artistry provides a distinctive backdrop where culture, history, and
         natural beauty converge, creating an inspiring environment for meetings,
         conferences, celebrations, and social gatherings alike. Whether hosting
         a corporate function or a private event, guests are immersed in a
         setting that is both sophisticated and memorable.
       </p>
-      <p className="prose-venue mt-5">
+      <p className="mt-5 text-charcoal/65">
         Under the direction of FIDI Hospitality, and complemented by the
         culinary expertise of Tardis Catering, Artistry delivers a seamless
         blend of elevated service and exceptional cuisine. Every event is
@@ -123,10 +123,12 @@ export default function VenueSticky() {
   return (
     <>
       {/* Mobile/tablet: plain static layout, no sticky */}
-      <div className="xl:hidden bg-cream py-18 px-6">
+      <div className="xl:hidden bg-cream py-10 md:py-section px-6">
         <div className="mx-auto flex flex-col gap-8">
           {textContent}
-          <div style={{ height: "55vw", minHeight: "240px", maxHeight: "480px" }}>
+          <div
+            style={{ height: "55vw", minHeight: "240px", maxHeight: "480px" }}
+          >
             <AutoImageSlider images={images} className="w-full h-full" />
           </div>
         </div>

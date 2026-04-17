@@ -24,7 +24,7 @@ export default function CelebrateLifePage() {
       />
 
       {/* Intro */}
-      <section className="bg-cream py-12 md:py-section px-6">
+      <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <div className="mb-10 md:mb-12">
             <SectionHeader
@@ -81,7 +81,7 @@ export default function CelebrateLifePage() {
       </section>
 
       {/* Packages */}
-      <section className="bg-primary-dark py-12 md:py-section px-6">
+      <section className="bg-primary-dark py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Packages"
@@ -145,7 +145,7 @@ export default function CelebrateLifePage() {
       </section>
 
       {/* Gallery */}
-      <section className="bg-primary/10 py-12 md:py-section px-6">
+      <section className="bg-primary/10 py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto">
           <SectionHeader
             label="Gallery"
@@ -158,7 +158,7 @@ export default function CelebrateLifePage() {
       </section>
 
       {/* Brochure CTA */}
-      <section className="bg-primary py-12 md:py-16 px-6 text-center">
+      <section className="bg-primary py-10 md:py-section px-6 text-center">
         <SectionHeader
           label="Take It With You"
           title="Plan Your Gathering at Artistry"
