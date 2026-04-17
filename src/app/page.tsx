@@ -25,7 +25,7 @@ export default function HomePage() {
       <EventHighlights />
 
       <section
-        className="relative flex aspect-[3/1] min-h-[400px] items-center justify-center text-center px-6 overflow-hidden"
+        className="relative flex h-[40vh] min-h-[300px] max-h-[520px] items-center justify-center text-center px-6 overflow-hidden parallax-section"
         style={{
           backgroundImage: "url('/media/images/home/divider.png')",
           backgroundAttachment: "fixed",

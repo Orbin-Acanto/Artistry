@@ -80,6 +80,13 @@
     display: none;
   }
 
+  /* Fixed-bg parallax: disable on mobile where it's unsupported */
+  @media (max-width: 768px) {
+    .parallax-section {
+      background-attachment: scroll !important;
+    }
+  }
+
   /* Parallax utility */
   .parallax-layer {
     will-change: transform;
