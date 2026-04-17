@@ -13,7 +13,7 @@ export default function TardisSection() {
   const isInView = useInView(ref, { once: false, margin: "-10%" });
 
   return (
-    <section className="bg-cream py-section px-6 overflow-hidden" ref={ref}>
+    <section className="bg-cream py-18 px-6 overflow-hidden" ref={ref}>
       <div className="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="order-2 lg:order-1 flex flex-col gap-3">
           <motion.div
