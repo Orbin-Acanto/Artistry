@@ -37,7 +37,7 @@ export default function EventsPage() {
                 href={event.href}
                 className="group relative overflow-hidden block"
               >
-                <div className="relative aspect-[4/5] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={event.image}
                     alt={event.title}
@@ -47,7 +47,9 @@ export default function EventsPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal/75 via-charcoal/20 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <h2 className="font-display text-3xl text-cream mb-3">{event.title}</h2>
+                    <h2 className="font-display text-3xl text-cream mb-3">
+                      {event.title}
+                    </h2>
                     <p className="font-body text-sm text-cream/70 leading-relaxed mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {event.description}
                     </p>
