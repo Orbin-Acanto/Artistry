@@ -40,6 +40,7 @@ export const weddingPageLocations: EventLocation[] = [
       "Say your vows beneath the soaring glass-walled Pavilion, where manicured lawns and striking sculptures frame every moment. The Tented Pavilion seamlessly transitions from an intimate ceremony setting to a grand reception hall, with direct access to the Mansion's galleries adding an unmatched layer of elegance.",
     capacity: "Up to 125 guests",
     image: "/media/images/events/wedding/location/Tented Pavilion/1.jpeg",
+    plan: "/media/images/events/wedding/location/Tented Pavilion/plan.jpg",
     gallery: [
       {
         src: "/media/images/events/wedding/location/Tented Pavilion/1.jpeg",
@@ -65,6 +66,7 @@ export const weddingPageLocations: EventLocation[] = [
       "Exchange vows in the heart of a quintessential English landscape, where sculpted hedgerows and formal pathways create a naturally breathtaking aisle. The Formal Gardens have set the stage for countless fairytale ceremonies, offering an outdoor setting that feels both timeless and deeply personal.",
     capacity: "Up to 500 guests",
     image: "/media/images/events/wedding/location/Formal Gardens/1.jpeg",
+    plan: "/media/images/events/wedding/location/Formal Gardens/plan.jpg",
     gallery: [
       {
         src: "/media/images/events/wedding/location/Formal Gardens/1.jpeg",
@@ -90,6 +92,7 @@ export const weddingPageLocations: EventLocation[] = [
       "The Great Lawn is a magnificent blank canvas, expansive enough to host your entire celebration under a custom tent, with sweeping views of the estate that make every photograph extraordinary. Our team will curate tenting, flooring, and lighting to bring your exact vision to life.",
     capacity: "Up to 800 guests",
     image: "/media/images/events/wedding/location/Great Lawn/1.jpeg",
+    plan: "/media/images/events/wedding/location/Great Lawn/plan.jpg",
     gallery: [
       {
         src: "/media/images/events/wedding/location/Great Lawn/1.jpeg",
@@ -115,6 +118,7 @@ export const weddingPageLocations: EventLocation[] = [
       "The historic Frick Estate Library offers an intimate, warmly appointed setting for cocktail hours, quiet toasts, or a sophisticated lounge for your guests. Its rich character and storied atmosphere make it a distinctive complement to any ceremony held on the grounds.",
     capacity: "Up to 40 guests",
     image: "/media/images/events/wedding/location/Formal Library/1.jpeg",
+    plan: "/media/images/events/wedding/location/Formal Library/plan.jpg",
     gallery: [
       {
         src: "/media/images/events/wedding/location/Formal Library/1.jpeg",
@@ -140,6 +144,7 @@ export const weddingPageLocations: EventLocation[] = [
       "Host your reception amid world-class art on the second floor of the Frick Estate. The Collection Gallery lends a cultured, one-of-a-kind backdrop to wedding dinners and cocktail hours, where fine art and fine dining share the same room.",
     capacity: "Up to 100 guests",
     image: "/media/images/events/wedding/location/Collection Gallery/1.jpeg",
+    plan: "/media/images/events/wedding/location/Collection Gallery/plan.jpg",
     gallery: [
       {
         src: "/media/images/events/wedding/location/Collection Gallery/1.jpeg",
@@ -165,6 +170,7 @@ export const weddingPageLocations: EventLocation[] = [
       "Celebrate with open sky above and serene pond views below on the East Terrace. Whether it is a golden-hour cocktail hour or an al fresco dinner as the sun sets over the sculpture garden, this terrace turns every moment into a memory worth keeping.",
     capacity: "Up to 250 guests",
     image: "/media/images/events/wedding/location/East Terrace/1.jpeg",
+    plan: "/media/images/events/wedding/location/East Terrace/plan.jpg",
     gallery: [
       {
         src: "/media/images/events/wedding/location/East Terrace/1.jpeg",
@@ -190,6 +196,7 @@ export const weddingPageLocations: EventLocation[] = [
       "The North Terrace places your celebration within a living sculpture garden, offering sweeping views of the estate's most remarkable works of art. With the grandeur of the Frick Estate as your backdrop, this space delivers a ceremony or reception setting unlike anything else on Long Island.",
     capacity: "Up to 250 guests",
     image: "/media/images/events/wedding/location/North Terrace/1.jpeg",
+    plan: "/media/images/events/wedding/location/North Terrace/plan.jpg",
     gallery: [
       {
         src: "/media/images/events/wedding/location/North Terrace/1.jpeg",
@@ -215,6 +222,7 @@ export const weddingPageLocations: EventLocation[] = [
       "The open-air Gazebo is where intimate ceremonies, portrait sessions, and champagne toasts find their most romantic setting. Nestled within the estate grounds, it offers a picturesque, garden-framed moment that photographs beautifully and feels entirely your own.",
     capacity: "Up to 50 guests",
     image: "/media/images/events/wedding/location/Gazebo/1.jpeg",
+    plan: "/media/images/events/wedding/location/Gazebo/plan.jpg",
     gallery: [
       {
         src: "/media/images/events/wedding/location/Gazebo/1.jpeg",
