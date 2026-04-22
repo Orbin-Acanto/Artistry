@@ -15,7 +15,7 @@ export default function SocialBrochurePage() {
         label="Brochures"
         title="Social Events"
         description="Galas, milestone celebrations, and social gatherings. Discover what Artistry can create for your most memorable moments."
-        imageSrc="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1920&q=80"
+        imageSrc="/media/images/events/Social Events/20230510_172459.jpg"
         imageAlt="Social event at Artistry"
       />
 

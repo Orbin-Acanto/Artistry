@@ -15,7 +15,7 @@ export default function CorporateBrochurePage() {
         label="Brochures"
         title="Corporate Events"
         description="From intimate board dinners to large-scale conferences, discover how Artistry elevates every corporate occasion."
-        imageSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1920&q=80"
+        imageSrc="/media/images/events/corporate/awards.jpg"
         imageAlt="Corporate event at Artistry"
       />
 

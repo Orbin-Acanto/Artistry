@@ -672,20 +672,90 @@ export const corporateEventTypes: CorporateEventType[] = [
 ];
 
 export const corporateGallery: GalleryImage[] = [
-  { src: "/media/images/events/corporate/1.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
-  { src: "/media/images/events/corporate/2.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
-  { src: "/media/images/events/corporate/3.png", alt: "Artistry corporate event", width: 1200, height: 900 },
-  { src: "/media/images/events/corporate/4.png", alt: "Artistry corporate event", width: 1200, height: 900 },
-  { src: "/media/images/events/corporate/5.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
-  { src: "/media/images/events/corporate/6.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
-  { src: "/media/images/events/corporate/7.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
-  { src: "/media/images/events/corporate/8.png", alt: "Artistry corporate event", width: 1200, height: 900 },
-  { src: "/media/images/events/corporate/9.png", alt: "Artistry corporate event", width: 1200, height: 900 },
-  { src: "/media/images/events/corporate/10.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
-  { src: "/media/images/events/corporate/11.png", alt: "Artistry corporate event", width: 1200, height: 900 },
-  { src: "/media/images/events/corporate/12.png", alt: "Artistry corporate event", width: 1200, height: 900 },
-  { src: "/media/images/events/corporate/13.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
-  { src: "/media/images/events/corporate/14.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
+  {
+    src: "/media/images/events/corporate/1.jpg",
+    alt: "Artistry corporate event",
+    width: 1200,
+    height: 900,
+  },
+  {
+    src: "/media/images/events/corporate/2.jpg",
+    alt: "Artistry corporate event",
+    width: 1200,
+    height: 900,
+  },
+  {
+    src: "/media/images/events/corporate/3.png",
+    alt: "Artistry corporate event",
+    width: 1200,
+    height: 900,
+  },
+  {
+    src: "/media/images/events/corporate/4.png",
+    alt: "Artistry corporate event",
+    width: 1200,
+    height: 900,
+  },
+  {
+    src: "/media/images/events/corporate/5.jpg",
+    alt: "Artistry corporate event",
+    width: 1200,
+    height: 900,
+  },
+  {
+    src: "/media/images/events/corporate/6.jpg",
+    alt: "Artistry corporate event",
+    width: 1200,
+    height: 900,
+  },
+  {
+    src: "/media/images/events/corporate/7.jpg",
+    alt: "Artistry corporate event",
+    width: 1200,
+    height: 900,
+  },
+  {
+    src: "/media/images/events/corporate/8.png",
+    alt: "Artistry corporate event",
+    width: 1200,
+    height: 900,
+  },
+  {
+    src: "/media/images/events/corporate/9.png",
+    alt: "Artistry corporate event",
+    width: 1200,
+    height: 900,
+  },
+  {
+    src: "/media/images/events/corporate/10.jpg",
+    alt: "Artistry corporate event",
+    width: 1200,
+    height: 900,
+  },
+  {
+    src: "/media/images/events/corporate/11.png",
+    alt: "Artistry corporate event",
+    width: 1200,
+    height: 900,
+  },
+  {
+    src: "/media/images/events/corporate/12.png",
+    alt: "Artistry corporate event",
+    width: 1200,
+    height: 900,
+  },
+  {
+    src: "/media/images/events/corporate/13.jpg",
+    alt: "Artistry corporate event",
+    width: 1200,
+    height: 900,
+  },
+  {
+    src: "/media/images/events/corporate/14.jpg",
+    alt: "Artistry corporate event",
+    width: 1200,
+    height: 900,
+  },
 ];
 
 // ─── SOCIAL EVENTS ───────────────────────────────────────────────────────────
@@ -950,24 +1020,10 @@ export const celebrateLifePackages: EventPackage[] = [
 ];
 
 export const celebrateLifeGallery: GalleryImage[] = [
-  {
-    src: "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=1200&q=80",
-    alt: "Serene gathering space",
-    width: 1200,
-    height: 800,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80",
-    alt: "Garden reception",
-    width: 800,
-    height: 1000,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?auto=format&fit=crop&w=1200&q=80",
-    alt: "Intimate indoor gathering",
-    width: 1200,
-    height: 800,
-  },
+  { src: "/media/images/events/celebrate/1.jpeg", alt: "Serene gathering space", width: 1200, height: 800 },
+  { src: "/media/images/events/celebrate/2.jpeg", alt: "Serene gathering space", width: 1200, height: 800 },
+  { src: "/media/images/events/celebrate/3.jpeg", alt: "Serene gathering space", width: 1200, height: 800 },
+  { src: "/media/images/events/celebrate/4.jpeg", alt: "Serene gathering space", width: 1200, height: 800 },
 ];
 
 // ── Events index page ─────────────────────────────────────────────────────────

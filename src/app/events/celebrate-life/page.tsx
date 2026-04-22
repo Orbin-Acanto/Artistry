@@ -19,7 +19,7 @@ export default function CelebrateLifePage() {
         label="Celebrate Life"
         title="Honor Every Chapter. Cherish Every Moment."
         description="A serene, beautiful space to gather, remember, and celebrate the journeys that shape us."
-        imageSrc="https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=1920&q=80"
+        imageSrc="/media/images/events/celebrate/hero.jpeg"
         imageAlt="Serene gathering at Artistry"
       />
 
@@ -39,21 +39,21 @@ export default function CelebrateLifePage() {
                 label: "The Setting",
                 title: "Spaces for Every Size",
                 body: "Gardens, pavilions, terraces, for 20 guests or 200.",
-                img: "/media/images/events/Social%20Events/H-23.jpg",
+                img: "/media/images/events/celebrate/1 - The Setting.jpeg",
                 alt: "Elegant reception setup at Artistry",
               },
               {
                 label: "The Food",
                 title: "Menus for the Occasion",
                 body: "Tardis Catering builds the menu around you: buffet, plated, or passed.",
-                img: "/media/images/events/Social%20Events/H-25.jpg",
+                img: "/media/images/events/celebrate/2 - The Food.jpeg",
                 alt: "Floral tablescape with gold chargers",
               },
               {
                 label: "The Team",
                 title: "One Contact Throughout",
                 body: "Your coordinator handles setup, timing, and staffing so you can be present.",
-                img: "/media/images/events/Social%20Events/20230908_152912-edit.jpg",
+                img: "/media/images/events/celebrate/3 - The Team.jpeg",
                 alt: "Tented celebration at Artistry",
               },
             ].map((card) => (
@@ -98,9 +98,13 @@ export default function CelebrateLifePage() {
                 className="border border-cream/20 p-6 md:p-8 hover:border-cream/50 transition-colors flex flex-col"
               >
                 {pkg.subtitle && (
-                  <p className="section-label text-cream/50 mb-2">{pkg.subtitle}</p>
+                  <p className="section-label text-cream/50 mb-2">
+                    {pkg.subtitle}
+                  </p>
                 )}
-                <h3 className="font-display text-2xl text-cream mb-1">{pkg.name}</h3>
+                <h3 className="font-display text-2xl text-cream mb-1">
+                  {pkg.name}
+                </h3>
                 {pkg.minGuests && (
                   <p className="font-body text-xs tracking-widest uppercase text-cream/35 mb-4">
                     {pkg.minGuests}
@@ -119,7 +123,9 @@ export default function CelebrateLifePage() {
                         {pkg.adds!.map((item) => (
                           <li key={item} className="flex gap-3 items-start">
                             <span className="w-1 h-1 rounded-full bg-cream/60 shrink-0 mt-2" />
-                            <span className="font-body text-sm text-cream/75">{item}</span>
+                            <span className="font-body text-sm text-cream/75">
+                              {item}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -129,13 +135,18 @@ export default function CelebrateLifePage() {
                       {pkg.includes.map((item) => (
                         <li key={item} className="flex gap-3 items-start">
                           <span className="w-1 h-1 rounded-full bg-cream/60 shrink-0 mt-2" />
-                          <span className="font-body text-sm text-cream/75">{item}</span>
+                          <span className="font-body text-sm text-cream/75">
+                            {item}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   )}
                 </div>
-                <Link href="/#contact" className="btn-outline w-full text-center mt-auto">
+                <Link
+                  href="/#contact"
+                  className="btn-outline w-full text-center mt-auto"
+                >
                   Inquire
                 </Link>
               </div>

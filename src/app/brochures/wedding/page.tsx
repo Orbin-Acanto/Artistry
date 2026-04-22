@@ -15,7 +15,7 @@ export default function WeddingBrochurePage() {
         label="Brochures"
         title="Weddings"
         description="Every detail of your wedding day, elevated by the timeless beauty of the Nassau County Museum of Art."
-        imageSrc="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1920&q=80"
+        imageSrc="/media/images/events/wedding/12.jpeg"
         imageAlt="Wedding at Artistry"
       />
 
