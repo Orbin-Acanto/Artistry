@@ -5,7 +5,7 @@ import MenuBrochureClient from "@/components/MenuBrochureClient";
 export const metadata: Metadata = {
   title: "Corporate Brochure | Artistry at Nassau County Museum of Art",
   description:
-    "Explore Artistry's corporate event brochure — from intimate board dinners to large-scale conferences at the Nassau County Museum of Art in Roslyn, NY.",
+    "Explore Artistry's corporate event brochure, from intimate board dinners to large-scale conferences at the Nassau County Museum of Art in Roslyn, NY.",
 };
 
 export default function CorporateBrochurePage() {

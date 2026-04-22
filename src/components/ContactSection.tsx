@@ -80,7 +80,7 @@ export default function ContactSection() {
               Thank You.
             </p>
             <p className="font-body text-charcoal/50 text-sm">
-              We&apos;ll be in touch within 24–48 hours.
+              We&apos;ll be in touch within 24 to 48 hours.
             </p>
           </motion.div>
         ) : (
@@ -221,7 +221,7 @@ export default function ContactSection() {
 
             {state === "error" && (
               <p className="font-body text-xs text-red-500 mt-4 text-right">
-                Something went wrong — email us at{" "}
+                Something went wrong. Email us at{" "}
                 <a href={SITE.contact.emailHref} className="underline">
                   {SITE.contact.email}
                 </a>

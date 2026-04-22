@@ -7,7 +7,7 @@ import { timeline } from "@/data/about";
 export const metadata: Metadata = {
   title: "History of the Property",
   description:
-    "Explore the rich history of the Nassau County Museum of Art estate in Roslyn, NY — the storied grounds that form the backdrop for Artistry's world-class events.",
+    "Explore the rich history of the Nassau County Museum of Art estate in Roslyn, NY. The storied grounds that form the backdrop for Artistry's world-class events.",
 };
 
 export default function HistoryPage() {
@@ -80,7 +80,7 @@ export default function HistoryPage() {
               story.&rdquo;
             </p>
             <footer className="mt-8 font-body text-sm tracking-widest uppercase text-cream/50">
-              — The Artistry Team
+              The Artistry Team
             </footer>
           </blockquote>
         </div>

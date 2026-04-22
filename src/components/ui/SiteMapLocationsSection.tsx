@@ -51,7 +51,7 @@ export default function SiteMapLocationsSection({
   const floorPlanImage = modal
     ? {
         src: modal.location.image,
-        alt: `${modal.location.name} floor plan placeholder`,
+        alt: `${modal.location.name} floor plan`,
       }
     : null;
 

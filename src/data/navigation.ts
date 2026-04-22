@@ -7,7 +7,7 @@ export type NavItem = {
 export const navigation: NavItem[] = [
   {
     label: "About",
-    href: "/about",
+    href: "/about/history",
     children: [
       { label: "History of the Property", href: "/about/history" },
       { label: "Location & Directors", href: "/about/location" },

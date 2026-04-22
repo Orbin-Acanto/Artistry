@@ -8,7 +8,7 @@ import { eventCards } from "@/data/events";
 export const metadata: Metadata = {
   title: "Events",
   description:
-    "Host your wedding, corporate event, social celebration, or milestone occasion at Artistry — Nassau County Museum of Art's premier event venue in Roslyn, NY.",
+    "Host your wedding, corporate event, social celebration, or milestone occasion at Artistry, Nassau County Museum of Art's premier event venue in Roslyn, NY.",
 };
 
 export default function EventsPage() {
@@ -18,7 +18,7 @@ export default function EventsPage() {
         label="Events"
         title="Every Occasion, an Unforgettable Experience"
         description="From intimate ceremonies to grand galas. Artistry is the stage for life's most extraordinary moments."
-        imageSrc="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1920&q=80"
+        imageSrc="/media/images/home/wedding.jpeg"
         imageAlt="Events at Artistry Nassau County Museum of Art"
       />
 

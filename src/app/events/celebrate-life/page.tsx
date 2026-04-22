@@ -9,7 +9,7 @@ import { celebrateLifePackages, celebrateLifeGallery } from "@/data/events";
 export const metadata: Metadata = {
   title: "Celebrate Life | Gatherings at Artistry",
   description:
-    "Celebrate Life gatherings at Artistry — a beautiful, serene setting for honoring life milestones at Nassau County Museum of Art, Roslyn, NY.",
+    "Celebrate Life gatherings at Artistry. A beautiful, serene setting for honoring life milestones at Nassau County Museum of Art, Roslyn, NY.",
 };
 
 export default function CelebrateLifePage() {

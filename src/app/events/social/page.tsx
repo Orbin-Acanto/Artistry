@@ -9,7 +9,7 @@ import { socialEventTypes, socialPackages, socialGallery } from "@/data/events";
 export const metadata: Metadata = {
   title: "Social Events | Bar Mitzvahs, Communions & Milestone Celebrations",
   description:
-    "Host Bar & Bat Mitzvahs, Communions, Confirmations, and milestone celebrations at Artistry in Roslyn, NY — a social event venue at Nassau County Museum of Art on Long Island.",
+    "Host Bar and Bat Mitzvahs, Communions, Confirmations, and milestone celebrations at Artistry in Roslyn, NY. A social event venue at Nassau County Museum of Art on Long Island.",
   keywords: [
     "Bar Mitzvah venue Long Island",
     "Bat Mitzvah venue NY",

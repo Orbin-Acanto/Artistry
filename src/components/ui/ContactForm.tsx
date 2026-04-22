@@ -26,7 +26,7 @@ export default function ContactForm() {
       <div className="py-16">
         <p className="font-display text-4xl text-charcoal mb-3">Thank you.</p>
         <p className="font-body text-charcoal/60 text-base">
-          We&apos;ll be in touch within 24–48 hours.
+          We&apos;ll be in touch within 24 to 48 hours.
         </p>
       </div>
     );

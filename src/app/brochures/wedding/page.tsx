@@ -5,7 +5,7 @@ import MenuBrochureClient from "@/components/MenuBrochureClient";
 export const metadata: Metadata = {
   title: "Wedding Brochure | Artistry at Nassau County Museum of Art",
   description:
-    "Browse Artistry's wedding brochure — every detail of your perfect day elevated by the beauty of the Nassau County Museum of Art in Roslyn, NY.",
+    "Browse Artistry's wedding brochure. Every detail of your perfect day elevated by the beauty of the Nassau County Museum of Art in Roslyn, NY.",
 };
 
 export default function WeddingBrochurePage() {

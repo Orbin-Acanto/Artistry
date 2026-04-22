@@ -4,7 +4,7 @@ import { sitemapSections } from "@/data/about";
 
 export const metadata: Metadata = {
   title: "Site Map",
-  description: "Complete site map for Artistry at Nassau County Museum of Art — browse all pages.",
+  description: "Complete site map for Artistry at Nassau County Museum of Art. Browse all pages.",
 };
 
 export default function SitemapPage() {

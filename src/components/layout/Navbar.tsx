@@ -113,7 +113,8 @@ function NavItemComponent({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <button
+        <Link
+          href={item.href}
           className={cn(
             "relative flex items-center px-4 py-2 font-display text-base xl:text-sm uppercase tracking-[0.22em] transition-colors duration-200",
             "after:absolute after:bottom-0 after:left-4 after:right-4 after:h-px after:bg-primary",
@@ -125,7 +126,7 @@ function NavItemComponent({
           )}
         >
           {item.label}
-        </button>
+        </Link>
         {open && (
           <div
             className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-white backdrop-blur-md border border-primary/10 shadow-2xl"
@@ -182,23 +183,26 @@ function MobileNavItem({
   if (item.children) {
     return (
       <div>
-        <button
-          onClick={() => setOpen(!open)}
+        <div
           className={cn(
             "w-full flex items-center justify-between py-3 font-display text-base uppercase tracking-[0.22em] border-b border-primary/10",
             isActive ? "text-primary" : "text-primary/75",
           )}
         >
-          {item.label}
-          <span
-            className={cn(
-              "text-primary/40 transition-transform duration-200 text-xs",
-              open && "rotate-180",
-            )}
-          >
-            ▾
-          </span>
-        </button>
+          <Link href={item.href} className="flex-1 hover:text-primary transition-colors">
+            {item.label}
+          </Link>
+          <button onClick={() => setOpen(!open)} className="pl-4 hover:text-primary transition-colors" aria-label="Toggle submenu">
+            <span
+              className={cn(
+                "text-primary/40 transition-transform duration-200 text-xs inline-block",
+                open && "rotate-180",
+              )}
+            >
+              ▾
+            </span>
+          </button>
+        </div>
         {open && (
           <div className="pl-4 space-y-1 pt-1">
             {item.children.map((child) => (

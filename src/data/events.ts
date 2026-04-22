@@ -86,7 +86,7 @@ export const weddingPageLocations: EventLocation[] = [
   {
     name: "Great Lawn",
     description:
-      "The Great Lawn is a magnificent blank canvas — expansive enough to host your entire celebration under a custom tent, with sweeping views of the estate that make every photograph extraordinary. Our team will curate tenting, flooring, and lighting to bring your exact vision to life.",
+      "The Great Lawn is a magnificent blank canvas, expansive enough to host your entire celebration under a custom tent, with sweeping views of the estate that make every photograph extraordinary. Our team will curate tenting, flooring, and lighting to bring your exact vision to life.",
     capacity: "Up to 800 guests",
     image: "/media/images/events/wedding/location/Great Lawn/1.jpeg",
     gallery: [
@@ -1033,8 +1033,7 @@ export const eventCards = [
     title: "Weddings",
     description:
       "Exchange vows and celebrate surrounded by sculpture gardens, manicured grounds, and timeless architecture. Artistry offers multiple ceremony and reception spaces for weddings of any size.",
-    image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/wedding/6.jpeg",
     href: "/events/weddings",
     cta: "Explore Weddings",
   },
@@ -1042,8 +1041,7 @@ export const eventCards = [
     title: "Corporate Events",
     description:
       "From summer outings to award galas, dinners to conferences. Inspire your team and impress your clients in a setting that elevates every gathering.",
-    image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/corporate/hero.jpg",
     href: "/events/corporate",
     cta: "Explore Corporate",
   },
@@ -1051,8 +1049,7 @@ export const eventCards = [
     title: "Social Events",
     description:
       "Bar and Bat Mitzvahs, Communions, milestone celebrations and more. Honor life's most meaningful chapters with warmth, elegance, and unforgettable hospitality.",
-    image:
-      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/Social Events/H-23.jpg",
     href: "/events/social",
     cta: "Explore Social Events",
   },
@@ -1060,8 +1057,7 @@ export const eventCards = [
     title: "Celebrate Life",
     description:
       "A gentle, graceful space to honor a life well-lived. Artistry provides a beautiful and dignified setting for gatherings that celebrate legacy and love.",
-    image:
-      "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=800&q=80",
+    image: "/media/images/events/celebrate/hero.jpeg",
     href: "/events/celebrate-life",
     cta: "Explore Celebrate Life",
   },

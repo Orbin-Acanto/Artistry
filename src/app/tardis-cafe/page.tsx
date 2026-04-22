@@ -10,7 +10,7 @@ import { MapPin, Clock } from "lucide-react";
 export const metadata: Metadata = {
   title: "Tardis Cafe | Coffee & Light Fare at Nassau County Museum of Art",
   description:
-    "Tardis Cafe at Nassau County Museum of Art in Roslyn, NY — artisan coffee, seasonal bites, and light fare for museum visitors and event guests.",
+    "Tardis Cafe at Nassau County Museum of Art in Roslyn, NY. Artisan coffee, seasonal bites, and light fare for museum visitors and event guests.",
 };
 
 export default function TardisCafePage() {
@@ -59,7 +59,7 @@ export default function TardisCafePage() {
                     Hours
                   </p>
                   <p className="font-body text-sm text-charcoal/75">
-                    Tuesday – Sunday: 10am – 4pm
+                    Tuesday to Sunday: 10am to 4pm
                   </p>
                   <p className="font-body text-sm text-charcoal/75">
                     Closed Mondays
