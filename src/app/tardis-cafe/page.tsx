@@ -20,7 +20,7 @@ export default function TardisCafePage() {
         label="Tardis Cafe"
         title="A Perfect Pause Among Art and Nature"
         description="Artisan coffee, seasonal fare, and warm hospitality. A tranquil retreat within the Nassau County Museum of Art grounds."
-        imageSrc="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1920&q=80"
+        imageSrc="/media/images/Tardis%20Catering/cafe/hero-image.png"
         imageAlt="Tardis Cafe at Nassau County Museum of Art"
       />
 
@@ -34,29 +34,43 @@ export default function TardisCafePage() {
               description="Tardis Cafe was born from a desire to offer museum visitors and event guests a moment of true comfort: a beautifully crafted coffee, a seasonal bite, a place to pause and reflect."
             />
             <p className="prose-venue mt-5">
-              Located within the museum grounds, the Tardis Cafe is the perfect companion to a morning stroll through the sculpture garden or a quiet lunch before an afternoon event. Every item on our menu reflects the same attention to craft and quality that defines Tardis Catering.
+              Located within the museum grounds, the Tardis Cafe is the perfect
+              companion to a morning stroll through the sculpture garden or a
+              quiet lunch before an afternoon event. Every item on our menu
+              reflects the same attention to craft and quality that defines
+              Tardis Catering.
             </p>
             <div className="mt-8 space-y-4">
               <div className="flex gap-3 items-start">
                 <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-body text-xs tracking-widest uppercase text-charcoal/40 mb-1">Location</p>
-                  <p className="font-body text-sm text-charcoal/75">{SITE.address.venue}, {SITE.address.full}</p>
+                  <p className="font-body text-xs tracking-widest uppercase text-charcoal/40 mb-1">
+                    Location
+                  </p>
+                  <p className="font-body text-sm text-charcoal/75">
+                    {SITE.address.venue}, {SITE.address.full}
+                  </p>
                 </div>
               </div>
               <div className="flex gap-3 items-start">
                 <Clock size={18} className="text-primary shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-body text-xs tracking-widest uppercase text-charcoal/40 mb-1">Hours</p>
-                  <p className="font-body text-sm text-charcoal/75">Tuesday – Sunday: 10am – 4pm</p>
-                  <p className="font-body text-sm text-charcoal/75">Closed Mondays</p>
+                  <p className="font-body text-xs tracking-widest uppercase text-charcoal/40 mb-1">
+                    Hours
+                  </p>
+                  <p className="font-body text-sm text-charcoal/75">
+                    Tuesday – Sunday: 10am – 4pm
+                  </p>
+                  <p className="font-body text-sm text-charcoal/75">
+                    Closed Mondays
+                  </p>
                 </div>
               </div>
             </div>
           </div>
           <div className="relative aspect-[4/5] overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=800&q=80"
+              src="/media/images/Tardis%20Catering/cafe/the-cafe.png"
               alt="Tardis Cafe interior"
               fill
               className="object-cover"
@@ -86,7 +100,9 @@ export default function TardisCafePage() {
                   {section.items.map((item) => (
                     <li key={item} className="flex gap-3 items-start">
                       <span className="w-1 h-1 rounded-full bg-cream/60 shrink-0 mt-2" />
-                      <span className="font-body text-sm text-cream/75 leading-relaxed">{item}</span>
+                      <span className="font-body text-sm text-cream/75 leading-relaxed">
+                        {item}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -103,7 +119,10 @@ export default function TardisCafePage() {
       <section className="bg-cream py-10 md:py-section px-6">
         <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
           {cafePhotoStrip.map((img) => (
-            <div key={img.src} className="relative aspect-square overflow-hidden group">
+            <div
+              key={img.src}
+              className="relative aspect-square overflow-hidden group"
+            >
               <Image
                 src={img.src}
                 alt={img.alt}
@@ -126,7 +145,9 @@ export default function TardisCafePage() {
           light
           className="mb-8"
         />
-        <Link href="/tardis-catering" className="btn-outline">Explore Tardis Catering</Link>
+        <Link href="/tardis-catering" className="btn-outline">
+          Explore Tardis Catering
+        </Link>
       </section>
     </>
   );

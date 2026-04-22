@@ -19,7 +19,7 @@ export default function TardisCateringPage() {
         label="Tardis Catering"
         title="Cuisine as Artful as the Setting"
         description="The exclusive culinary partner of Artistry. Every dish is crafted with the same attention to beauty and detail as the venue itself."
-        imageSrc="/media/images/Tardis%20Catering/IMG_2866.jpg"
+        imageSrc="/media/images/Tardis%20Catering/catering/hero.jpeg"
         imageAlt="Tardis Catering cuisine at Artistry"
       />
 
@@ -102,30 +102,20 @@ export default function TardisCateringPage() {
           />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              {
-                src: "/media/images/Tardis%20Catering/IMG_2868.jpg",
-                alt: "Tardis Catering black and gold banquet table",
-              },
-              {
-                src: "/media/images/Tardis%20Catering/20231005_111742.jpg",
-                alt: "Tardis Catering plated grain bowl with chickpeas",
-              },
-              {
-                src: "/media/images/Tardis%20Catering/IMG_1928.jpg",
-                alt: "Tardis Catering buffet spread with pasta and salads",
-              },
-              {
-                src: "/media/images/Tardis%20Catering/20231005_111004.jpg",
-                alt: "Tardis Catering table setting with plated salads",
-              },
-              {
-                src: "/media/images/Tardis%20Catering/20231130_183207.jpg",
-                alt: "Tardis Catering skewer station at winter event",
-              },
-              {
-                src: "/media/images/Tardis%20Catering/IMG_2866.jpg",
-                alt: "Tardis Catering shrimp salad table under tent",
-              },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/1.jpeg", alt: "Tardis Catering event" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/2.jpeg", alt: "Tardis Catering event" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/3.jpeg", alt: "Tardis Catering event" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/4.jpeg", alt: "Tardis Catering event" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/5.jpeg", alt: "Tardis Catering event" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/6.jpeg", alt: "Tardis Catering event" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/7.jpeg", alt: "Tardis Catering event" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/8.jpeg", alt: "Tardis Catering event" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/9.jpeg", alt: "Tardis Catering event" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/10.jpeg", alt: "Tardis Catering event" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/11.jpeg", alt: "Tardis Catering event" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/12.jpeg", alt: "Tardis Catering event" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/13.jpeg", alt: "Tardis Catering event" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/14.jpeg", alt: "Tardis Catering event" },
             ].map((img) => (
               <div
                 key={img.src}

@@ -16,16 +16,12 @@ export const cafeMenu = [
 ];
 
 export const cafePhotoStrip = [
-  {
-    src: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80",
-    alt: "Coffee at Tardis Cafe",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80",
-    alt: "Seasonal pastry",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=600&q=80",
-    alt: "Outdoor seating at Tardis Cafe",
-  },
+  { src: "/media/images/Tardis%20Catering/cafe/1.jpeg", alt: "Tardis Cafe" },
+  { src: "/media/images/Tardis%20Catering/cafe/2.jpeg", alt: "Tardis Cafe" },
+  { src: "/media/images/Tardis%20Catering/cafe/3.jpeg", alt: "Tardis Cafe" },
+  { src: "/media/images/Tardis%20Catering/cafe/4.jpeg", alt: "Tardis Cafe" },
+  { src: "/media/images/Tardis%20Catering/cafe/5.jpeg", alt: "Tardis Cafe" },
+  { src: "/media/images/Tardis%20Catering/cafe/6.jpeg", alt: "Tardis Cafe" },
+  { src: "/media/images/Tardis%20Catering/cafe/7.jpeg", alt: "Tardis Cafe" },
+  { src: "/media/images/Tardis%20Catering/cafe/8.jpeg", alt: "Tardis Cafe" },
 ];

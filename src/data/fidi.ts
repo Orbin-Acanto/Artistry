@@ -6,8 +6,7 @@ export const fidiVenues = [
     subtitle: "Nassau County Museum of Art, Roslyn, NY",
     description:
       "A premier event venue set within 40+ acres of the Nassau County Museum of Art estate on Long Island. Weddings, corporate events, and social celebrations in a world-class cultural setting.",
-    image:
-      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80",
+    image: "/media/images/fidi/artistry.jpeg",
     href: "/",
     current: true,
     external: false,
@@ -17,8 +16,7 @@ export const fidiVenues = [
     subtitle: "Financial District, New York City",
     description:
       "A sophisticated event space in the heart of Manhattan's Financial District. An elevated setting for corporate gatherings, private dinners, and social occasions of all sizes.",
-    image:
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80",
+    image: "/media/images/fidi/FIDI Mezzanine.jpg",
     href: "https://www.fidimezzanine.com/",
     current: false,
     external: true,
@@ -28,8 +26,7 @@ export const fidiVenues = [
     subtitle: "Financial District, New York City",
     description:
       "An iconic venue housed inside a landmark building in the heart of downtown Manhattan. Historic architecture and modern event capabilities make it one of New York's most distinctive spaces.",
-    image:
-      "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80",
+    image: "/media/images/fidi/48 Wall Street.jpg",
     href: "https://www.48wallnyc.com/",
     current: false,
     external: true,

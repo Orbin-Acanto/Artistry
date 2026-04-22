@@ -19,7 +19,7 @@ export default function FidiPage() {
         label="FIDI Hospitality"
         title="Distinctive Venues. Extraordinary Events."
         description="FIDI Hospitality is a premier hospitality group operating some of New York's most celebrated event venues."
-        imageSrc="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=1920&q=80"
+        imageSrc="/media/images/fidi/hero.png"
         imageAlt="FIDI Hospitality venues"
       />
 
@@ -44,7 +44,7 @@ export default function FidiPage() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80"
+              src="/media/images/fidi/about.jpg"
               alt="FIDI Hospitality team"
               fill
               className="object-cover"
