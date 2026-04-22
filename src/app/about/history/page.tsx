@@ -5,9 +5,16 @@ import Image from "next/image";
 import { timeline } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "History of the Property",
+  title: "History | Nassau County Museum of Art Estate Roslyn Long Island",
   description:
-    "Explore the rich history of the Nassau County Museum of Art estate in Roslyn, NY. The storied grounds that form the backdrop for Artistry's world-class events.",
+    "Explore the rich history of the Nassau County Museum of Art estate in Roslyn, NY — the storied grounds that form the backdrop for Artistry's world-class events on Long Island.",
+  keywords: [
+    "Nassau County Museum of Art history",
+    "Roslyn NY estate history",
+    "Long Island historic venue",
+    "Nassau County historic event venue",
+    "Artistry venue history",
+  ],
 };
 
 export default function HistoryPage() {

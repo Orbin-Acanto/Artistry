@@ -6,9 +6,17 @@ import Link from "next/link";
 import { eventCards } from "@/data/events";
 
 export const metadata: Metadata = {
-  title: "Events",
+  title: "Events | Wedding, Corporate & Social Venue Long Island NY",
   description:
     "Host your wedding, corporate event, social celebration, or milestone occasion at Artistry, Nassau County Museum of Art's premier event venue in Roslyn, NY.",
+  keywords: [
+    "event venue Long Island",
+    "wedding venue Nassau County",
+    "corporate event venue NY",
+    "social events Long Island",
+    "milestone celebration venue Roslyn NY",
+    "event space near NYC",
+  ],
 };
 
 export default function EventsPage() {

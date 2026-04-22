@@ -79,6 +79,53 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": ["EventVenue", "LocalBusiness"],
+  name: "Artistry at Nassau County Museum of Art",
+  alternateName: "Artistry Events",
+  description:
+    "Premier event venue at Nassau County Museum of Art in Roslyn, NY. Weddings, corporate events, social celebrations, and milestone occasions on Long Island.",
+  url: "https://www.eventsatartistry.com",
+  logo: "https://www.eventsatartistry.com/og-image.jpg",
+  image: "https://www.eventsatartistry.com/og-image.jpg",
+  telephone: "+12129715353",
+  email: "info@eventsatartistry.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "One Museum Drive",
+    addressLocality: "Roslyn",
+    addressRegion: "NY",
+    postalCode: "11576",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 40.7965,
+    longitude: -73.6476,
+  },
+  areaServed: [
+    { "@type": "City", name: "Roslyn" },
+    { "@type": "County", name: "Nassau County" },
+    { "@type": "AdministrativeArea", name: "Long Island" },
+    { "@type": "City", name: "New York City" },
+  ],
+  priceRange: "$$$",
+  servesCuisine: "American",
+  amenityFeature: [
+    { "@type": "LocationFeatureSpecification", name: "Indoor Event Space", value: true },
+    { "@type": "LocationFeatureSpecification", name: "Outdoor Event Space", value: true },
+    { "@type": "LocationFeatureSpecification", name: "On-site Catering", value: true },
+    { "@type": "LocationFeatureSpecification", name: "Wedding Ceremonies", value: true },
+    { "@type": "LocationFeatureSpecification", name: "Corporate Events", value: true },
+    { "@type": "LocationFeatureSpecification", name: "Valet Parking", value: true },
+  ],
+  sameAs: [
+    "https://www.instagram.com/eventsatartistry",
+    "https://www.facebook.com/eventsatartistry",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -89,6 +136,12 @@ export default function RootLayout({
       lang="en"
       className={`${gildaDisplay.variable} ${montserrat.variable}`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="antialiased">
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
         <Navbar />

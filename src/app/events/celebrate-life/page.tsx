@@ -7,9 +7,16 @@ import Link from "next/link";
 import { celebrateLifePackages, celebrateLifeGallery } from "@/data/events";
 
 export const metadata: Metadata = {
-  title: "Celebrate Life | Gatherings at Artistry",
+  title: "Celebrate Life Events | Memorial & Life Celebration Venue Long Island",
   description:
-    "Celebrate Life gatherings at Artistry. A beautiful, serene setting for honoring life milestones at Nassau County Museum of Art, Roslyn, NY.",
+    "Honor life's most meaningful moments at Artistry in Roslyn, NY. A serene, elegant setting for Celebrate Life gatherings and memorial events at Nassau County Museum of Art on Long Island.",
+  keywords: [
+    "Celebrate Life venue Long Island",
+    "memorial event venue NY",
+    "life celebration gathering Roslyn",
+    "Nassau County event venue",
+    "elegant gathering space Long Island",
+  ],
 };
 
 export default function CelebrateLifePage() {

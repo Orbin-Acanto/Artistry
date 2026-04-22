@@ -26,7 +26,23 @@ export const metadata: Metadata = {
     "Nassau County wedding venue",
     "outdoor wedding venue NY",
     "museum wedding venue",
+    "wedding venue near NYC",
+    "garden wedding Long Island",
+    "indoor outdoor wedding Nassau County",
   ],
+  openGraph: {
+    title: "Wedding Venue Long Island | Weddings at Artistry",
+    description:
+      "Say I do surrounded by world-class art and lush estate grounds. Artistry at Nassau County Museum of Art — Long Island's premier wedding venue.",
+    images: [
+      {
+        url: "/media/images/home/wedding.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Wedding at Artistry Nassau County Museum of Art",
+      },
+    ],
+  },
 };
 
 export default function WeddingsPage() {

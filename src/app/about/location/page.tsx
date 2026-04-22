@@ -8,9 +8,16 @@ import { directors } from "@/data/about";
 import { MapPin, Phone, Mail, Car, Train } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Location & Directors",
+  title: "Location & Directions | Artistry Event Venue Roslyn, Long Island NY",
   description:
-    "Visit Artistry at One Museum Dr, Roslyn, NY 11576, inside the Nassau County Museum of Art. Directions, contact information, and leadership team.",
+    "Visit Artistry at One Museum Dr, Roslyn, NY 11576, inside the Nassau County Museum of Art. Get directions, contact information, and meet our leadership team.",
+  keywords: [
+    "Artistry event venue location",
+    "One Museum Drive Roslyn NY",
+    "Nassau County Museum of Art directions",
+    "event venue Long Island directions",
+    "Roslyn NY event venue contact",
+  ],
 };
 
 export default function LocationPage() {

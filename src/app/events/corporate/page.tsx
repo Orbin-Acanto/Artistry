@@ -17,7 +17,23 @@ export const metadata: Metadata = {
     "business events Nassau County",
     "corporate dinner venue NY",
     "awards gala Long Island",
+    "corporate venue near NYC",
+    "corporate retreat Long Island",
+    "team building venue Nassau County",
   ],
+  openGraph: {
+    title: "Corporate Events Long Island | Artistry at Nassau County Museum of Art",
+    description:
+      "Elevate your next corporate event at Artistry in Roslyn, NY. Distinctive venue, world-class catering, and unmatched setting on Long Island.",
+    images: [
+      {
+        url: "/media/images/events/corporate/hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Corporate event at Artistry Nassau County Museum of Art",
+      },
+    ],
+  },
 };
 
 export default function CorporatePage() {
