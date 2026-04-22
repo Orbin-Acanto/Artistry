@@ -604,7 +604,7 @@ export const corporateEventTypes: CorporateEventType[] = [
     slug: "summer-bbq",
     description:
       "Celebrate the season with a bespoke outdoor gathering on our estate grounds. From casual BBQ spreads to elevated al fresco dining, we create the perfect team experience.",
-    capacity: "50 – 300 guests",
+    capacity: "50 to 300 guests",
     image: "/media/images/events/corporate/bbq_outdoor.png",
     highlights: [
       "Custom BBQ stations",
@@ -618,7 +618,7 @@ export const corporateEventTypes: CorporateEventType[] = [
     slug: "dinners",
     description:
       "Host a refined client dinner or executive gathering in one of our intimate, beautifully appointed dining spaces, with menus curated by Tardis Catering.",
-    capacity: "10 – 150 guests",
+    capacity: "10 to 150 guests",
     image: "/media/images/events/corporate/dinner.jpg",
     highlights: [
       "Private dining rooms",
@@ -631,8 +631,8 @@ export const corporateEventTypes: CorporateEventType[] = [
     name: "Meetings & Conferences",
     slug: "meetings",
     description:
-      "State-of-the-art meeting spaces within an inspiring artistic environment — the ideal setting to drive creativity and focus for your team.",
-    capacity: "10 – 200 guests",
+      "State-of-the-art meeting spaces within an inspiring artistic environment, ideal for driving creativity and focus for your team.",
+    capacity: "10 to 200 guests",
     image: "/media/images/events/corporate/meeting.jpg",
     highlights: [
       "A/V & presentation tech",
@@ -645,8 +645,8 @@ export const corporateEventTypes: CorporateEventType[] = [
     name: "Cocktail Receptions",
     slug: "cocktail",
     description:
-      "Sophisticated cocktail receptions among world-class art — perfect for client entertaining, product launches, and networking events.",
-    capacity: "50 – 400 guests",
+      "Sophisticated cocktail receptions among world-class art, perfect for client entertaining, product launches, and networking events.",
+    capacity: "50 to 400 guests",
     image: "/media/images/events/corporate/cocktail.jpg",
     highlights: [
       "Passed hors d'oeuvres",
@@ -659,8 +659,8 @@ export const corporateEventTypes: CorporateEventType[] = [
     name: "Awards & Presentations",
     slug: "awards",
     description:
-      "A grand, memorable stage for your company's most important moments — from award ceremonies to annual galas and product reveals.",
-    capacity: "100 – 500 guests",
+      "A grand, memorable stage for your company's most important moments, from award ceremonies to annual galas and product reveals.",
+    capacity: "100 to 500 guests",
     image: "/media/images/events/corporate/awards.jpg",
     highlights: [
       "Stage & podium setup",
@@ -672,54 +672,20 @@ export const corporateEventTypes: CorporateEventType[] = [
 ];
 
 export const corporateGallery: GalleryImage[] = [
-  {
-    src: "/media/images/events/corporate/1.jpg",
-    alt: "Cocktail reception on terrace",
-    width: 800,
-    height: 1000,
-  },
-  {
-    src: "/media/images/events/corporate/2.jpg",
-    alt: "Corporate dinner at Artistry",
-    width: 1200,
-    height: 800,
-  },
-  {
-    src: "/media/images/events/corporate/3.jpg",
-    alt: "Awards ceremony night",
-    width: 1200,
-    height: 800,
-  },
-  {
-    src: "/media/images/events/corporate/4.jpg",
-    alt: "Conference meeting room setup",
-    width: 800,
-    height: 800,
-  },
-  {
-    src: "/media/images/events/corporate/5.jpg",
-    alt: "Conference meeting room setup",
-    width: 800,
-    height: 800,
-  },
-  {
-    src: "/media/images/events/corporate/6.jpg",
-    alt: "Conference meeting room setup",
-    width: 800,
-    height: 800,
-  },
-  {
-    src: "/media/images/events/corporate/7.jpg",
-    alt: "Conference meeting room setup",
-    width: 800,
-    height: 800,
-  },
-  {
-    src: "/media/images/events/corporate/8.jpg",
-    alt: "Conference meeting room setup",
-    width: 800,
-    height: 800,
-  },
+  { src: "/media/images/events/corporate/1.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
+  { src: "/media/images/events/corporate/2.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
+  { src: "/media/images/events/corporate/3.png", alt: "Artistry corporate event", width: 1200, height: 900 },
+  { src: "/media/images/events/corporate/4.png", alt: "Artistry corporate event", width: 1200, height: 900 },
+  { src: "/media/images/events/corporate/5.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
+  { src: "/media/images/events/corporate/6.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
+  { src: "/media/images/events/corporate/7.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
+  { src: "/media/images/events/corporate/8.png", alt: "Artistry corporate event", width: 1200, height: 900 },
+  { src: "/media/images/events/corporate/9.png", alt: "Artistry corporate event", width: 1200, height: 900 },
+  { src: "/media/images/events/corporate/10.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
+  { src: "/media/images/events/corporate/11.png", alt: "Artistry corporate event", width: 1200, height: 900 },
+  { src: "/media/images/events/corporate/12.png", alt: "Artistry corporate event", width: 1200, height: 900 },
+  { src: "/media/images/events/corporate/13.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
+  { src: "/media/images/events/corporate/14.jpg", alt: "Artistry corporate event", width: 1200, height: 900 },
 ];
 
 // ─── SOCIAL EVENTS ───────────────────────────────────────────────────────────
