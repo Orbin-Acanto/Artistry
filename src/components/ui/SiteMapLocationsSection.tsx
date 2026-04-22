@@ -48,12 +48,13 @@ export default function SiteMapLocationsSection({
     return modal.location.gallery;
   }, [modal]);
 
-  const floorPlanImage = modal
-    ? {
-        src: modal.location.image,
-        alt: `${modal.location.name} floor plan`,
-      }
-    : null;
+  const floorPlanImage =
+    modal && modal.location.plan
+      ? {
+          src: modal.location.plan,
+          alt: `${modal.location.name} floor plan`,
+        }
+      : null;
 
   const openModal = (location: EventLocation, view: ModalView) => {
     setGalleryIndex(0);
@@ -135,7 +136,7 @@ export default function SiteMapLocationsSection({
                         src={floorPlanImage.src}
                         alt={floorPlanImage.alt}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                         sizes="(max-width: 1024px) 100vw, 70vw"
                       />
                     )}

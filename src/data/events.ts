@@ -21,6 +21,7 @@ export type EventLocation = {
   description: string;
   capacity: string;
   image: string;
+  plan?: string;
   gallery: { src: string; alt: string }[];
 };
 
