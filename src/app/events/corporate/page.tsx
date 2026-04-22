@@ -55,7 +55,7 @@ export default function CorporatePage() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden">
             <Image
-              src="/media/images/events/corporate/about.jpg"
+              src="/media/images/events/corporate/about.png"
               alt="Corporate event space at Artistry"
               fill
               className="object-cover"
