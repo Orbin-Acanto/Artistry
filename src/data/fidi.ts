@@ -6,7 +6,7 @@ export const fidiVenues = [
     subtitle: "Nassau County Museum of Art, Roslyn, NY",
     description:
       "A premier event venue set within 40+ acres of the Nassau County Museum of Art estate on Long Island. Weddings, corporate events, and social celebrations in a world-class cultural setting.",
-    image: "/media/images/fidi/artistry.jpeg",
+    image: "/media/images/fidi/Artistry.jpeg",
     href: "/",
     current: true,
     external: false,
