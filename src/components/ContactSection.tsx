@@ -399,24 +399,22 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* reCAPTCHA */}
-          <div className="flex justify-center mb-10">
+          {/* reCAPTCHA + Submit */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 mb-8 items-center">
             <ReCAPTCHA
               ref={recaptchaRef}
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
               onChange={(token) => setRecaptchaToken(token)}
             />
-          </div>
-
-          {/* Submit */}
-          <div className="flex justify-end">
-            <button
-              type="submit"
-              disabled={isSubmitting || !recaptchaToken}
-              className="btn-primary min-w-[160px] disabled:opacity-40 disabled:cursor-not-allowed"
-            >
-              {isSubmitting ? "Sending…" : "Submit"}
-            </button>
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                disabled={isSubmitting || !recaptchaToken}
+                className="btn-primary min-w-[160px] disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? "Sending…" : "Submit"}
+              </button>
+            </div>
           </div>
 
           {submitStatus?.type === "error" && (
