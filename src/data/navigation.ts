@@ -57,6 +57,8 @@ export const navigation: NavItem[] = [
       { label: "MME Worldwide", href: "https://www.mmeink.com/", external: true },
       { label: "Mikey Mike Events", href: "https://www.mikeymikeevents.com/", external: true },
       { label: "Tardi's Catering", href: "https://www.tardiscatering.com/", external: true },
+      { label: "W Kosher Events", href: "https://www.wkosherevents.com/", external: true },
+      { label: "MMEink - Event Rentals", href: "https://www.eventproprentals.com/", external: true },
     ],
   },
   {
