@@ -133,15 +133,27 @@ function NavItemComponent({
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            {item.children.map((child) => (
-              <Link
-                key={child.href}
-                href={child.href}
-                className="block px-5 py-3 font-body text-sm uppercase tracking-[0.18em] text-primary-dark hover:text-primary hover:bg-primary/5 transition-all duration-150"
-              >
-                {child.label}
-              </Link>
-            ))}
+            {item.children.map((child) =>
+              child.external ? (
+                <a
+                  key={child.href}
+                  href={child.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-5 py-3 font-body text-sm uppercase tracking-[0.18em] text-primary-dark hover:text-primary hover:bg-primary/5 transition-all duration-150"
+                >
+                  {child.label}
+                </a>
+              ) : (
+                <Link
+                  key={child.href}
+                  href={child.href}
+                  className="block px-5 py-3 font-body text-sm uppercase tracking-[0.18em] text-primary-dark hover:text-primary hover:bg-primary/5 transition-all duration-150"
+                >
+                  {child.label}
+                </Link>
+              )
+            )}
           </div>
         )}
       </li>
@@ -205,15 +217,27 @@ function MobileNavItem({
         </div>
         {open && (
           <div className="pl-4 space-y-1 pt-1">
-            {item.children.map((child) => (
-              <Link
-                key={child.href}
-                href={child.href}
-                className="block py-2.5 font-body text-sm uppercase tracking-[0.18em] text-primary/60 hover:text-primary transition-colors"
-              >
-                {child.label}
-              </Link>
-            ))}
+            {item.children.map((child) =>
+              child.external ? (
+                <a
+                  key={child.href}
+                  href={child.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block py-2.5 font-body text-sm uppercase tracking-[0.18em] text-primary/60 hover:text-primary transition-colors"
+                >
+                  {child.label}
+                </a>
+              ) : (
+                <Link
+                  key={child.href}
+                  href={child.href}
+                  className="block py-2.5 font-body text-sm uppercase tracking-[0.18em] text-primary/60 hover:text-primary transition-colors"
+                >
+                  {child.label}
+                </Link>
+              )
+            )}
           </div>
         )}
       </div>
