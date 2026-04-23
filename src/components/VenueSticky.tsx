@@ -104,7 +104,7 @@ export default function VenueSticky() {
       </p>
       <p className="mt-5 text-charcoal/65">
         Under the direction of FIDI Hospitality, and complemented by the
-        culinary expertise of Tardi's Catering, Artistry delivers a seamless
+        culinary expertise of Tardi&apos;s Catering, Artistry delivers a seamless
         blend of elevated service and exceptional cuisine. Every event is
         thoughtfully curated, ensuring that the artistry of the surroundings is
         matched by the artistry of the experience.

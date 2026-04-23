@@ -84,7 +84,7 @@ export default function TardisSection() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -16 }}
             transition={{ duration: 0.6, delay: 0.1, ease }}
           >
-            Culinary Excellence by Tardi's Catering
+            Culinary Excellence by Tardi&apos;s Catering
           </motion.p>
 
           <h2 className="font-display text-[clamp(1.75rem,6vw,3.5rem)] leading-tight text-balance break-words uppercase text-primary-dark overflow-hidden">
@@ -113,7 +113,7 @@ export default function TardisSection() {
           >
             At Artistry Estate, dining is more than a service. It is an
             experience crafted to captivate the senses and elevate every moment.
-            Under the direction of Tardi's Catering, each menu is a celebration
+            Under the direction of Tardi&apos;s Catering, each menu is a celebration
             of innovation, seasonality, and refined taste.
           </motion.p>
 
@@ -135,7 +135,7 @@ export default function TardisSection() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.85, ease }}
           >
-            Using only the finest, locally sourced ingredients, Tardi's Catering
+            Using only the finest, locally sourced ingredients, Tardi&apos;s Catering
             transforms each dish into a work of art, beautifully presented and
             flawlessly executed. Paired with impeccable service and seamless
             coordination, the result is a dining experience as memorable as the
@@ -158,7 +158,7 @@ export default function TardisSection() {
             transition={{ duration: 0.8, delay: 1, ease }}
           >
             <Link href="/tardis-catering" className="btn-primary">
-              Tardi's Catering
+              Tardi&apos;s Catering
             </Link>
             {/* <Link href="/tardis-cafe" className="btn-primary">
               Tardi's Cafe

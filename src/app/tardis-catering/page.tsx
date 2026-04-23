@@ -33,7 +33,7 @@ export default function TardisCateringPage() {
               description="Tardi's Catering was founded on a single belief: that great food is not just sustenance. It is memory. A taste that recalls a moment. A dish that defines a celebration."
             />
             <p className="prose-venue mt-5">
-              As the exclusive catering partner of Artistry, Tardi's brings
+              As the exclusive catering partner of Artistry, Tardi&apos;s brings
               together an award-winning culinary team trained in the finest
               kitchens of New York and Europe. Every menu is developed in close
               collaboration with the client. Seasonal ingredients, artisan

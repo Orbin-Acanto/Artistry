@@ -34,11 +34,11 @@ export default function TardisCafePage() {
               description="Tardi's Cafe was born from a desire to offer museum visitors and event guests a moment of true comfort: a beautifully crafted coffee, a seasonal bite, a place to pause and reflect."
             />
             <p className="prose-venue mt-5">
-              Located within the museum grounds, the Tardi's Cafe is the perfect
+              Located within the museum grounds, the Tardi&apos;s Cafe is the perfect
               companion to a morning stroll through the sculpture garden or a
               quiet lunch before an afternoon event. Every item on our menu
               reflects the same attention to craft and quality that defines
-              Tardi's Catering.
+              Tardi&apos;s Catering.
             </p>
             <div className="mt-8 space-y-4">
               <div className="flex gap-3 items-start">
@@ -146,7 +146,7 @@ export default function TardisCafePage() {
           className="mb-8"
         />
         <Link href="/tardis-catering" className="btn-outline">
-          Explore Tardi's Catering
+          Explore Tardi&apos;s Catering
         </Link>
       </section>
     </>

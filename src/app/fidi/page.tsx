@@ -38,7 +38,7 @@ export default function FidiPage() {
               hospitality experience matches the grandeur of the venue. From
               Artistry at the Nassau County Museum of Art to our growing
               portfolio of signature properties, FIDI brings together the finest
-              in event management, culinary excellence via Tardi's Catering, and
+              in event management, culinary excellence via Tardi&apos;s Catering, and
               unwavering commitment to client vision.
             </p>
           </div>
