@@ -58,7 +58,7 @@ export default function CorporatePage() {
             />
             <p className="prose-venue mt-5">
               From intimate executive dinners to company-wide summer outings,
-              our team handles every detail with precision. Tardis Catering
+              our team handles every detail with precision. Tardi's Catering
               delivers exceptional cuisine and service, while our event
               coordinators ensure a seamless experience from arrival to
               departure.

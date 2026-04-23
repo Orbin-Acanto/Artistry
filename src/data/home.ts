@@ -6,11 +6,11 @@ export const venueImages = [
     alt: "Artistry event venue exterior at Nassau County Museum of Art",
   },
   {
-    src: "/media/images/home/about_1.jpeg",
+    src: "/media/images/home/about_2.jpg",
     alt: "Artistry venue interior and grounds",
   },
   {
-    src: "/media/images/home/about_3.jpeg",
+    src: "/media/images/home/about_4.jpg",
     alt: "Artistry venue gardens and estate",
   },
 ];
@@ -65,7 +65,7 @@ export const tardisSectionImages = [
     alt: "Tardis Catering elegant black and gold banquet table setting",
   },
   {
-    src: "/media/images/home/image_1.jpg",
+    src: "/media/images/Tardis Catering/catering/gallery/1.jpeg",
     alt: "Tardis Catering plated salad with crystal glassware",
   },
   {

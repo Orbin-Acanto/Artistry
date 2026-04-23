@@ -17,7 +17,7 @@ export default function TardisCafePage() {
   return (
     <>
       <PageHero
-        label="Tardis Cafe"
+        label="Tardi's Cafe"
         title="A Perfect Pause Among Art and Nature"
         description="Artisan coffee, seasonal fare, and warm hospitality. A tranquil retreat within the Nassau County Museum of Art grounds."
         imageSrc="/media/images/Tardis%20Catering/cafe/hero-image.png"
@@ -31,14 +31,14 @@ export default function TardisCafePage() {
             <SectionHeader
               label="The Cafe"
               title="Where the Museum Grounds Meet a Warm Cup"
-              description="Tardis Cafe was born from a desire to offer museum visitors and event guests a moment of true comfort: a beautifully crafted coffee, a seasonal bite, a place to pause and reflect."
+              description="Tardi's Cafe was born from a desire to offer museum visitors and event guests a moment of true comfort: a beautifully crafted coffee, a seasonal bite, a place to pause and reflect."
             />
             <p className="prose-venue mt-5">
-              Located within the museum grounds, the Tardis Cafe is the perfect
+              Located within the museum grounds, the Tardi's Cafe is the perfect
               companion to a morning stroll through the sculpture garden or a
               quiet lunch before an afternoon event. Every item on our menu
               reflects the same attention to craft and quality that defines
-              Tardis Catering.
+              Tardi's Catering.
             </p>
             <div className="mt-8 space-y-4">
               <div className="flex gap-3 items-start">
@@ -138,15 +138,15 @@ export default function TardisCafePage() {
       {/* CTA */}
       <section className="bg-primary py-10 md:py-section px-6 text-center">
         <SectionHeader
-          label="Also by Tardis"
+          label="Also by Tardi's"
           title="Hosting an Event?"
-          description="Tardis Catering handles full event menus and service at Artistry. Explore our catering experience."
+          description="Tardi's Catering handles full event menus and service at Artistry. Explore our catering experience."
           centered
           light
           className="mb-8"
         />
         <Link href="/tardis-catering" className="btn-outline">
-          Explore Tardis Catering
+          Explore Tardi's Catering
         </Link>
       </section>
     </>

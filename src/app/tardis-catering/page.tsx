@@ -16,7 +16,7 @@ export default function TardisCateringPage() {
   return (
     <>
       <PageHero
-        label="Tardis Catering"
+        label="Tardi's Catering"
         title="Cuisine as Artful as the Setting"
         description="The exclusive culinary partner of Artistry. Every dish is crafted with the same attention to beauty and detail as the venue itself."
         imageSrc="/media/images/Tardis%20Catering/catering/hero.jpeg"
@@ -30,10 +30,10 @@ export default function TardisCateringPage() {
             <SectionHeader
               label="Who We Are"
               title="Culinary Craft at the Heart of Every Event"
-              description="Tardis Catering was founded on a single belief: that great food is not just sustenance. It is memory. A taste that recalls a moment. A dish that defines a celebration."
+              description="Tardi's Catering was founded on a single belief: that great food is not just sustenance. It is memory. A taste that recalls a moment. A dish that defines a celebration."
             />
             <p className="prose-venue mt-5">
-              As the exclusive catering partner of Artistry, Tardis brings
+              As the exclusive catering partner of Artistry, Tardi's brings
               together an award-winning culinary team trained in the finest
               kitchens of New York and Europe. Every menu is developed in close
               collaboration with the client. Seasonal ingredients, artisan
@@ -134,20 +134,6 @@ export default function TardisCateringPage() {
         </div>
       </section>
 
-      {/* Cafe link */}
-      <section className="bg-primary py-10 md:py-section px-6 text-center">
-        <SectionHeader
-          label="Also by Tardis"
-          title="Visit Tardis Cafe"
-          description="Stop by our Tardis Cafe for artisan coffee, seasonal bites, and light fare, open to museum visitors and event guests alike."
-          centered
-          light
-          className="mb-8"
-        />
-        <Link href="/tardis-cafe" className="btn-outline">
-          Explore Tardis Cafe
-        </Link>
-      </section>
     </>
   );
 }

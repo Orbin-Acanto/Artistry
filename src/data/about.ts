@@ -294,10 +294,9 @@ export const sitemapSections = [
     links: [{ label: "Preferred Vendors", href: "/vendors" }],
   },
   {
-    title: "Tardis Catering",
+    title: "Tardi's Catering",
     links: [
       { label: "Who We Are", href: "/tardis-catering" },
-      { label: "Tardis Cafe", href: "/tardis-cafe" },
     ],
   },
   {

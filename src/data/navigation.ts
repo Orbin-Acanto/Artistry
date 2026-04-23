@@ -46,12 +46,12 @@ export const navigation: NavItem[] = [
     ],
   },
   {
-    label: "Tardis Catering",
+    label: "Tardi's Catering",
     href: "/tardis-catering",
-    children: [
-      { label: "Who We Are", href: "/tardis-catering" },
-      { label: "Tardis Cafe", href: "/tardis-cafe" },
-    ],
+    // children: [
+    //   { label: "Who We Are", href: "/tardis-catering" },
+    //   { label: "Tardi's Cafe", href: "/tardis-cafe" },
+    // ],
   },
   {
     label: "FIDI",

@@ -626,7 +626,7 @@ export const corporateEventTypes: CorporateEventType[] = [
     name: "Corporate Dinners",
     slug: "dinners",
     description:
-      "Host a refined client dinner or executive gathering in one of our intimate, beautifully appointed dining spaces, with menus curated by Tardis Catering.",
+      "Host a refined client dinner or executive gathering in one of our intimate, beautifully appointed dining spaces, with menus curated by Tardi's Catering.",
     capacity: "10 to 150 guests",
     image: "/media/images/events/corporate/dinner.jpg",
     highlights: [

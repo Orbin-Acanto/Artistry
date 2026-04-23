@@ -29,8 +29,7 @@ export const SITE = {
       "FIDI Hospitality is a premier hospitality group operating distinctive event venues across the New York metropolitan area. Artistry is one of FIDI's signature venues.",
   },
   catering: {
-    name: "Tardis Catering",
-    cafe: "Tardis Cafe",
+    name: "Tardi's Catering",
     description:
       "Tardis Catering is the exclusive culinary partner of Artistry, offering bespoke menus crafted by world-class chefs for weddings, corporate gatherings, and social celebrations.",
   },

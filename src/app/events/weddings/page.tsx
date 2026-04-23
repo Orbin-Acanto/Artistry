@@ -67,7 +67,7 @@ export default function WeddingsPage() {
             />
             <p className="prose-venue mt-5">
               From your first visit to the last moments of the evening, our
-              wedding team works alongside Tardis Catering and the museum staff
+              wedding team works alongside Tardi's Catering and the museum staff
               to make sure every part of the day runs the way you imagined it.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">

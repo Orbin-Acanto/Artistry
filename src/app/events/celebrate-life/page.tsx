@@ -52,7 +52,7 @@ export default function CelebrateLifePage() {
               {
                 label: "The Food",
                 title: "Menus for the Occasion",
-                body: "Tardis Catering builds the menu around you: buffet, plated, or passed.",
+                body: "Tardi's Catering builds the menu around you: buffet, plated, or passed.",
                 img: "/media/images/events/celebrate/2 - The Food.jpeg",
                 alt: "Floral tablescape with gold chargers",
               },
