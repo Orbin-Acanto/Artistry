@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import React, { useEffect } from 'react';
-import { InlineWidget } from 'react-calendly';
+import React, { useEffect } from "react";
+import { InlineWidget } from "react-calendly";
 
 export default function ThankYouPage() {
   useEffect(() => {
-    const link = document.createElement('link');
-    link.href = 'https://assets.calendly.com/assets/external/widget.css';
-    link.rel = 'stylesheet';
+    const link = document.createElement("link");
+    link.href = "https://assets.calendly.com/assets/external/widget.css";
+    link.rel = "stylesheet";
     document.head.appendChild(link);
   }, []);
 
@@ -15,7 +15,7 @@ export default function ThankYouPage() {
     <div className="min-h-screen bg-cream">
       <div className="h-20" />
       <div className="max-w-7xl mx-auto px-6 py-10 md:py-16">
-        <div className="text-center mb-10">
+        <div className="text-center">
           <p className="font-body text-xs tracking-[0.25em] uppercase text-primary mb-4">
             Artistry at Nassau County Museum of Art
           </p>
@@ -37,13 +37,13 @@ export default function ThankYouPage() {
         <div className="overflow-hidden">
           <InlineWidget
             url="https://calendly.com/mmeconsult/mme-appointment"
-            styles={{ height: '800px', minWidth: '100%' }}
+            styles={{ height: "800px", minWidth: "100%" }}
             pageSettings={{
-              backgroundColor: 'faf8f4',
+              backgroundColor: "faf8f4",
               hideEventTypeDetails: false,
               hideLandingPageDetails: false,
-              primaryColor: '8b6e4e',
-              textColor: '2a2a2a',
+              primaryColor: "8b6e4e",
+              textColor: "2a2a2a",
             }}
           />
         </div>
