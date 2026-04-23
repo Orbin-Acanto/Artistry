@@ -181,12 +181,12 @@ export default function Footer() {
             >
               Site Map
             </Link>
-            <Link
-              href="/privacy"
+            <a
+              href="mailto:info@eventsatartistry.com"
               className="font-body text-xs text-cream/35 hover:text-cream/60 transition-colors tracking-wide"
             >
-              Privacy Policy
-            </Link>
+              Contact
+            </a>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import { timeline } from "@/data/about";
 
 export const metadata: Metadata = {
   title: "History | Nassau County Museum of Art Estate Roslyn Long Island",
+  alternates: { canonical: "https://www.eventsatartistry.com/about/history" },
   description:
     "Explore the rich history of the Nassau County Museum of Art estate in Roslyn, NY — the storied grounds that form the backdrop for Artistry's world-class events on Long Island.",
   keywords: [

@@ -3,8 +3,10 @@ import Link from "next/link";
 import { sitemapSections } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Site Map",
+  title: "Site Map | Artistry at Nassau County Museum of Art",
   description: "Complete site map for Artistry at Nassau County Museum of Art. Browse all pages.",
+  alternates: { canonical: "https://www.eventsatartistry.com/sitemap" },
+  robots: { index: false, follow: true },
 };
 
 export default function SitemapPage() {

@@ -18,6 +18,7 @@ import { weddingEnhancements } from "@/data/events";
 
 export const metadata: Metadata = {
   title: "Wedding Venue Long Island | Weddings at Artistry",
+  alternates: { canonical: "https://www.eventsatartistry.com/events/weddings" },
   description:
     "Host your wedding at Artistry, Nassau County Museum of Art in Roslyn, NY. Ceremony and reception spaces, exclusive packages, and Tardis Catering on Long Island.",
   keywords: [

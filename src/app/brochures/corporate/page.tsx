@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: "Corporate Brochure | Artistry at Nassau County Museum of Art",
   description:
     "Explore Artistry's corporate event brochure, from intimate board dinners to large-scale conferences at the Nassau County Museum of Art in Roslyn, NY.",
+  alternates: { canonical: "https://www.eventsatartistry.com/brochures/corporate" },
+  robots: { index: false, follow: false },
 };
 
 export default function CorporateBrochurePage() {

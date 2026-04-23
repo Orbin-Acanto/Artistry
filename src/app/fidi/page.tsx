@@ -8,6 +8,7 @@ import { fidiVenues, fidiValues } from "@/data/fidi";
 
 export const metadata: Metadata = {
   title: "FIDI Hospitality | The Group Behind Artistry",
+  alternates: { canonical: "https://www.eventsatartistry.com/fidi" },
   description:
     "FIDI Hospitality is a premier hospitality group operating distinctive event venues across New York. Artistry at Nassau County Museum of Art is one of FIDI's signature venues.",
 };

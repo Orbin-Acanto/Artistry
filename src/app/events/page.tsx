@@ -7,6 +7,7 @@ import { eventCards } from "@/data/events";
 
 export const metadata: Metadata = {
   title: "Events | Wedding, Corporate & Social Venue Long Island NY",
+  alternates: { canonical: "https://www.eventsatartistry.com/events" },
   description:
     "Host your wedding, corporate event, social celebration, or milestone occasion at Artistry, Nassau County Museum of Art's premier event venue in Roslyn, NY.",
   keywords: [

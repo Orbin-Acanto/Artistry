@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Artistry at Nassau County Museum of Art | Event Venue Roslyn, NY",
   description:
     "Artistry is a premier event venue at Nassau County Museum of Art in Roslyn, NY. Host weddings, corporate events, social celebrations, and milestone occasions surrounded by stunning art and lush grounds.",
+  alternates: { canonical: "https://www.eventsatartistry.com" },
 };
 
 export default function HomePage() {

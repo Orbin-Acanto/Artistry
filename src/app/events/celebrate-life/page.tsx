@@ -8,6 +8,7 @@ import { celebrateLifePackages, celebrateLifeGallery } from "@/data/events";
 
 export const metadata: Metadata = {
   title: "Celebrate Life Events | Memorial & Life Celebration Venue Long Island",
+  alternates: { canonical: "https://www.eventsatartistry.com/events/celebrate-life" },
   description:
     "Honor life's most meaningful moments at Artistry in Roslyn, NY. A serene, elegant setting for Celebrate Life gatherings and memorial events at Nassau County Museum of Art on Long Island.",
   keywords: [

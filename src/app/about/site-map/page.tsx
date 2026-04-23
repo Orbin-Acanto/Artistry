@@ -6,9 +6,10 @@ import Image from "next/image";
 import { locations } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Site Map",
+  title: "Venue Map | Artistry at Nassau County Museum of Art",
   description:
     "Explore the layout and event spaces of Artistry at Nassau County Museum of Art. View our grounds map to plan your event at our Roslyn, NY venue.",
+  alternates: { canonical: "https://www.eventsatartistry.com/about/site-map" },
 };
 
 export default function SiteMapPage() {

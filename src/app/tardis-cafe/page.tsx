@@ -9,6 +9,7 @@ import { MapPin, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Tardis Cafe | Coffee & Light Fare at Nassau County Museum of Art",
+  alternates: { canonical: "https://www.eventsatartistry.com/tardis-cafe" },
   description:
     "Tardis Cafe at Nassau County Museum of Art in Roslyn, NY. Artisan coffee, seasonal bites, and light fare for museum visitors and event guests.",
 };

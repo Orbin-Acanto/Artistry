@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: "Social Events Brochure | Artistry at Nassau County Museum of Art",
   description:
     "Explore Artistry's social events brochure: galas, milestone celebrations, and social gatherings at the Nassau County Museum of Art in Roslyn, NY.",
+  alternates: { canonical: "https://www.eventsatartistry.com/brochures/social" },
+  robots: { index: false, follow: false },
 };
 
 export default function SocialBrochurePage() {

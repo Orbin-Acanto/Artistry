@@ -9,6 +9,7 @@ import { corporateEventTypes, corporateGallery } from "@/data/events";
 export const metadata: Metadata = {
   title:
     "Corporate Events Long Island | Artistry at Nassau County Museum of Art",
+  alternates: { canonical: "https://www.eventsatartistry.com/events/corporate" },
   description:
     "Host corporate dinners, summer outings, meetings, cocktail receptions, and award ceremonies at Artistry in Roslyn, NY. A premier corporate event venue on Long Island.",
   keywords: [
