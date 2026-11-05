@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ratelimit } from '@/lib/rate-limit';
+import { deliverToN8n, toQueuedFiles } from '@/lib/n8n-queue';
 
 const HONEYPOT_FIELD = 'website';
 const MIN_FORM_TIME = 5000;
@@ -106,35 +107,17 @@ export async function POST(request: NextRequest) {
       page: (formData.get('page') as string) || '/',
     };
 
-    const n8nFormData = new FormData();
-    Object.entries(submissionData).forEach(([key, value]) => {
-      n8nFormData.append(key, value || '');
+    const fields = Object.fromEntries(
+      Object.entries(submissionData).map(([key, value]) => [key, value || ''])
+    );
+    const files = await toQueuedFiles(formData.getAll('attachments') as File[]);
+
+    const n8nData = await deliverToN8n({
+      target: 'N8N_LEAD_WEBHOOK_URL',
+      kind: 'form',
+      fields,
+      files,
     });
-
-    const files = formData.getAll('attachments') as File[];
-    if (files && files.length > 0) {
-      files.forEach((file) => {
-        n8nFormData.append('data', file);
-      });
-    }
-
-    const username = process.env.N8N_USERNAME!;
-    const password = process.env.N8N_PASSWORD!;
-    const credentials = Buffer.from(`${username}:${password}`).toString('base64');
-
-    const n8nResponse = await fetch(process.env.N8N_LEAD_WEBHOOK_URL!, {
-      method: 'POST',
-      headers: { Authorization: `Basic ${credentials}` },
-      body: n8nFormData,
-    });
-
-    if (!n8nResponse.ok) {
-      const errorText = await n8nResponse.text();
-      console.error('n8n webhook error:', errorText);
-      throw new Error('Failed to send data to n8n');
-    }
-
-    const n8nData = await n8nResponse.json();
 
     return NextResponse.json(
       { success: true, message: 'Form submitted successfully!', data: n8nData },
