@@ -105,6 +105,11 @@ export const faqGroups: { title: string; items: Faq[] }[] = [
           "No, Tardi's Catering is the exclusive caterer at Artistry. Artistry also works with an exclusive vendor for event services, so check with your coordinator before booking any outside vendor.",
       },
       {
+        question: "Are kosher and other dietary options available?",
+        answer:
+          "Yes, Tardi's Catering offers kosher and other dietary options. Tell your coordinator about your guests' needs when you plan the menu.",
+      },
+      {
         question: "Is there a bar?",
         answer:
           "Yes, every reception package includes a 5-hour bar. Package One has beer and wine, and Packages Two to Four have a full spirits bar. Prosecco and signature cocktails can be added.",
@@ -157,6 +162,11 @@ export const faqGroups: { title: string; items: Faq[] }[] = [
       {
         question: "Is there parking?",
         answer: "Yes, there is ample free parking on site.",
+      },
+      {
+        question: "Is Artistry wheelchair accessible?",
+        answer:
+          "Yes, Artistry is wheelchair accessible with elevator access. Share any accessibility needs with your coordinator in advance.",
       },
       {
         question: "Can guests get to Artistry by train?",
