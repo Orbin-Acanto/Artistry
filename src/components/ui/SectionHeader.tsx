@@ -29,14 +29,14 @@ export default function SectionHeader({
           {label}
         </p>
       )}
-      <h1
+      <h2
         className={cn(
           "font-display text-[clamp(1.75rem,6vw,3.5rem)] leading-tight text-balance break-words uppercase",
           light ? "text-cream" : "text-primary-dark",
         )}
       >
         {title}
-      </h1>
+      </h2>
       {description && (
         <p
           className={cn(

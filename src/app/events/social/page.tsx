@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ImageGallery from "@/components/ui/ImageGallery";
@@ -7,10 +8,12 @@ import Link from "next/link";
 import { socialEventTypes, socialPackages, socialGallery } from "@/data/events";
 
 export const metadata: Metadata = {
-  title: "Social Events Long Island | Bar Mitzvahs, Communions & Milestone Celebrations",
-  alternates: { canonical: "https://www.eventsatartistry.com/events/social" },
-  description:
-    "Host Bar and Bat Mitzvahs, Communions, Confirmations, Sweet 16s, and milestone celebrations at Artistry in Roslyn, NY. A premier social event venue near NYC at Nassau County Museum of Art on Long Island.",
+  ...pageMetadata({
+    title: "Social Events at Artistry | Mitzvahs, Sweet 16s and More",
+    description:
+      "Bar and Bat Mitzvahs, Communions, Confirmations, Sweet 16s and milestone parties at Artistry, inside Nassau County Museum of Art in Roslyn, NY.",
+    path: "/events/social",
+  }),
   keywords: [
     "Bar Mitzvah venue Long Island",
     "Bat Mitzvah venue NY",

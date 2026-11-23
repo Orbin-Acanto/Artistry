@@ -55,7 +55,7 @@ export const weddingPageLocations: EventLocation[] = [
         alt: "The Tented Pavilion wedding ceremony",
       },
       {
-        src: "/media/images/events/wedding/location/Tented Pavilion/4.png",
+        src: "/media/images/events/wedding/location/Tented Pavilion/4.webp",
         alt: "The Tented Pavilion wedding ceremony",
       },
     ],
@@ -159,7 +159,7 @@ export const weddingPageLocations: EventLocation[] = [
         alt: "Collection Gallery wedding reception",
       },
       {
-        src: "/media/images/events/wedding/location/Collection Gallery/4.png",
+        src: "/media/images/events/wedding/location/Collection Gallery/4.webp",
         alt: "Collection Gallery wedding reception",
       },
     ],
@@ -367,13 +367,13 @@ export const weddingPackages: EventPackage[] = [
 
 export const weddingGallery: GalleryImage[] = [
   {
-    src: "/media/images/events/wedding/1.png",
+    src: "/media/images/events/wedding/1.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/2.png",
+    src: "/media/images/events/wedding/2.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
@@ -385,13 +385,13 @@ export const weddingGallery: GalleryImage[] = [
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/4.png",
+    src: "/media/images/events/wedding/4.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/5.png",
+    src: "/media/images/events/wedding/5.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
@@ -403,7 +403,7 @@ export const weddingGallery: GalleryImage[] = [
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/7.png",
+    src: "/media/images/events/wedding/7.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
@@ -415,19 +415,19 @@ export const weddingGallery: GalleryImage[] = [
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/9.png",
+    src: "/media/images/events/wedding/9.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/10.png",
+    src: "/media/images/events/wedding/10.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/11.png",
+    src: "/media/images/events/wedding/11.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
@@ -439,7 +439,7 @@ export const weddingGallery: GalleryImage[] = [
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/13.png",
+    src: "/media/images/events/wedding/13.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
@@ -457,7 +457,7 @@ export const weddingGallery: GalleryImage[] = [
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/16.png",
+    src: "/media/images/events/wedding/16.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
@@ -475,31 +475,31 @@ export const weddingGallery: GalleryImage[] = [
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/19.png",
+    src: "/media/images/events/wedding/19.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/20.png",
+    src: "/media/images/events/wedding/20.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/21.png",
+    src: "/media/images/events/wedding/21.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/22.png",
+    src: "/media/images/events/wedding/22.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/23.png",
+    src: "/media/images/events/wedding/23.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
@@ -511,7 +511,7 @@ export const weddingGallery: GalleryImage[] = [
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/25.png",
+    src: "/media/images/events/wedding/25.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
@@ -529,7 +529,7 @@ export const weddingGallery: GalleryImage[] = [
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/28.png",
+    src: "/media/images/events/wedding/28.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
@@ -547,7 +547,7 @@ export const weddingGallery: GalleryImage[] = [
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/31.png",
+    src: "/media/images/events/wedding/31.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
@@ -559,7 +559,7 @@ export const weddingGallery: GalleryImage[] = [
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/33.png",
+    src: "/media/images/events/wedding/33.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
@@ -583,13 +583,13 @@ export const weddingGallery: GalleryImage[] = [
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/37.png",
+    src: "/media/images/events/wedding/37.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
   },
   {
-    src: "/media/images/events/wedding/38.png",
+    src: "/media/images/events/wedding/38.webp",
     alt: "Artistry wedding celebration",
     width: 1200,
     height: 900,
@@ -694,13 +694,13 @@ export const corporateGallery: GalleryImage[] = [
     height: 900,
   },
   {
-    src: "/media/images/events/corporate/3.png",
+    src: "/media/images/events/corporate/3.webp",
     alt: "Artistry corporate event",
     width: 1200,
     height: 900,
   },
   {
-    src: "/media/images/events/corporate/4.png",
+    src: "/media/images/events/corporate/4.webp",
     alt: "Artistry corporate event",
     width: 1200,
     height: 900,
@@ -724,13 +724,13 @@ export const corporateGallery: GalleryImage[] = [
     height: 900,
   },
   {
-    src: "/media/images/events/corporate/8.png",
+    src: "/media/images/events/corporate/8.webp",
     alt: "Artistry corporate event",
     width: 1200,
     height: 900,
   },
   {
-    src: "/media/images/events/corporate/9.png",
+    src: "/media/images/events/corporate/9.webp",
     alt: "Artistry corporate event",
     width: 1200,
     height: 900,
@@ -742,13 +742,13 @@ export const corporateGallery: GalleryImage[] = [
     height: 900,
   },
   {
-    src: "/media/images/events/corporate/11.png",
+    src: "/media/images/events/corporate/11.webp",
     alt: "Artistry corporate event",
     width: 1200,
     height: 900,
   },
   {
-    src: "/media/images/events/corporate/12.png",
+    src: "/media/images/events/corporate/12.webp",
     alt: "Artistry corporate event",
     width: 1200,
     height: 900,
@@ -1136,7 +1136,7 @@ export const weddingEnhancements: WeddingEnhancement[] = [
       "/media/images/events/wedding/enhancement/Upgrade 2 - Floral & Design Packages/2.jpg",
       "/media/images/events/wedding/enhancement/Upgrade 2 - Floral & Design Packages/3.png",
       "/media/images/events/wedding/enhancement/Upgrade 2 - Floral & Design Packages/4.jpg",
-      "/media/images/events/wedding/enhancement/Upgrade 2 - Floral & Design Packages/5.png",
+      "/media/images/events/wedding/enhancement/Upgrade 2 - Floral & Design Packages/5.webp",
     ]),
   },
   {
@@ -1157,7 +1157,7 @@ export const weddingEnhancements: WeddingEnhancement[] = [
     description:
       "Create a captivating atmosphere with layered lighting designed to transform your wedding from day to night. From warm uplighting and delicate pin-spot accents to custom gobos and dynamic intelligent lighting, every detail is crafted to evoke elegance, romance, and unforgettable moments.",
     image:
-      "/media/images/events/wedding/enhancement/Upgrade 4 - Lighting/1.png",
+      "/media/images/events/wedding/enhancement/Upgrade 4 - Lighting/1.webp",
     gallery: createGallery("Lighting", [
       "/media/images/events/wedding/enhancement/Upgrade 4 - Lighting/2.png",
       "/media/images/events/wedding/enhancement/Upgrade 4 - Lighting/3.png",

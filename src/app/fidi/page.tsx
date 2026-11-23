@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Image from "next/image";
@@ -7,10 +8,12 @@ import { SITE } from "@/data/site";
 import { fidiVenues, fidiValues } from "@/data/fidi";
 
 export const metadata: Metadata = {
-  title: "FIDI Hospitality | The Group Behind Artistry",
-  alternates: { canonical: "https://www.eventsatartistry.com/fidi" },
-  description:
-    "FIDI Hospitality is a premier hospitality group operating distinctive event venues across New York. Artistry at Nassau County Museum of Art is one of FIDI's signature venues.",
+  ...pageMetadata({
+    title: "FIDI Hospitality | The Group Behind Artistry",
+    description:
+      "FIDI Hospitality runs event venues in New York, including Artistry at Nassau County Museum of Art in Roslyn, NY. Learn about the group and its venues.",
+    path: "/fidi",
+  }),
 };
 
 export default function FidiPage() {
@@ -20,7 +23,7 @@ export default function FidiPage() {
         label="FIDI Hospitality"
         title="Distinctive Venues. Extraordinary Events."
         description="FIDI Hospitality is a premier hospitality group operating some of New York's most celebrated event venues."
-        imageSrc="/media/images/fidi/hero.png"
+        imageSrc="/media/images/fidi/hero.webp"
         imageAlt="FIDI Hospitality venues"
       />
 

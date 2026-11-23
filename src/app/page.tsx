@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import VideoHero from "@/components/VideoHero";
 import CutoutParallax from "@/components/CutoutParallax";
 import VenueSticky from "@/components/VenueSticky";
@@ -8,10 +9,12 @@ import TardisSection from "@/components/TardisSection";
 import ContactSection from "@/components/ContactSection";
 
 export const metadata: Metadata = {
-  title: "Artistry at Nassau County Museum of Art | Event Venue Roslyn, NY",
-  description:
-    "Artistry is a premier event venue at Nassau County Museum of Art in Roslyn, NY. Host weddings, corporate events, social celebrations, and milestone occasions surrounded by stunning art and lush grounds.",
-  alternates: { canonical: "https://www.eventsatartistry.com" },
+  ...pageMetadata({
+    title: "Artistry | Event Venue at Nassau County Museum of Art",
+    description:
+      "Weddings, corporate events and private celebrations at Artistry, the event venue inside Nassau County Museum of Art in Roslyn, NY on Long Island.",
+    path: "/",
+  }),
 };
 
 export default function HomePage() {
@@ -28,7 +31,7 @@ export default function HomePage() {
       <section
         className="relative flex h-[40vh] min-h-[300px] max-h-[520px] items-center justify-center text-center px-6 overflow-hidden parallax-section"
         style={{
-          backgroundImage: "url('/media/images/home/divider.png')",
+          backgroundImage: "url('/media/images/home/divider.webp')",
           backgroundAttachment: "fixed",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -52,7 +55,7 @@ export default function HomePage() {
         subtext="Step into a world of possibility and begin planning an unforgettable experience. At Artistry, our dedicated event team is poised to transform your vision into a seamless, extraordinary celebration, crafted with precision, style, and distinction."
         ctaLabel="Start Planning"
         ctaHref="/#contact"
-        imageSrc="/media/images/home/frame.png"
+        imageSrc="/media/images/home/frame.webp"
         imageAlt="Artistry venue at dusk"
       />
 

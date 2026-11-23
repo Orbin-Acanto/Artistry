@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Image from "next/image";
@@ -6,10 +7,12 @@ import Link from "next/link";
 import { eventCards } from "@/data/events";
 
 export const metadata: Metadata = {
-  title: "Events | Wedding, Corporate & Social Venue Long Island NY",
-  alternates: { canonical: "https://www.eventsatartistry.com/events" },
-  description:
-    "Host your wedding, corporate event, social celebration, or milestone occasion at Artistry, Nassau County Museum of Art's premier event venue in Roslyn, NY.",
+  ...pageMetadata({
+    title: "Events at Artistry | Weddings, Corporate and Social",
+    description:
+      "Plan a wedding, corporate event, social celebration or celebration of life at Artistry, inside Nassau County Museum of Art in Roslyn, NY.",
+    path: "/events",
+  }),
   keywords: [
     "event venue Long Island",
     "wedding venue Nassau County",

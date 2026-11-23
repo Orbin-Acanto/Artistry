@@ -24,11 +24,11 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.eventsatartistry.com"),
   title: {
-    default: "Artistry at Nassau County Museum of Art | Event Venue Roslyn, NY",
+    default: "Artistry | Event Venue at Nassau County Museum of Art",
     template: "%s | Artistry Events",
   },
   description:
-    "Artistry is a premier event venue at Nassau County Museum of Art in Roslyn, NY. Host weddings, corporate events, social celebrations, and milestone occasions surrounded by stunning art and lush grounds.",
+    "Weddings, corporate events and private celebrations at Artistry, the event venue inside Nassau County Museum of Art in Roslyn, NY on Long Island.",
   keywords: [
     "event venue Long Island",
     "wedding venue Nassau County",
@@ -42,25 +42,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.eventsatartistry.com",
     siteName: "Artistry Events",
-    title: "Artistry at Nassau County Museum of Art | Event Venue Roslyn, NY",
+    title: "Artistry | Event Venue at Nassau County Museum of Art",
     description:
-      "A premier event venue nestled within the Nassau County Museum of Art. Weddings, corporate events, and unforgettable celebrations on Long Island.",
+      "Weddings, corporate events and private celebrations at Artistry, the event venue inside Nassau County Museum of Art in Roslyn, NY on Long Island.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Artistry Event Venue at Nassau County Museum of Art",
+        alt: "Artistry at Nassau County Museum of Art",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Artistry at Nassau County Museum of Art | Event Venue Roslyn, NY",
+    title: "Artistry | Event Venue at Nassau County Museum of Art",
     description:
-      "A premier event venue nestled within the Nassau County Museum of Art. Weddings, corporate events, and unforgettable celebrations on Long Island.",
+      "Weddings, corporate events and private celebrations at Artistry, the event venue inside Nassau County Museum of Art in Roslyn, NY on Long Island.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -74,9 +73,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: "https://www.eventsatartistry.com",
-  },
 };
 
 const jsonLd = {
@@ -85,9 +81,9 @@ const jsonLd = {
   name: "Artistry at Nassau County Museum of Art",
   alternateName: "Artistry Events",
   description:
-    "Premier event venue at Nassau County Museum of Art in Roslyn, NY. Weddings, corporate events, social celebrations, and milestone occasions on Long Island.",
+    "Event venue inside Nassau County Museum of Art in Roslyn, NY, for weddings, corporate events, social celebrations and celebrations of life.",
   url: "https://www.eventsatartistry.com",
-  logo: "https://www.eventsatartistry.com/og-image.jpg",
+  logo: "https://www.eventsatartistry.com/media/images/logo/artistry-logo.svg",
   image: "https://www.eventsatartistry.com/og-image.jpg",
   telephone: "+12129715353",
   email: "info@eventsatartistry.com",
@@ -99,26 +95,19 @@ const jsonLd = {
     postalCode: "11576",
     addressCountry: "US",
   },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 40.7965,
-    longitude: -73.6476,
-  },
   areaServed: [
     { "@type": "City", name: "Roslyn" },
     { "@type": "County", name: "Nassau County" },
     { "@type": "AdministrativeArea", name: "Long Island" },
     { "@type": "City", name: "New York City" },
   ],
-  priceRange: "$$$",
-  servesCuisine: "American",
   amenityFeature: [
     { "@type": "LocationFeatureSpecification", name: "Indoor Event Space", value: true },
     { "@type": "LocationFeatureSpecification", name: "Outdoor Event Space", value: true },
     { "@type": "LocationFeatureSpecification", name: "On-site Catering", value: true },
     { "@type": "LocationFeatureSpecification", name: "Wedding Ceremonies", value: true },
     { "@type": "LocationFeatureSpecification", name: "Corporate Events", value: true },
-    { "@type": "LocationFeatureSpecification", name: "Valet Parking", value: true },
+    { "@type": "LocationFeatureSpecification", name: "Free Parking", value: true },
   ],
   sameAs: [
     "https://www.instagram.com/eventsatartistry",

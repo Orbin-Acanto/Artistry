@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ImageGallery from "@/components/ui/ImageGallery";
@@ -7,10 +8,12 @@ import Link from "next/link";
 import { celebrateLifePackages, celebrateLifeGallery } from "@/data/events";
 
 export const metadata: Metadata = {
-  title: "Celebrate Life Events | Memorial & Life Celebration Venue Long Island",
-  alternates: { canonical: "https://www.eventsatartistry.com/events/celebrate-life" },
-  description:
-    "Honor life's most meaningful moments at Artistry in Roslyn, NY. A serene, elegant setting for Celebrate Life gatherings and memorial events at Nassau County Museum of Art on Long Island.",
+  ...pageMetadata({
+    title: "Celebrate Life Gatherings at Artistry | Roslyn, NY",
+    description:
+      "A calm setting for celebration of life and memorial gatherings at Nassau County Museum of Art in Roslyn, NY, for 20 guests or 200, with one contact throughout.",
+    path: "/events/celebrate-life",
+  }),
   keywords: [
     "Celebrate Life venue Long Island",
     "memorial event venue NY",

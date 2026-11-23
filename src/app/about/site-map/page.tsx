@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import SiteMapLocationsSection from "@/components/ui/SiteMapLocationsSection";
@@ -6,10 +7,12 @@ import Image from "next/image";
 import { locations } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Venue Map | Artistry at Nassau County Museum of Art",
-  description:
-    "Explore the layout and event spaces of Artistry at Nassau County Museum of Art. View our grounds map to plan your event at our Roslyn, NY venue.",
-  alternates: { canonical: "https://www.eventsatartistry.com/about/site-map" },
+  ...pageMetadata({
+    title: "Venue Map | Artistry at Nassau County Museum of Art",
+    description:
+      "See the grounds and the eight event spaces at Artistry, Nassau County Museum of Art, and plan where your event will happen in Roslyn, NY.",
+    path: "/about/site-map",
+  }),
 };
 
 export default function SiteMapPage() {

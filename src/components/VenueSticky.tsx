@@ -73,7 +73,6 @@ function ImageCard({
           fill
           className="object-cover"
           sizes="(max-width: 1024px) 100vw, 50vw"
-          priority
         />
       </div>
     </motion.div>
@@ -158,7 +157,6 @@ export default function VenueSticky() {
                     src={img.src}
                     alt=""
                     fill
-                    priority
                     sizes="1px"
                   />
                 ))}

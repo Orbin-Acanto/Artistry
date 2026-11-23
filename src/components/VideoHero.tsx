@@ -28,6 +28,8 @@ export default function VideoHero() {
         muted
         loop
         playsInline
+        preload="metadata"
+        poster="/media/video/hero-poster.jpg"
         className="absolute inset-0 w-full h-full object-cover"
         aria-hidden="true"
       >

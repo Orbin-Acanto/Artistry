@@ -53,13 +53,13 @@ export const directors = [
     name: "Lauren Leuci",
     title: "Director of Sales",
     bio: "Over 12 years in luxury events have made Lauren the trusted first point of contact for clients planning life's most meaningful moments. Her consultative approach and deep knowledge of Artistry's capabilities ensure every inquiry becomes an extraordinary event.",
-    image: "/media/images/about/location/Lauren.png",
+    image: "/media/images/about/location/Lauren.webp",
   },
   {
     name: "Andrew Heaton",
     title: "Director of Operations",
     bio: "With 15 years orchestrating high-end events, Andrew ensures every detail runs flawlessly. His operational expertise in vendor coordination and day-of execution is the backbone of every seamless Artistry experience.",
-    image: "/media/images/about/location/Andy.png",
+    image: "/media/images/about/location/Andy.webp",
   },
 ];
 

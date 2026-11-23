@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ImageGallery from "@/components/ui/ImageGallery";
@@ -17,10 +18,13 @@ import {
 import { weddingEnhancements } from "@/data/events";
 
 export const metadata: Metadata = {
-  title: "Wedding Venue Long Island | Weddings at Artistry",
-  alternates: { canonical: "https://www.eventsatartistry.com/events/weddings" },
-  description:
-    "Host your wedding at Artistry, Nassau County Museum of Art in Roslyn, NY. Ceremony and reception spaces, exclusive packages, and Tardis Catering on Long Island.",
+  ...pageMetadata({
+    title: "Weddings at Artistry | Long Island Wedding Venue",
+    description:
+      "Ceremonies and receptions at Nassau County Museum of Art in Roslyn, NY. Eight indoor and outdoor spaces, wedding packages and Tardi's Catering.",
+    path: "/events/weddings",
+    image: "/media/images/home/wedding.jpeg",
+  }),
   keywords: [
     "wedding venue Long Island",
     "wedding venue Roslyn NY",
@@ -31,19 +35,6 @@ export const metadata: Metadata = {
     "garden wedding Long Island",
     "indoor outdoor wedding Nassau County",
   ],
-  openGraph: {
-    title: "Wedding Venue Long Island | Weddings at Artistry",
-    description:
-      "Say I do surrounded by world-class art and lush estate grounds. Artistry at Nassau County Museum of Art — Long Island's premier wedding venue.",
-    images: [
-      {
-        url: "/media/images/home/wedding.jpeg",
-        width: 1200,
-        height: 630,
-        alt: "Wedding at Artistry Nassau County Museum of Art",
-      },
-    ],
-  },
 };
 
 export default function WeddingsPage() {

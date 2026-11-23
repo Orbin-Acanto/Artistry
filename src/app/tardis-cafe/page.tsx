@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Image from "next/image";
@@ -8,10 +9,12 @@ import { cafeMenu, cafePhotoStrip } from "@/data/tardis";
 import { MapPin, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Tardis Cafe | Coffee & Light Fare at Nassau County Museum of Art",
-  alternates: { canonical: "https://www.eventsatartistry.com/tardis-cafe" },
-  description:
-    "Tardis Cafe at Nassau County Museum of Art in Roslyn, NY. Artisan coffee, seasonal bites, and light fare for museum visitors and event guests.",
+  ...pageMetadata({
+    title: "Tardis Cafe at Nassau County Museum of Art",
+    description:
+      "Tardis Cafe serves coffee, seasonal bites and light fare at Nassau County Museum of Art in Roslyn, NY, for museum visitors and event guests.",
+    path: "/tardis-cafe",
+  }),
 };
 
 export default function TardisCafePage() {
@@ -21,7 +24,7 @@ export default function TardisCafePage() {
         label="Tardi's Cafe"
         title="A Perfect Pause Among Art and Nature"
         description="Artisan coffee, seasonal fare, and warm hospitality. A tranquil retreat within the Nassau County Museum of Art grounds."
-        imageSrc="/media/images/Tardis%20Catering/cafe/hero-image.png"
+        imageSrc="/media/images/Tardis%20Catering/cafe/hero-image.webp"
         imageAlt="Tardis Cafe at Nassau County Museum of Art"
       />
 
@@ -71,7 +74,7 @@ export default function TardisCafePage() {
           </div>
           <div className="relative aspect-[4/5] overflow-hidden">
             <Image
-              src="/media/images/Tardis%20Catering/cafe/the-cafe.png"
+              src="/media/images/Tardis%20Catering/cafe/the-cafe.webp"
               alt="Tardis Cafe interior"
               fill
               className="object-cover"

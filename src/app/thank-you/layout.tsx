@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Thank You | Artistry Events",
+  title: { absolute: "Thank You | Artistry Events" },
   robots: { index: false, follow: false },
 };
 

@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { sitemapSections } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Site Map | Artistry at Nassau County Museum of Art",
-  description: "Complete site map for Artistry at Nassau County Museum of Art. Browse all pages.",
-  alternates: { canonical: "https://www.eventsatartistry.com/sitemap" },
+  ...pageMetadata({
+    title: "Site Map | Artistry Events",
+    description:
+      "Every page on the Artistry Events website, from weddings and corporate events to catering, the cafe and directions.",
+    path: "/sitemap",
+  }),
   robots: { index: false, follow: true },
 };
 

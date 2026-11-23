@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/ui/PageHero";
 import MenuBrochureClient from "@/components/MenuBrochureClient";
 
 export const metadata: Metadata = {
-  title: "Corporate Brochure | Artistry at Nassau County Museum of Art",
-  description:
-    "Explore Artistry's corporate event brochure, from intimate board dinners to large-scale conferences at the Nassau County Museum of Art in Roslyn, NY.",
-  alternates: { canonical: "https://www.eventsatartistry.com/brochures/corporate" },
+  ...pageMetadata({
+    title: "Corporate Brochure | Artistry Events",
+    description:
+      "Read the Artistry corporate brochure, from board dinners to large conferences at Nassau County Museum of Art in Roslyn, NY.",
+    path: "/brochures/corporate",
+  }),
   robots: { index: false, follow: false },
 };
 

@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Image from "next/image";
 import { timeline } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "History | Nassau County Museum of Art Estate Roslyn Long Island",
-  alternates: { canonical: "https://www.eventsatartistry.com/about/history" },
-  description:
-    "Explore the rich history of the Nassau County Museum of Art estate in Roslyn, NY — the storied grounds that form the backdrop for Artistry's world-class events on Long Island.",
+  ...pageMetadata({
+    title: "History of the Museum Estate | Artistry",
+    description:
+      "The history of the Nassau County Museum of Art estate in Roslyn, NY, the grounds where Artistry hosts weddings, corporate events and celebrations today.",
+    path: "/about/history",
+  }),
   keywords: [
     "Nassau County Museum of Art history",
     "Roslyn NY estate history",

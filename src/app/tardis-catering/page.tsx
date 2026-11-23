@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Image from "next/image";
@@ -7,10 +8,12 @@ import { SITE } from "@/data/site";
 import MenuBrochureClient from "@/components/MenuBrochureClient";
 
 export const metadata: Metadata = {
-  title: "Tardis Catering | Culinary Excellence at Artistry",
-  alternates: { canonical: "https://www.eventsatartistry.com/tardis-catering" },
-  description:
-    "Tardis Catering is the exclusive culinary partner of Artistry at Nassau County Museum of Art. Bespoke menus, world-class chefs, and exceptional service for weddings and events in Roslyn, NY.",
+  ...pageMetadata({
+    title: "Tardis Catering | Exclusive Caterer at Artistry",
+    description:
+      "Tardis Catering is the exclusive caterer at Artistry, Nassau County Museum of Art. Custom menus for weddings, corporate events and celebrations in Roslyn, NY.",
+    path: "/tardis-catering",
+  }),
 };
 
 export default function TardisCateringPage() {

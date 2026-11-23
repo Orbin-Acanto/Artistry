@@ -42,7 +42,6 @@ export default function AutoImageSlider({
             alt=""
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            priority
           />
         ))}
       </div>
@@ -62,7 +61,6 @@ export default function AutoImageSlider({
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
-            priority
           />
         </motion.div>
       </AnimatePresence>
