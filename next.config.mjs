@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { withBotId } from "botid/next/config";
 
 // Copy pdfjs worker to public/ so it is served statically.
 // Runs at build time — keeps the worker version in sync with pdfjs-dist automatically.
@@ -70,10 +71,11 @@ const nextConfig = {
           { key: "X-Frame-Options", value: "DENY" },
           { key: "X-XSS-Protection", value: "1; mode=block" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=()" },
         ],
       },
     ];
   },
 };
 
-export default nextConfig;
+export default withBotId(nextConfig);

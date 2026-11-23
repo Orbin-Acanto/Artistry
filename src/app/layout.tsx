@@ -6,6 +6,8 @@ import Footer from "@/components/layout/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { BotIdClient } from "botid/client";
+import ClickTracking from "@/components/ClickTracking";
 
 const gildaDisplay = Gilda_Display({
   subsets: ["latin"],
@@ -126,6 +128,7 @@ export default function RootLayout({
       className={`${gildaDisplay.variable} ${montserrat.variable}`}
     >
       <head>
+        <BotIdClient protect={[{ path: "/api/contact-form", method: "POST" }]} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -138,6 +141,7 @@ export default function RootLayout({
         <Footer />
         <Analytics />
         <SpeedInsights />
+        <ClickTracking />
       </body>
     </html>
   );

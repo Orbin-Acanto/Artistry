@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { SITE } from "@/data/site";
 import { usePathname, useRouter } from "next/navigation";
 import ReCAPTCHA from "react-google-recaptcha";
+import { track } from "@vercel/analytics";
 
 const ease = [0.76, 0, 0.24, 1] as const;
 
@@ -125,6 +126,7 @@ export default function ContactSection() {
       const result = await response.json();
 
       if (result.success && result.data) {
+        track("lead_submitted", { form: "contact", page: pathname || "/" });
         recaptchaRef.current?.reset();
         setRecaptchaToken(null);
         router.push("/thank-you");

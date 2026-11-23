@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { checkBotId } from 'botid/server';
 import { ratelimit } from '@/lib/rate-limit';
 import { deliverToN8n, toQueuedFiles } from '@/lib/n8n-queue';
 
@@ -32,6 +33,11 @@ async function verifyRecaptcha(token: string): Promise<boolean> {
 }
 
 export async function POST(request: NextRequest) {
+  const verification = await checkBotId();
+  if (verification.isBot) {
+    return NextResponse.json({ success: false, message: 'Access denied' }, { status: 403 });
+  }
+
   try {
     const realIp = request.headers.get('x-real-ip');
     const cfIp = request.headers.get('cf-connecting-ip');
