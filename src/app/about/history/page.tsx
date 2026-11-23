@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Image from "next/image";
@@ -7,7 +8,7 @@ import { timeline } from "@/data/about";
 
 export const metadata: Metadata = {
   ...pageMetadata({
-    title: "History of the Museum Estate | Artistry",
+    title: "History of the Nassau County Museum of Art Estate | Artistry",
     description:
       "The history of the Nassau County Museum of Art estate in Roslyn, NY, the grounds where Artistry hosts weddings, corporate events and celebrations today.",
     path: "/about/history",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
 export default function HistoryPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "History of the Property", path: "/about/history" }])} />
       <PageHero
         label="About"
         title="A Century of Art & Celebration"

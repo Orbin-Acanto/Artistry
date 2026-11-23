@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Image from "next/image";
@@ -8,7 +9,7 @@ import { eventCards } from "@/data/events";
 
 export const metadata: Metadata = {
   ...pageMetadata({
-    title: "Events at Artistry | Weddings, Corporate and Social",
+    title: "Events at Artistry | Nassau County Event Venue",
     description:
       "Plan a wedding, corporate event, social celebration or celebration of life at Artistry, inside Nassau County Museum of Art in Roslyn, NY.",
     path: "/events",
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
 export default function EventsPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Events", path: "/events" }])} />
       <PageHero
         label="Events"
         title="Every Occasion, an Unforgettable Experience"

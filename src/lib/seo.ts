@@ -34,3 +34,19 @@ export function pageMetadata({ title, description, path, image }: PageSeo): Meta
     },
   };
 }
+
+const SITE_URL = "https://www.eventsatartistry.com";
+
+// BreadcrumbList JSON-LD; Home is added first automatically.
+export function breadcrumbJsonLd(trail: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [{ name: "Home", path: "/" }, ...trail].map((crumb, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: crumb.name,
+      item: `${SITE_URL}${crumb.path}`,
+    })),
+  };
+}

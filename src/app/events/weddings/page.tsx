@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ImageGallery from "@/components/ui/ImageGallery";
@@ -40,6 +41,7 @@ export const metadata: Metadata = {
 export default function WeddingsPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Events", path: "/events" }, { name: "Weddings", path: "/events/weddings" }])} />
       <PageHero
         label="Weddings"
         title="Your Wedding, Immersed in a Living Work of Art"

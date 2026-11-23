@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { BotIdClient } from "botid/client";
 import ClickTracking from "@/components/ClickTracking";
+import { locations } from "@/data/about";
 
 const gildaDisplay = Gilda_Display({
   subsets: ["latin"],
@@ -26,7 +27,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.eventsatartistry.com"),
   title: {
-    default: "Artistry | Event Venue at Nassau County Museum of Art",
+    default: "Artistry | Long Island Event Venue at Nassau County Museum of Art",
     template: "%s | Artistry Events",
   },
   description:
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Artistry Events",
-    title: "Artistry | Event Venue at Nassau County Museum of Art",
+    title: "Artistry | Long Island Event Venue at Nassau County Museum of Art",
     description:
       "Weddings, corporate events and private celebrations at Artistry, the event venue inside Nassau County Museum of Art in Roslyn, NY on Long Island.",
     images: [
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Artistry | Event Venue at Nassau County Museum of Art",
+    title: "Artistry | Long Island Event Venue at Nassau County Museum of Art",
     description:
       "Weddings, corporate events and private celebrations at Artistry, the event venue inside Nassau County Museum of Art in Roslyn, NY on Long Island.",
     images: ["/og-image.jpg"],
@@ -80,6 +81,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["EventVenue", "LocalBusiness"],
+  "@id": "https://www.eventsatartistry.com/#venue",
   name: "Artistry at Nassau County Museum of Art",
   alternateName: "Artistry Events",
   description:
@@ -97,6 +99,17 @@ const jsonLd = {
     postalCode: "11576",
     addressCountry: "US",
   },
+  hasMap: "https://maps.google.com/maps?q=Nassau+County+Museum+of+Art,+1+Museum+Dr,+Roslyn+Harbor,+NY+11576",
+  maximumAttendeeCapacity: 800,
+  containsPlace: locations.map((space) => ({
+    "@type": "EventVenue",
+    name: space.name,
+    maximumAttendeeCapacity: Number(space.capacity.replace(/\D/g, "")),
+  })),
+  parentOrganization: {
+    "@type": "Organization",
+    name: "FIDI Hospitality",
+  },
   areaServed: [
     { "@type": "City", name: "Roslyn" },
     { "@type": "County", name: "Nassau County" },
@@ -110,6 +123,9 @@ const jsonLd = {
     { "@type": "LocationFeatureSpecification", name: "Wedding Ceremonies", value: true },
     { "@type": "LocationFeatureSpecification", name: "Corporate Events", value: true },
     { "@type": "LocationFeatureSpecification", name: "Free Parking", value: true },
+    { "@type": "LocationFeatureSpecification", name: "Full Bar Service", value: true },
+    { "@type": "LocationFeatureSpecification", name: "Audio Visual Equipment", value: true },
+    { "@type": "LocationFeatureSpecification", name: "Sculpture Garden", value: true },
   ],
   sameAs: [
     "https://www.instagram.com/eventsatartistry",

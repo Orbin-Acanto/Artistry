@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Image from "next/image";
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 export default function FidiPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "FIDI Hospitality", path: "/fidi" }])} />
       <PageHero
         label="FIDI Hospitality"
         title="Distinctive Venues. Extraordinary Events."

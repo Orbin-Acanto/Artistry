@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import SiteMapLocationsSection from "@/components/ui/SiteMapLocationsSection";
@@ -8,7 +9,7 @@ import { locations } from "@/data/about";
 
 export const metadata: Metadata = {
   ...pageMetadata({
-    title: "Venue Map | Artistry at Nassau County Museum of Art",
+    title: "Event Spaces on Long Island | Artistry Venue Map",
     description:
       "See the grounds and the eight event spaces at Artistry, Nassau County Museum of Art, and plan where your event will happen in Roslyn, NY.",
     path: "/about/site-map",
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
 export default function SiteMapPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Venue Map", path: "/about/site-map" }])} />
       <PageHero
         label="About"
         title="Explore Our Grounds"

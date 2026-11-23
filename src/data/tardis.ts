@@ -16,12 +16,12 @@ export const cafeMenu = [
 ];
 
 export const cafePhotoStrip = [
-  { src: "/media/images/Tardis%20Catering/cafe/1.jpeg", alt: "Tardis Cafe" },
-  { src: "/media/images/Tardis%20Catering/cafe/2.jpeg", alt: "Tardis Cafe" },
-  { src: "/media/images/Tardis%20Catering/cafe/3.jpeg", alt: "Tardis Cafe" },
-  { src: "/media/images/Tardis%20Catering/cafe/4.jpeg", alt: "Tardis Cafe" },
-  { src: "/media/images/Tardis%20Catering/cafe/5.jpeg", alt: "Tardis Cafe" },
-  { src: "/media/images/Tardis%20Catering/cafe/6.jpeg", alt: "Tardis Cafe" },
-  { src: "/media/images/Tardis%20Catering/cafe/7.jpeg", alt: "Tardis Cafe" },
-  { src: "/media/images/Tardis%20Catering/cafe/8.jpeg", alt: "Tardis Cafe" },
+  { src: "/media/images/Tardis%20Catering/cafe/1.jpeg", alt: "Latte with granola and fruit cups at Tardi's Cafe" },
+  { src: "/media/images/Tardis%20Catering/cafe/2.jpeg", alt: "Brass espresso machine with a Tardi's Cafe cup" },
+  { src: "/media/images/Tardis%20Catering/cafe/3.jpeg", alt: "Croissant and glazed donuts on a plate" },
+  { src: "/media/images/Tardis%20Catering/cafe/4.jpeg", alt: "Hot drink topped with whipped cream in a patterned cup" },
+  { src: "/media/images/Tardis%20Catering/cafe/5.jpeg", alt: "Cappuccino with latte art beside fresh flowers" },
+  { src: "/media/images/Tardis%20Catering/cafe/6.jpeg", alt: "Cappuccino with donuts and a white orchid" },
+  { src: "/media/images/Tardis%20Catering/cafe/7.jpeg", alt: "Tardi's Cafe menu beside a basket of bananas" },
+  { src: "/media/images/Tardis%20Catering/cafe/8.jpeg", alt: "Croissant and donut on a cafe table with an orchid" },
 ];

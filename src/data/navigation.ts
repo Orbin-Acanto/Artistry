@@ -13,6 +13,7 @@ export const navigation: NavItem[] = [
       { label: "History of the Property", href: "/about/history" },
       { label: "Location & Directors", href: "/about/location" },
       { label: "Site Map", href: "/about/site-map" },
+      { label: "FAQ", href: "/faq" },
     ],
   },
   {

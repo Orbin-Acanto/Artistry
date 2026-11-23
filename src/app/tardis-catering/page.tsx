@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Image from "next/image";
@@ -9,7 +10,7 @@ import MenuBrochureClient from "@/components/MenuBrochureClient";
 
 export const metadata: Metadata = {
   ...pageMetadata({
-    title: "Tardis Catering | Exclusive Caterer at Artistry",
+    title: "Tardis Catering | Long Island Event Catering at Artistry",
     description:
       "Tardis Catering is the exclusive caterer at Artistry, Nassau County Museum of Art. Custom menus for weddings, corporate events and celebrations in Roslyn, NY.",
     path: "/tardis-catering",
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 export default function TardisCateringPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Tardi's Catering", path: "/tardis-catering" }])} />
       <PageHero
         label="Tardi's Catering"
         title="Cuisine as Artful as the Setting"
@@ -106,20 +108,20 @@ export default function TardisCateringPage() {
           />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { src: "/media/images/Tardis%20Catering/catering/gallery/1.jpeg", alt: "Tardis Catering event" },
-              { src: "/media/images/Tardis%20Catering/catering/gallery/2.jpeg", alt: "Tardis Catering event" },
-              { src: "/media/images/Tardis%20Catering/catering/gallery/3.jpeg", alt: "Tardis Catering event" },
-              { src: "/media/images/Tardis%20Catering/catering/gallery/4.jpeg", alt: "Tardis Catering event" },
-              { src: "/media/images/Tardis%20Catering/catering/gallery/5.jpeg", alt: "Tardis Catering event" },
-              { src: "/media/images/Tardis%20Catering/catering/gallery/6.jpeg", alt: "Tardis Catering event" },
-              { src: "/media/images/Tardis%20Catering/catering/gallery/7.jpeg", alt: "Tardis Catering event" },
-              { src: "/media/images/Tardis%20Catering/catering/gallery/8.jpeg", alt: "Tardis Catering event" },
-              { src: "/media/images/Tardis%20Catering/catering/gallery/9.jpeg", alt: "Tardis Catering event" },
-              { src: "/media/images/Tardis%20Catering/catering/gallery/10.jpeg", alt: "Tardis Catering event" },
-              { src: "/media/images/Tardis%20Catering/catering/gallery/11.jpeg", alt: "Tardis Catering event" },
-              { src: "/media/images/Tardis%20Catering/catering/gallery/12.jpeg", alt: "Tardis Catering event" },
-              { src: "/media/images/Tardis%20Catering/catering/gallery/13.jpeg", alt: "Tardis Catering event" },
-              { src: "/media/images/Tardis%20Catering/catering/gallery/14.jpeg", alt: "Tardis Catering event" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/1.jpeg", alt: "Plated salad with a crisp on a gold charger" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/2.jpeg", alt: "Plated filet with microgreens and roasted potatoes" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/3.jpeg", alt: "Plated fish entree at a table set with a framed photo and florals" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/4.jpeg", alt: "Chicken entree with mushrooms and roasted potatoes" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/5.jpeg", alt: "Fish entree with asparagus, potatoes and lemon" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/6.jpeg", alt: "Plated salad on a gold charger with crystal glassware" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/7.jpeg", alt: "Plated salad with teal glassware and hydrangeas" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/8.jpeg", alt: "Pasta buffet with ravioli and labeled dishes" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/9.jpeg", alt: "Banquet table with a plated first course under blue lighting" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/10.jpeg", alt: "Salads served on black plates at a seated dinner" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/11.jpeg", alt: "Filet and lemon fish duo entree" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/12.jpeg", alt: "Round table set with salads and printed menus" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/13.jpeg", alt: "Mixed green salad with red onion and olives" },
+              { src: "/media/images/Tardis%20Catering/catering/gallery/14.jpeg", alt: "Salad on a gold charger with black linens" },
             ].map((img) => (
               <div
                 key={img.src}

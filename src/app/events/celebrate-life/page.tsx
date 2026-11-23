@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ImageGallery from "@/components/ui/ImageGallery";
@@ -9,7 +10,7 @@ import { celebrateLifePackages, celebrateLifeGallery } from "@/data/events";
 
 export const metadata: Metadata = {
   ...pageMetadata({
-    title: "Celebrate Life Gatherings at Artistry | Roslyn, NY",
+    title: "Celebration of Life Venue on Long Island | Artistry, Roslyn NY",
     description:
       "A calm setting for celebration of life and memorial gatherings at Nassau County Museum of Art in Roslyn, NY, for 20 guests or 200, with one contact throughout.",
     path: "/events/celebrate-life",
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
 export default function CelebrateLifePage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Events", path: "/events" }, { name: "Celebrate Life", path: "/events/celebrate-life" }])} />
       <PageHero
         label="Celebrate Life"
         title="Honor Every Chapter. Cherish Every Moment."

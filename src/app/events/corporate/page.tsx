@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ImageGallery from "@/components/ui/ImageGallery";
@@ -9,7 +10,7 @@ import { corporateEventTypes, corporateGallery } from "@/data/events";
 
 export const metadata: Metadata = {
   ...pageMetadata({
-    title: "Corporate Events at Artistry | Roslyn, Long Island",
+    title: "Corporate Event Venue on Long Island | Artistry, Roslyn NY",
     description:
       "Corporate dinners, summer outings, meetings, cocktail receptions and award ceremonies at Artistry, inside Nassau County Museum of Art in Roslyn, NY.",
     path: "/events/corporate",
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
 export default function CorporatePage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Events", path: "/events" }, { name: "Corporate Events", path: "/events/corporate" }])} />
       <PageHero
         label="Corporate Events"
         title="Inspire Your Team. Impress Your Clients."

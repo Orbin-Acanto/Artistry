@@ -10,7 +10,7 @@ import ContactSection from "@/components/ContactSection";
 
 export const metadata: Metadata = {
   ...pageMetadata({
-    title: "Artistry | Event Venue at Nassau County Museum of Art",
+    title: "Artistry | Long Island Event Venue at Nassau County Museum of Art",
     description:
       "Weddings, corporate events and private celebrations at Artistry, the event venue inside Nassau County Museum of Art in Roslyn, NY on Long Island.",
     path: "/",

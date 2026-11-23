@@ -176,6 +176,12 @@ export default function Footer() {
           </p>
           <div className="flex gap-6">
             <Link
+              href="/faq"
+              className="font-body text-xs text-cream/35 hover:text-cream/60 transition-colors tracking-wide"
+            >
+              FAQ
+            </Link>
+            <Link
               href="/sitemap"
               className="font-body text-xs text-cream/35 hover:text-cream/60 transition-colors tracking-wide"
             >

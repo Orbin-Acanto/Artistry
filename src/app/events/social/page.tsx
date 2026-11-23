@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/seo";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ImageGallery from "@/components/ui/ImageGallery";
@@ -9,7 +10,7 @@ import { socialEventTypes, socialPackages, socialGallery } from "@/data/events";
 
 export const metadata: Metadata = {
   ...pageMetadata({
-    title: "Social Events at Artistry | Mitzvahs, Sweet 16s and More",
+    title: "Bar Mitzvah and Social Event Venue on Long Island | Artistry",
     description:
       "Bar and Bat Mitzvahs, Communions, Confirmations, Sweet 16s and milestone parties at Artistry, inside Nassau County Museum of Art in Roslyn, NY.",
     path: "/events/social",
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
 export default function SocialEventsPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Events", path: "/events" }, { name: "Social Events", path: "/events/social" }])} />
       <PageHero
         label="Social Events"
         title="Life's Most Meaningful Moments Deserve a Setting to Match"
