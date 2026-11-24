@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { checkBotId } from 'botid/server';
 import { ratelimit } from '@/lib/rate-limit';
 import { deliverToN8n, toQueuedFiles } from '@/lib/n8n-queue';
+import { n8nLeadsEnabled, sendToCrm } from '@/lib/fidi-crm';
 
 const HONEYPOT_FIELD = 'website';
 const MIN_FORM_TIME = 5000;
@@ -118,12 +119,17 @@ export async function POST(request: NextRequest) {
     );
     const files = await toQueuedFiles(formData.getAll('attachments') as File[]);
 
-    const n8nData = await deliverToN8n({
-      target: 'N8N_LEAD_WEBHOOK_URL',
-      kind: 'form',
-      fields,
-      files,
-    });
+    const crm = sendToCrm(
+      'FIDI_CRM_CONTACT_KEY',
+      { ...fields, attachments: files.map((f) => f.name).join(', ') },
+      request
+    );
+    // n8n also runs as the fallback when it is switched off and the CRM failed.
+    const n8nData =
+      n8nLeadsEnabled() || !(await crm)
+        ? await deliverToN8n({ target: 'N8N_LEAD_WEBHOOK_URL', kind: 'form', fields, files })
+        : {};
+    await crm;
 
     return NextResponse.json(
       { success: true, message: 'Form submitted successfully!', data: n8nData },
